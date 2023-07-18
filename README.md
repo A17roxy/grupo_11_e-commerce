@@ -24,3 +24,7 @@ Nuestro público objetivo es principalmente melómano-cultural, de nicho, mayor 
 - Referencia para Home ya que cuenta con dos opciones, lo cuál nos permite diferenciar claramente el acceso y adquisición a la música digital por un lado, y la adquirible en formato físico: [Le Guess Who](https://leguesswho.com/)
 - Referencia para Carrito de compra: [Mercado Libre Cart](https://www.mercadolibre.com.ar/gz/cart/v2)
 - Referencia en cuanto a una de las finalidades del sitio: [The Detroit Record Club](https://www.thedetroitrecordclub.com/)
+
+## Link a plataforma para organizar el trabajo
+
+- Trello: [Trello]([https://bandcamp.com/](https://trello.com/b/jpyjm8Iz/proyecto-integrador)https://trello.com/b/jpyjm8Iz/proyecto-integrador)
