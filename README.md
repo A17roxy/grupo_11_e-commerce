@@ -27,4 +27,4 @@ Nuestro público objetivo es principalmente melómano-cultural, de nicho, mayor 
 
 ## Link a plataforma para organizar el trabajo
 
-- Trello: [Trello]([https://bandcamp.com/](https://trello.com/b/jpyjm8Iz/proyecto-integrador)https://trello.com/b/jpyjm8Iz/proyecto-integrador/)
+- Trello: [Trello](https://trello.com/b/jpyjm8Iz/proyecto-integrador/)
