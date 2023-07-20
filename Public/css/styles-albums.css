@@ -15,15 +15,73 @@
     --negro: #310b0b;
 }
 
+.header-principal{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #310b0b;
+    margin: 0px;
+    padding: 20px;
+    position:fixed;
+    top: 0px;
+    left: 0px; 
+    width: 100vw;
+    z-index: 10; 
+    box-shadow: 2px 8px 12px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 8px 12px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 8px 12px 1px rgba(0,0,0,0.75);
+}
+
+.header-principal-left{
+    text-align: center;
+    margin-left: 5px;
+}
+
+.header-principal-right {
+    display: flex;
+    align-items: flex-end;
+    padding-right: 114px;
+    background: -webkit-linear-gradient(var(--amarillo),var(--naranja));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 200ms;
+}
+
+.header-principal-right:hover{
+      text-shadow: var(--amarillo) 1px 0 20px;}
+
+
+.header-logo{
+    padding-top: 10px;
+    max-width: 250px; 
+    /* max-width: 20vw;  ESTE ACHICA / AGRANDA EL LOGO*/
+}
+
+
 body {
     background-color: var(--negro);
     text-align: center;
+    
+}
+
+
+.albums-main-container {
+    width: 100vw;
+    align-content: center;
+    text-align: center;
+    position:absolute;
+    top: 120px;
+    /* padding-top: 100px; */
+    
+    z-index: 1;
+    
 }
 
 .album{
     border: solid 1px black;
     border-radius: 3%;
-    
     background-image: linear-gradient(var(--naranja),var(--negro));
     display: inline-block;
     block-size: auto;
@@ -79,35 +137,6 @@ body {
 
 
 
-
-
-.home-imgs {
-    width: 100%;
-    margin: auto;
-}
-
-.capsule {
-    width: 100%;
-    margin: 1rem;
-    margin-bottom: 10px;
-    display: flex;
-}
-
-.content {
-    display: flex;
-}
-
-.happy-box {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    background-color: #FFADAD;
-    /* margin: auto; */
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    align-self: center;
-}
-
 @media (min-width: 361px){
     .happy-box {
         width: 90%;
@@ -136,11 +165,5 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-}
-
-.capsule {
-    margin: 10px;
-    display: flex;
-    justify-content: space-between;
 }
 }
