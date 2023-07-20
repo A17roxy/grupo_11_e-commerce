@@ -43,10 +43,6 @@ body {
 }
 
 
-.album-cover {
-
-}
-
 .album-imagen {
     width: 300px;
     padding-bottom: 3px;
@@ -72,6 +68,7 @@ body {
     align-items: flex-end;
     padding-right: 4px;
     background: -webkit-linear-gradient(var(--amarillo),var(--naranja));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 200ms;
