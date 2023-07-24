@@ -1,11 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
 
+
+
 * {
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
+    font-weight: 300;
 }
+
+:root{
+    --amarillo: #EEB76B;
+    --naranja: #E2703A;
+    --bordo: #9C3D54;
+    --negro: #310b0b;
+}
+
+.header-principal{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #310b0b;
+    margin: 0px;
+    padding: 20px;
+    position:fixed;
+    top: 0px;
+    left: 0px; 
+    width: 100vw;
+    z-index: 10; 
+    box-shadow: 2px 8px 12px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 8px 12px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 8px 12px 1px rgba(0,0,0,0.75);
+}
+
+.header-principal-left {
+    text-align: center;
+    margin-left: 5px;
+}
+
+.header-principal-right {
+    display: flex;
+    align-items: flex-end;
+    padding-right: 114px;
+    background: -webkit-linear-gradient(var(--amarillo),var(--naranja));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 200ms;
+}
+
+.header-principal-right:hover{
+      text-shadow: var(--amarillo) 1px 0 20px;}
+
+
+.header-logo{
+    padding-top: 10px;
+    max-width: 250px; 
+    /* max-width: 20vw;  ESTE ACHICA / AGRANDA EL LOGO*/
+}
+
+.album-icono-mas {
+    display: flex;
+    align-items: flex-end;
+    padding-right: 4px;
+    background: -webkit-linear-gradient(var(--amarillo),var(--naranja));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 200ms;
+}
+
+.album-icono-mas:hover{
+      text-shadow: var(--amarillo) 1px 0 20px;}
+
 
 body {
     background-color: #FFADAD;
@@ -40,7 +109,7 @@ body {
 
 @media (min-width: 361px){
     .happy-box {
-        width: 90%;
+        width: 100%;
         background-color: #FFADAD;
         /* margin: auto; */
         padding: 3rem;
