@@ -15,25 +15,7 @@
 
 <body>
     <header>
-        <div class="header-principal">
-            <div class="header-principal-left">
-                <img class="header-logo" src="images/logo_bits_and_sound_linear.png" alt="">
-            </div>
-            <div class="header-principal-right">
-                <div class="icono-luz">
-                    <h1><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>&nbsp;&nbsp;</h1>
-                </div>
-                <div><a href="#" class="myButton">Mi cuenta</a></div>
-            </div>
-            <div class="header-principal-right-movil">
-                <div class="icono-luz">
-                    <h2><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>&nbsp;&nbsp;</h2>
-                </div>
-                <div class="icono-luz">
-                    <h2><a href="#"><i class="fa-solid fa-bars"></i></a></h2>
-                </div>
-            </div>
-        </div>
+        <%- include('header') %> 
     </header>
 
     <main class="login-main">
@@ -41,17 +23,20 @@
             <div class="login-cuadro-cuadro">
                 <form action="/" class="login-form">
                     <div class="login-form-field">
-                        <label>Nombre de usuario:</label>
-                        <input type="text" name="user-name" placeholder="User123">
+                        <label for="user">Nombre de usuario:</label>
+                        <input type="text" id="user" name="user-name" placeholder="User123">
                     </div>
                     <div class="login-form-field">
-                        <label>Contraseña:</label>
-                        <input type="password" name="password">
+                        <label for="pass">Contraseña:</label>
+                        <input type="password" id="pass" name="password">
                     </div>
                     <div class="login-form-button">
-                        <!-- <input class="login-submit-button" type="submit" value="Enviar" action="/home.html"> -->
                         <input class="myButton" type="submit" value="Enviar" action="/home.html">
                     </div>
+                    &nbsp;<br>
+                    <h5><a class="login-form-field" href="#">Olvidé mi usuario</a></h5>
+                    &nbsp;<br>
+                    <h5><a class="login-form-field" href="#">Olvide mi contraseña</a></h5>
                 </form>
             </div>
         </div>
