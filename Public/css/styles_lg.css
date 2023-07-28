@@ -283,17 +283,4 @@ justify-content: space-evenly;
     }
 
     
-    .footer-fixed {
-   
-        position: absolute;
-        bottom: 0;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        margin-bottom: 0px;
-        padding: 20px;
-        width: 100%;
-      
-    }
     
