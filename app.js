@@ -13,7 +13,7 @@ app.set('views',[
     path.join(__dirname,'views/main'),
     path.join(__dirname,'views/albums'),
     path.join(__dirname,'views/pistas'),
-    path.join(__dirname,'views/partials')
+    path.join(__dirname,'views/partials'),
 ]);
 
 /* CARGA DE LOS ROUTERS */

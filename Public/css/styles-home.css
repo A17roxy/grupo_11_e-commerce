@@ -257,7 +257,7 @@ body {
 .myButton {
 	background:linear-gradient(to bottom, #eeb86b 5%, #e26f3a 100%);
 	background-color:#eeb86b;
-	border-radius:5px;
+	border-radius:4px;
 	display:inline-block;
 	cursor:pointer;
 	color:#310b0b;
