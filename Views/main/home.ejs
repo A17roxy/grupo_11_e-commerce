@@ -1,41 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles_lg.css">
+    <link rel="stylesheet" href="/css/styles-albums.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"/>
-     <title>Bits & Sound</title>
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Iniciar sesión</title>
 </head>
 
 <body>
     <header>
         <div class="header-principal">
             <div class="header-principal-left">
-            <img class="header-logo" src="images/logo_bits_and_sound.png" alt="">
+                <img class="header-logo" src="images/logo_bits_and_sound_linear.png" alt="">
             </div>
-            <!-- <div class="header-principal-right"> -->
-                <div class="album-icono-mas">
-                <h1><a href="#"><i class="fa-solid fa-cart-plus"></i></a></h1>
+            <div class="header-principal-right">
+                <div class="icono-luz">
+                    <h1><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>&nbsp;&nbsp;</h1>
+                </div>
+                <div><a href="#" class="myButton">Mi cuenta</a></div>
+            </div>
+            <div class="header-principal-right-movil">
+                <div class="icono-luz">
+                    <h2><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>&nbsp;&nbsp;</h2>
+                </div>
+                <div class="icono-luz">
+                    <h2><a href="#"><i class="fa-solid fa-bars"></i></a></h2>
+                </div>
             </div>
         </div>
     </header>
-    <main>
-        <section class="content">
-            <div class="happy-box">
-            <div class="capsule"><a href="/Views/music-tracks.html"><img class="home-imgs"
-                        src="/images/asset_img_tracks.jpg" width="50vw" alt="Mix"></div></a>
-            <div class="capsule"><a href="/Views/music_products.html"><img class="home-imgs"
-                        src="/images/asset_img_mprod.jpg" width="50vw" alt="Music Products"></a></div>
-                    </div>
+
+
+    <section class="albums-main-container">
+        <article class="album">
+            <div class="album-cover">
+                <img class="album-imagen" src="/images/asset_img_tracks.jpg" alt="">
+            </div>
+<!--             <div class="album-footer">
+                <div class="album-titulo">
+                    <h4>Funkadelic</h4>
+                    <h4>Maggot Brain</h4>
+                    <h5>1971</h5>
+                </div>
+                <div class="album-icono-mas">
+                    <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                </div>
+            </div> -->
+        </article>
+        <article class="album">
+            <div class="album-cover">
+                <img class="album-imagen" src="/images/asset_img_mprod.jpg" alt="">
+            </div>
+<!--             <div class="album-footer">
+                <div class="album-titulo">
+                    <h4>Bruce Springsteen</h4>
+                    <h4>Born in the U.S.A.</h4>
+                    <h5>1984</h5>
+                </div>
+                <div class="album-icono-mas">
+                    <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                </div>
+            </div> -->
+        </article>
         </section>
-    </main>
-    <footer></footer>
+
+
+    <footer class="footer-fixed">
+        <div class="footer-principal-movil">
+            <div class="footer-principal-left">
+                <div class="album-icono-mas"><a href="#">
+                        <h2><i class="fa-brands fa-square-instagram"></i>&nbsp;&nbsp;</h2>
+                    </a></div>
+                <div class="album-icono-mas"><a href="#">
+                        <h2><i class="fa-brands fa-square-facebook"></i>&nbsp;&nbsp;</h2>
+                    </a></div>
+                <div class="album-icono-mas"><a href="#">
+                        <h2><i class="fa-brands fa-square-twitter"></i>&nbsp;&nbsp;</h2>
+                    </a></div>
+                <div class="album-icono-mas">
+                    <a href="#">
+                        <h2><i class="fa-solid fa-square-envelope"></i>&nbsp;&nbsp;</h2>
+                    </a>
+                </div>
+                <div class="album-icono-mas">
+                    <a href="#">
+                        <h2><i class="fa-solid fa-square-phone"></i></h2>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-principal-right">
+            
+                <div>
+                    <h4>&#169; 2023 B&S</h4>
+                </div>
+            </div>
+        </div>
+        <div class="footer-principal">
+            <div class="footer-principal-left">
+                <div>
+                    <h3>&#169; 2023 BITS & SOUND &nbsp;&nbsp;&nbsp;</h3>
+                </div>
+                <div class="album-icono-mas"><a href="#">
+                        <h1><i class="fa-brands fa-square-instagram"></i>&nbsp;&nbsp;</h1>
+                    </a></div>
+                <div class="album-icono-mas"><a href="#">
+                        <h1><i class="fa-brands fa-square-facebook"></i>&nbsp;&nbsp;</h1>
+                    </a></div>
+                <div class="album-icono-mas"><a href="#">
+                        <h1><i class="fa-brands fa-square-twitter"></i>&nbsp;&nbsp;</h1>
+                    </a></div>
+            </div>
+            <div class="footer-principal-right">
+                <div class="album-icono-mas"><a href="#">
+                        <h1><i class="fa-solid fa-square-envelope"></i>&nbsp;&nbsp;</h1>
+                    </a></div>
+                <div class="album-icono-mas"><a href="#">
+                        <h1><i class="fa-solid fa-square-phone"></i></h1>
+                    </a></div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
