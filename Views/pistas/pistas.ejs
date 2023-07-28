@@ -14,451 +14,469 @@
 
 <body>
     <header>
-        <header>
-            <div class="header-principal">
-                <div class="header-principal-left">
-                    <img class="header-logo" src="images/logo_bits_and_sound_linear.png" alt="">
-                </div>
-                <div class="header-principal-right">
-                    <div class="icono-luz">
-                        <h1><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>&nbsp;&nbsp;</h1>
+        <%- include('header') %> 
+    </header>
+    <main>
+        <section class="pistas-main-container">
+            <article class="pista">
+                <div class="pista-pista">
+                    <div class="pista-cover">
+                        <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
                     </div>
-                    <div><a href="#" class="myButton">Mi cuenta</a></div>
-                </div>
-                <div class="header-principal-right-movil">
-                    <div class="icono-luz">
-                        <h2><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>&nbsp;&nbsp;</h2>
+                    <div class="pista-artista-titulo">
+                        <h3>Nombre del Artista - información adicional</h3>
+                        <h2>Titulo del trabajo y mensaje del artista</h2>
                     </div>
-                    <div class="icono-luz">
-                        <h2><a href="#"><i class="fa-solid fa-bars"></i></a></h2>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <main>
-            <section class="pistas-main-container">
-                <article class="pista">
-                    <div class="pista-pista">
-                        <div class="pista-cover">
-                            <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
+                    <div class="pista-controles">
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1>
+                            </a>
                         </div>
-                        <div class="pista-artista-titulo">
-                            <h3>Nombre del Artista - información adicional</h3>
-                            <h2>Titulo del trabajo y mensaje del artista</h2>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1>
+                            </a>
                         </div>
-                        <div class="pista-controles">
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-stop"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-info"></i></i></h1></a>
-                            </div>
-                            
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-stop"></i>&nbsp;&nbsp;</h1>
+                            </a>
                         </div>
-                        <div class="pista-comprar">
-                            <div class="pista-comprar-precio">
-                                <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
-                            </div>
-                            <div class="pista-comprar-icono-mas">
-                                <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
-                            </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-info"></i></i></h1>
+                            </a>
                         </div>
-                    </div>
-                </article>
-                <article class="pista">
-                    <div class="pista-pista">
-                        <div class="pista-cover">
-                            <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
-                        </div>
-                        <div class="pista-artista-titulo">
-                            <h3>Nombre del Artista</h3>
-                            <h3>Titulo del trabajo</h3>
-                        </div>
-                        <div class="pista-controles">
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-stop"></i></h1></a>
-                            </div>
-                        </div>
-                        <div class="pista-comprar">
-                            <div class="pista-comprar-precio">
-                                <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
-                            </div>
-                            <div class="pista-comprar-icono-mas">
-                                <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="pista">
-                    <div class="pista-pista">
-                        <div class="pista-cover">
-                            <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
-                        </div>
-                        <div class="pista-artista-titulo">
-                            <h3>Nombre del Artista</h3>
-                            <h3>Titulo del trabajo</h3>
-                        </div>
-                        <div class="pista-controles">
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-stop"></i></h1></a>
-                            </div>
-                        </div>
-                        <div class="pista-comprar">
-                            <div class="pista-comprar-precio">
-                                <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
-                            </div>
-                            <div class="pista-comprar-icono-mas">
-                                <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="pista">
-                    <div class="pista-pista">
-                        <div class="pista-cover">
-                            <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
-                        </div>
-                        <div class="pista-artista-titulo">
-                            <h3>Nombre del Artista</h3>
-                            <h3>Titulo del trabajo</h3>
-                        </div>
-                        <div class="pista-controles">
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-stop"></i></h1></a>
-                            </div>
-                        </div>
-                        <div class="pista-comprar">
-                            <div class="pista-comprar-precio">
-                                <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
-                            </div>
-                            <div class="pista-comprar-icono-mas">
-                                <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="pista">
-                    <div class="pista-pista">
-                        <div class="pista-cover">
-                            <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
-                        </div>
-                        <div class="pista-artista-titulo">
-                            <h3>Nombre del Artista</h3>
-                            <h3>Titulo del trabajo</h3>
-                        </div>
-                        <div class="pista-controles">
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-stop"></i></h1></a>
-                            </div>
-                        </div>
-                        <div class="pista-comprar">
-                            <div class="pista-comprar-precio">
-                                <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
-                            </div>
-                            <div class="pista-comprar-icono-mas">
-                                <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="pista">
-                    <div class="pista-pista">
-                        <div class="pista-cover">
-                            <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
-                        </div>
-                        <div class="pista-artista-titulo">
-                            <h3>Nombre del Artista</h3>
-                            <h3>Titulo del trabajo</h3>
-                        </div>
-                        <div class="pista-controles">
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-stop"></i></h1></a>
-                            </div>
-                        </div>
-                        <div class="pista-comprar">
-                            <div class="pista-comprar-precio">
-                                <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
-                            </div>
-                            <div class="pista-comprar-icono-mas">
-                                <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="pista">
-                    <div class="pista-pista">
-                        <div class="pista-cover">
-                            <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
-                        </div>
-                        <div class="pista-artista-titulo">
-                            <h3>Nombre del Artista</h3>
-                            <h3>Titulo del trabajo</h3>
-                        </div>
-                        <div class="pista-controles">
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-stop"></i></h1></a>
-                            </div>
-                        </div>
-                        <div class="pista-comprar">
-                            <div class="pista-comprar-precio">
-                                <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
-                            </div>
-                            <div class="pista-comprar-icono-mas">
-                                <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="pista">
-                    <div class="pista-pista">
-                        <div class="pista-cover">
-                            <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
-                        </div>
-                        <div class="pista-artista-titulo">
-                            <h3>Nombre del Artista</h3>
-                            <h3>Titulo del trabajo</h3>
-                        </div>
-                        <div class="pista-controles">
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-stop"></i></h1></a>
-                            </div>
-                        </div>
-                        <div class="pista-comprar">
-                            <div class="pista-comprar-precio">
-                                <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
-                            </div>
-                            <div class="pista-comprar-icono-mas">
-                                <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="pista">
-                    <div class="pista-pista">
-                        <div class="pista-cover">
-                            <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
-                        </div>
-                        <div class="pista-artista-titulo">
-                            <h3>Nombre del Artista</h3>
-                            <h3>Titulo del trabajo</h3>
-                        </div>
-                        <div class="pista-controles">
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-stop"></i></h1></a>
-                            </div>
-                        </div>
-                        <div class="pista-comprar">
-                            <div class="pista-comprar-precio">
-                                <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
-                            </div>
-                            <div class="pista-comprar-icono-mas">
-                                <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="pista">
-                    <div class="pista-pista">
-                        <div class="pista-cover">
-                            <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
-                        </div>
-                        <div class="pista-artista-titulo">
-                            <h3>Nombre del Artista</h3>
-                            <h3>Titulo del trabajo</h3>
-                        </div>
-                        <div class="pista-controles">
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-stop"></i></h1></a>
-                            </div>
-                        </div>
-                        <div class="pista-comprar">
-                            <div class="pista-comprar-precio">
-                                <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
-                            </div>
-                            <div class="pista-comprar-icono-mas">
-                                <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="pista">
-                    <div class="pista-pista">
-                        <div class="pista-cover">
-                            <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
-                        </div>
-                        <div class="pista-artista-titulo">
-                            <h3>Nombre del Artista</h3>
-                            <h3>Titulo del trabajo</h3>
-                        </div>
-                        <div class="pista-controles">
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-stop"></i></h1></a>
-                            </div>
-                        </div>
-                        <div class="pista-comprar">
-                            <div class="pista-comprar-precio">
-                                <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
-                            </div>
-                            <div class="pista-comprar-icono-mas">
-                                <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="pista">
-                    <div class="pista-pista">
-                        <div class="pista-cover">
-                            <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
-                        </div>
-                        <div class="pista-artista-titulo">
-                            <h3>Nombre del Artista</h3>
-                            <h3>Titulo del trabajo</h3>
-                        </div>
-                        <div class="pista-controles">
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1></a>
-                            </div>
-                            <div class="icono-luz"><a href="#">
-                                <h1><i class="fa-solid fa-circle-stop"></i></h1></a>
-                            </div>
-                        </div>
-                        <div class="pista-comprar">
-                            <div class="pista-comprar-precio">
-                                <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
-                            </div>
-                            <div class="pista-comprar-icono-mas">
-                                <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
-                            </div>
-                        </div>
-                    </div>
-                </article>
 
-            </section>
-        </main>
-        <footer class="footer-main">
-            <div class="footer-principal-movil">
-                <div class="footer-principal-left">
-                    <div class="icono-luz"><a href="#">
-                            <h2><i class="fa-brands fa-square-instagram"></i>&nbsp;&nbsp;</h2>
-                        </a></div>
-                    <div class="icono-luz"><a href="#">
-                            <h2><i class="fa-brands fa-square-facebook"></i>&nbsp;&nbsp;</h2>
-                        </a></div>
-                    <div class="icono-luz"><a href="#">
-                            <h2><i class="fa-brands fa-square-twitter"></i>&nbsp;&nbsp;</h2>
-                        </a></div>
-                    <div class="icono-luz">
-                        <a href="#">
-                            <h2><i class="fa-solid fa-square-envelope"></i>&nbsp;&nbsp;</h2>
-                        </a>
                     </div>
-                    <div class="icono-luz">
-                        <a href="#">
-                            <h2><i class="fa-solid fa-square-phone"></i></h2>
-                        </a>
+                    <div class="pista-comprar">
+                        <div class="pista-comprar-precio">
+                            <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
+                        </div>
+                        <div class="pista-comprar-icono-mas">
+                            <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                        </div>
                     </div>
                 </div>
-                <div class="footer-principal-right">
+            </article>
+            <article class="pista">
+                <div class="pista-pista">
+                    <div class="pista-cover">
+                        <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
+                    </div>
+                    <div class="pista-artista-titulo">
+                        <h3>Nombre del Artista</h3>
+                        <h3>Titulo del trabajo</h3>
+                    </div>
+                    <div class="pista-controles">
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-stop"></i></h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pista-comprar">
+                        <div class="pista-comprar-precio">
+                            <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
+                        </div>
+                        <div class="pista-comprar-icono-mas">
+                            <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="pista">
+                <div class="pista-pista">
+                    <div class="pista-cover">
+                        <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
+                    </div>
+                    <div class="pista-artista-titulo">
+                        <h3>Nombre del Artista</h3>
+                        <h3>Titulo del trabajo</h3>
+                    </div>
+                    <div class="pista-controles">
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-stop"></i></h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pista-comprar">
+                        <div class="pista-comprar-precio">
+                            <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
+                        </div>
+                        <div class="pista-comprar-icono-mas">
+                            <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="pista">
+                <div class="pista-pista">
+                    <div class="pista-cover">
+                        <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
+                    </div>
+                    <div class="pista-artista-titulo">
+                        <h3>Nombre del Artista</h3>
+                        <h3>Titulo del trabajo</h3>
+                    </div>
+                    <div class="pista-controles">
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-stop"></i></h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pista-comprar">
+                        <div class="pista-comprar-precio">
+                            <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
+                        </div>
+                        <div class="pista-comprar-icono-mas">
+                            <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="pista">
+                <div class="pista-pista">
+                    <div class="pista-cover">
+                        <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
+                    </div>
+                    <div class="pista-artista-titulo">
+                        <h3>Nombre del Artista</h3>
+                        <h3>Titulo del trabajo</h3>
+                    </div>
+                    <div class="pista-controles">
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-stop"></i></h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pista-comprar">
+                        <div class="pista-comprar-precio">
+                            <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
+                        </div>
+                        <div class="pista-comprar-icono-mas">
+                            <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="pista">
+                <div class="pista-pista">
+                    <div class="pista-cover">
+                        <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
+                    </div>
+                    <div class="pista-artista-titulo">
+                        <h3>Nombre del Artista</h3>
+                        <h3>Titulo del trabajo</h3>
+                    </div>
+                    <div class="pista-controles">
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-stop"></i></h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pista-comprar">
+                        <div class="pista-comprar-precio">
+                            <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
+                        </div>
+                        <div class="pista-comprar-icono-mas">
+                            <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="pista">
+                <div class="pista-pista">
+                    <div class="pista-cover">
+                        <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
+                    </div>
+                    <div class="pista-artista-titulo">
+                        <h3>Nombre del Artista</h3>
+                        <h3>Titulo del trabajo</h3>
+                    </div>
+                    <div class="pista-controles">
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-stop"></i></h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pista-comprar">
+                        <div class="pista-comprar-precio">
+                            <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
+                        </div>
+                        <div class="pista-comprar-icono-mas">
+                            <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="pista">
+                <div class="pista-pista">
+                    <div class="pista-cover">
+                        <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
+                    </div>
+                    <div class="pista-artista-titulo">
+                        <h3>Nombre del Artista</h3>
+                        <h3>Titulo del trabajo</h3>
+                    </div>
+                    <div class="pista-controles">
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-stop"></i></h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pista-comprar">
+                        <div class="pista-comprar-precio">
+                            <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
+                        </div>
+                        <div class="pista-comprar-icono-mas">
+                            <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="pista">
+                <div class="pista-pista">
+                    <div class="pista-cover">
+                        <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
+                    </div>
+                    <div class="pista-artista-titulo">
+                        <h3>Nombre del Artista</h3>
+                        <h3>Titulo del trabajo</h3>
+                    </div>
+                    <div class="pista-controles">
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-stop"></i></h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pista-comprar">
+                        <div class="pista-comprar-precio">
+                            <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
+                        </div>
+                        <div class="pista-comprar-icono-mas">
+                            <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="pista">
+                <div class="pista-pista">
+                    <div class="pista-cover">
+                        <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
+                    </div>
+                    <div class="pista-artista-titulo">
+                        <h3>Nombre del Artista</h3>
+                        <h3>Titulo del trabajo</h3>
+                    </div>
+                    <div class="pista-controles">
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-stop"></i></h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pista-comprar">
+                        <div class="pista-comprar-precio">
+                            <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
+                        </div>
+                        <div class="pista-comprar-icono-mas">
+                            <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="pista">
+                <div class="pista-pista">
+                    <div class="pista-cover">
+                        <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
+                    </div>
+                    <div class="pista-artista-titulo">
+                        <h3>Nombre del Artista</h3>
+                        <h3>Titulo del trabajo</h3>
+                    </div>
+                    <div class="pista-controles">
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-stop"></i></h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pista-comprar">
+                        <div class="pista-comprar-precio">
+                            <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
+                        </div>
+                        <div class="pista-comprar-icono-mas">
+                            <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="pista">
+                <div class="pista-pista">
+                    <div class="pista-cover">
+                        <img class="pista-imagen" src="images/albums/Funkadelic-Maggot_Brain-1971.webp" alt="">
+                    </div>
+                    <div class="pista-artista-titulo">
+                        <h3>Nombre del Artista</h3>
+                        <h3>Titulo del trabajo</h3>
+                    </div>
+                    <div class="pista-controles">
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-pause"></i>&nbsp;&nbsp;</h1>
+                            </a>
+                        </div>
+                        <div class="icono-luz"><a href="#">
+                                <h1><i class="fa-solid fa-circle-stop"></i></h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pista-comprar">
+                        <div class="pista-comprar-precio">
+                            <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
+                        </div>
+                        <div class="pista-comprar-icono-mas">
+                            <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
 
-                    <div>
-                        <h4>&#169; 2023 B&S</h4>
-                    </div>
+        </section>
+    </main>
+    <footer class="footer-main">
+        <div class="footer-principal-movil">
+            <div class="footer-principal-left">
+                <div class="icono-luz"><a href="#">
+                        <h2><i class="fa-brands fa-square-instagram"></i>&nbsp;&nbsp;</h2>
+                    </a></div>
+                <div class="icono-luz"><a href="#">
+                        <h2><i class="fa-brands fa-square-facebook"></i>&nbsp;&nbsp;</h2>
+                    </a></div>
+                <div class="icono-luz"><a href="#">
+                        <h2><i class="fa-brands fa-square-twitter"></i>&nbsp;&nbsp;</h2>
+                    </a></div>
+                <div class="icono-luz">
+                    <a href="#">
+                        <h2><i class="fa-solid fa-square-envelope"></i>&nbsp;&nbsp;</h2>
+                    </a>
+                </div>
+                <div class="icono-luz">
+                    <a href="#">
+                        <h2><i class="fa-solid fa-square-phone"></i></h2>
+                    </a>
                 </div>
             </div>
-            <div class="footer-principal">
-                <div class="footer-principal-left">
-                    <div>
-                        <h3>&#169; 2023 BITS & SOUND &nbsp;&nbsp;&nbsp;</h3>
-                    </div>
-                    <div class="icono-luz"><a href="#">
-                            <h1><i class="fa-brands fa-square-instagram"></i>&nbsp;&nbsp;</h1>
-                        </a></div>
-                    <div class="icono-luz"><a href="#">
-                            <h1><i class="fa-brands fa-square-facebook"></i>&nbsp;&nbsp;</h1>
-                        </a></div>
-                    <div class="icono-luz"><a href="#">
-                            <h1><i class="fa-brands fa-square-twitter"></i>&nbsp;&nbsp;</h1>
-                        </a></div>
-                </div>
-                <div class="footer-principal-right">
-                    <div class="icono-luz"><a href="#">
-                            <h1><i class="fa-solid fa-square-envelope"></i>&nbsp;&nbsp;</h1>
-                        </a></div>
-                    <div class="icono-luz"><a href="#">
-                            <h1><i class="fa-solid fa-square-phone"></i></h1>
-                        </a></div>
+            <div class="footer-principal-right">
+
+                <div>
+                    <h4>&#169; 2023 B&S</h4>
                 </div>
             </div>
-        </footer>
+        </div>
+        <div class="footer-principal">
+            <div class="footer-principal-left">
+                <div>
+                    <h3>&#169; 2023 BITS & SOUND &nbsp;&nbsp;&nbsp;</h3>
+                </div>
+                <div class="icono-luz"><a href="#">
+                        <h1><i class="fa-brands fa-square-instagram"></i>&nbsp;&nbsp;</h1>
+                    </a></div>
+                <div class="icono-luz"><a href="#">
+                        <h1><i class="fa-brands fa-square-facebook"></i>&nbsp;&nbsp;</h1>
+                    </a></div>
+                <div class="icono-luz"><a href="#">
+                        <h1><i class="fa-brands fa-square-twitter"></i>&nbsp;&nbsp;</h1>
+                    </a></div>
+            </div>
+            <div class="footer-principal-right">
+                <div class="icono-luz"><a href="#">
+                        <h1><i class="fa-solid fa-square-envelope"></i>&nbsp;&nbsp;</h1>
+                    </a></div>
+                <div class="icono-luz"><a href="#">
+                        <h1><i class="fa-solid fa-square-phone"></i></h1>
+                    </a></div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
