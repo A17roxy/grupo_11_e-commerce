@@ -1,105 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="stylesheet" href="/css/styles-login-register.css">
-        <title>Registro</title>
-    </head>
 
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles_lg.css">
+    <link rel="stylesheet" href="/css/styles-albums.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Registro</title>
+</head>
 
 
 <body>
     <header>
-        <div class="top-header">
-            <img class="logo" src=" ">
-            <form class="search-section">
-                <input class="search-bar" type="text" placeholder="Buscar pistas, tracks">
-                <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-            <div class="copy-header"> <i class="fa-solid fa-hand-holding-dollar"></i> Comprá con Tarjeta de Credito</div>
-        </div>
-
-        <div class="burger-menu">
-            <button class="hamburguer-button"><i class="fas fa-bars"></i></button>
-        </div>
-
-        <nav class="main-navbar">
-            <ul class="right-navbar">
-                <li><a href="/register">Creá tu cuenta <i class="fa-regular fa-id-card"> </i></a></li>
-                <li><a href="/login">Ingresá <i class="fa-solid fa-right-to-bracket"></i></a></li>
-                <li><a href="#">Mi Carrito <i class="fa-solid fa-basket-shopping"></i></a></li>
-            </ul>
-
-        </nav>
-        
+        <%- include('header') %>
     </header>
 
-    <main class="register">
-        <form action="/" class="form-register">
-            <div class="control-register-form">
-                <label class="title-register">Nombre y apellido</label>
-                <input class="subcontrol-register-form" type="text" name="name-lastname" placeholder="Pepa Pig" required>
-            </div>
-            <div class="control-register-form">
-                <label class="title-register">Nombre de usuari@</label>
-                <input class="subcontrol-register-form" type="text" name="user-name" placeholder="pepa.Pig" required>
-            </div>
-            <div class="control-register-form">
-                <label class="title-register">E-mail</label>
-                <input class="subcontrol-register-form" type="email" name="email" placeholder="pepapig@mail.com" required>
-            </div>
-            <div class="control-register-form">
-                <label class="title-register">Fecha de nacimiento</label>
-                <input class="subcontrol-register-form" type="date" name="birth" required>
-            </div>
-            <div class="control-register-form ">
-                <label class="title-register">Perfil de usuari@</label>
-                <div class="user-category">
-                    <label><input class="subcontrol-register-form" type="radio" name="profile">Comprador</label>
-                    <label><input class="subcontrol-register-form" type="radio" name="profile">Vendedor</label>
-                    <label><input class="subcontrol-register-form" type="radio" name="profile">Ambos</label>
-                </div>
-            </div>
-            <div class="control-register-form">
-                <label class="title-register">Categorías de interés</label>
-                <div class="checkbox-category">
+    <main class="login-main">
+        <div class="login-cuadro">
+            <div class="login-cuadro-cuadro">
+                <form action="/" class="login-form">
+                    <div class="control-register-form">
+                        <label class="title-register">Nombre y apellido</label>
+                        <input class="subcontrol-register-form" type="text" name="name-lastname" placeholder="Pepa Pig"
+                            required>
+                    </div>
+                    <div class="control-register-form">
+                        <label class="title-register">Nombre de usuari@</label>
+                        <input class="subcontrol-register-form" type="text" name="user-name" placeholder="pepa.Pig"
+                            required>
+                    </div>
+                    <div class="control-register-form">
+                        <label class="title-register">E-mail</label>
+                        <input class="subcontrol-register-form" type="email" name="email" placeholder="pepapig@mail.com"
+                            required>
+                    </div>
+                    <div class="control-register-form">
+                        <label class="title-register">Fecha de nacimiento</label>
+                        <input class="subcontrol-register-form" type="date" name="birth" required>
+                    </div>
+                    <div class="control-register-form ">
+                        <label class="title-register">Perfil de usuari@</label>
+                        <div class="user-category">
+                            <label><input class="subcontrol-register-form" type="radio" name="profile">Comprador</label>
+                            <label><input class="subcontrol-register-form" type="radio" name="profile">Vendedor</label>
+                            <label><input class="subcontrol-register-form" type="radio" name="profile">Ambos</label>
+                        </div>
+                    </div>
+                    <div class="control-register-form">
+                        <label class="title-register">Categorías de interés</label>
+                        <div class="checkbox-category">
 
-                    <label><input class="subcontrol-register-form check" type="checkbox" name="user-interest">Electro</label>
-                    <label><input class="subcontrol-register-form check" type="checkbox" name="user-interest">jazz</label>
-                    <label><input class="subcontrol-register-form check" type="checkbox" name="user-interest">hip-hop</label>
-                    <label><input class="subcontrol-register-form check" type="checkbox"
-                            name="user-interest">blues</label>
-                    <label><input class="subcontrol-register-form check" type="checkbox" name="user-interest">salsa</label>
-                </div>
+                            <label><input class="subcontrol-register-form check" type="checkbox"
+                                    name="user-interest">Electro</label>
+                            <label><input class="subcontrol-register-form check" type="checkbox"
+                                    name="user-interest">jazz</label>
+                            <label><input class="subcontrol-register-form check" type="checkbox"
+                                    name="user-interest">hip-hop</label>
+                            <label><input class="subcontrol-register-form check" type="checkbox"
+                                    name="user-interest">blues</label>
+                            <label><input class="subcontrol-register-form check" type="checkbox"
+                                    name="user-interest">salsa</label>
+                        </div>
+                    </div>
+                    <div class="control-register-form">
+                        <label class="title-register">Contraseña</label>
+                        <input class="subcontrol-register-form" type="password" name="password">
+                        <br>
+                        <label class="title-register">Confirmar contraseña</label>
+                        <input class="subcontrol-register-form" type="password" name="confirm-password">
+                    </div>
+                    <div class="button-send-reset-register">
+                        <input class="reset-button" type="reset" value="Borrar">
+                        <input class="submit-button" type="submit" value="Enviar" action="/home.html">
+                    </div>
+                </form>
             </div>
-            <div class="control-register-form">
-                <label class="title-register">Contraseña</label>
-                <input class="subcontrol-register-form" type="password" name="password">
-                <br>
-                <label class="title-register">Confirmar contraseña</label>
-                <input class="subcontrol-register-form" type="password" name="confirm-password">
-            </div>
-            <div class="button-send-reset-register">
-                <input class="reset-button" type="reset" value="Borrar">
-                <input class="submit-button" type="submit" value="Enviar" action="/home.html">
-            </div>
-            </div>
+        </div>
 
-        </form>
     </main>
 
     <footer>
-        <section class="footer-content">
-            <div class="footer-wrap">
-                <i class="fa-solid fa-credit-card footer-icon"></i>
-                <p class="footer-title"><strong>Pagá con tarjeta o en efectivo</strong></p>
-                <p class="footer-description">!LLeva la musica a tu manera y crea tu propia musica!</p>
-            </div>
-          
-
+        <%- include('footer') %>
     </footer>
 </body>
 
