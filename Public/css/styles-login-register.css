@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
+
+ 
  .form-register {
     padding: 20px;
     width: 100%
@@ -53,6 +56,16 @@ justify-content: space-evenly;
 }
 
 /*LOGIN*/
+
+/* REGISTER */
+
+.register-main{
+    padding-top: 3svh; 
+    display: flex;
+}
+
+/* FIN REGISTER */
+
 .form-login {
     padding: 20px;
     width: 100%;
@@ -168,3 +181,94 @@ justify-content: space-evenly;
         width: 80%;
         max-width: 600px;
     }
+
+    /**/
+
+    .reg-frame{
+        width: 80%;
+        max-width: 400px;
+        height: 800px;
+        border: solid 1px black;
+        border-radius: 4px;
+        background-image: linear-gradient(var(--naranja), var(--negro));
+        font-size: 1rem;
+        padding: 2px;
+        margin: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(var(--naranja), var(--negro));
+        -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.84);
+        -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.84);
+        box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.84);
+        transition: all 300ms;
+
+    }
+    
+    .reg-frame-frame{
+        width: 99%;
+        height: 99%;
+        padding: 5px 10px 5px 10px;
+        background-color: var(--negro);
+        color: var(--amarillo);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: 3px;
+    }
+
+    .reg-form {
+        color: var(--amarillo);
+        padding: 10px;
+        width: 100%;
+        
+    }
+    
+    .reg-form-field{
+        padding-top: 20px; 
+        width: 100%;
+    }
+    
+    .reg-reset-button,
+    .reg-submit-button{
+        background:linear-gradient(to bottom, #eeb86b 5%, #e26f3a 100%);
+        background-color:#eeb86b;
+        border-radius:5px;
+        display:inline-block;
+        cursor:pointer;
+        color:#310b0b;
+        /* font-family:Arial; */
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 14px;
+        text-decoration:none;
+    }
+    .subcontrol-register-form {
+        color: var(--amarillo);
+        background-color: var(--negro);
+        width: 80%;
+    }
+
+
+.reg-form-field input{
+    border: solid 1px var(--amarillo);
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    margin-top: 5px;
+    font-size: 1rem;
+    background-color: var(--negro);
+    color: var(--amarillo);
+    width: 100%;
+}
+
+.reg-form-field label {
+    width: 100%;
+}
+
+.reg-form-field input:focus {
+/*     outline:none; */
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(255, 232, 138, 1);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(255, 232, 138, 1);
+    box-shadow: 0px 0px 10px 1px rgba(255, 232, 138, 1);
+}

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles_lg.css">
-    <link rel="stylesheet" href="/css/styles-albums.css">
+    <link rel="stylesheet" href="/css/styles-home.css">
+    <link rel="stylesheet" href="/css/styles-login-register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,30 +19,30 @@
         <%- include('header') %>
     </header>
 
-    <main class="login-main">
-        <div class="login-cuadro">
-            <div class="login-cuadro-cuadro">
-                <form action="/" class="login-form">
-                    <div class="control-register-form">
+    <main class="register-main">
+        <div class="reg-frame">
+            <div class="reg-frame-frame">
+                <form action="/" class="reg-form">
+                    <div class="reg-form-field">
                         <label class="title-register">Nombre y apellido</label>
-                        <input class="subcontrol-register-form" type="text" name="name-lastname" placeholder="Pepa Pig"
+                        <input class="subcontrol-register-form" type="text" name="name-lastname" placeholder="Nombre y Apellido"
                             required>
                     </div>
-                    <div class="control-register-form">
+                    <div class="reg-form-field">
                         <label class="title-register">Nombre de usuari@</label>
-                        <input class="subcontrol-register-form" type="text" name="user-name" placeholder="pepa.Pig"
+                        <input class="subcontrol-register-form" type="text" name="user-name" placeholder="Nombre de Usuario"
                             required>
                     </div>
-                    <div class="control-register-form">
+                    <div class="reg-form-field">
                         <label class="title-register">E-mail</label>
-                        <input class="subcontrol-register-form" type="email" name="email" placeholder="pepapig@mail.com"
+                        <input class="subcontrol-register-form" type="email" name="email" placeholder="direccion@email.com"
                             required>
                     </div>
-                    <div class="control-register-form">
+                    <div class="reg-form-field">
                         <label class="title-register">Fecha de nacimiento</label>
                         <input class="subcontrol-register-form" type="date" name="birth" required>
                     </div>
-                    <div class="control-register-form ">
+                    <div class="reg-form-field">
                         <label class="title-register">Perfil de usuari@</label>
                         <div class="user-category">
                             <label><input class="subcontrol-register-form" type="radio" name="profile">Comprador</label>
@@ -50,7 +50,7 @@
                             <label><input class="subcontrol-register-form" type="radio" name="profile">Ambos</label>
                         </div>
                     </div>
-                    <div class="control-register-form">
+                    <div class="reg-form-field">
                         <label class="title-register">Categorías de interés</label>
                         <div class="checkbox-category">
 
@@ -66,7 +66,7 @@
                                     name="user-interest">salsa</label>
                         </div>
                     </div>
-                    <div class="control-register-form">
+                    <div class="reg-form-field">
                         <label class="title-register">Contraseña</label>
                         <input class="subcontrol-register-form" type="password" name="password">
                         <br>
@@ -74,8 +74,8 @@
                         <input class="subcontrol-register-form" type="password" name="confirm-password">
                     </div>
                     <div class="button-send-reset-register">
-                        <input class="reset-button" type="reset" value="Borrar">
-                        <input class="submit-button" type="submit" value="Enviar" action="/home.html">
+                        <input class="reg-reset-button" type="reset" value="Borrar">
+                        <input class="reg-submit-button" type="submit" value="Enviar" action="/home.html">
                     </div>
                 </form>
             </div>
