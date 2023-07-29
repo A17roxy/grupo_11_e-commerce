@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,6 +7,7 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
 }
+
 :root {
     --amarillo: #EEB76B;
     --naranja: #E2703A;
@@ -21,8 +23,11 @@ body {
     flex-direction: column;
 }
 
+/* HEADER */
+
 .header-principal {
     display: flex;
+    max-height: 60px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +59,7 @@ body {
 
 .header-principal-right {
     display: none;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: center;
     margin-right: 20px;
     transition: all 200ms;
@@ -64,7 +69,7 @@ body {
 .header-principal-right-movil {
     background-color: var(--negro);
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: center;
     margin-right: 0px;
     transition: all 200ms;
@@ -76,29 +81,54 @@ body {
     /* max-width: 20vw;  ESTE ACHICA y AGRANDA EL LOGO con el responsive */
 }
 
+/* MAIN */
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
 
 .albums-main-container {
+    display: flex;
     width: 100%;
-    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* align-content: center; */
     text-align: center;
     position: relative;
-    padding-top: 150px; 
+    /* padding-top: 150px; */
     z-index: 1;
-} 
+    /**/
+    align-items: center;
+}
 
 .album {
+    display: flex;
+    justify-content: space-evenly;
     border: solid 1px black;
     border-radius: 3%;
     background-image: linear-gradient(var(--naranja), var(--negro));
-    display: inline-block;
-    block-size: auto;
+    /* display: inline-block; */
+    /* block-size: auto; */
     font-size: 1rem;
-    padding: 5px;
-    margin: 10px;
+    padding: 5px; 
+    margin: 30px;
+    max-width: 350px;
+    /* min-width: 100px; */
     -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.84);
     -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.84);
     box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.84);
     transition: all 300ms;
+    flex-basis: content;
+    /**/
+    flex-grow: 1;
+    /* flex-shrink: 1; */
+    /* aspect-ratio: attr(width) / attr(height); */
+    
+    
 }
 
 .album:hover {
@@ -107,9 +137,18 @@ body {
     box-shadow: 0px 0px 17px 1px rgba(255, 232, 138, 1);
 }
 
+.album-cover {
+    display: flex;
+}
 
 .album-imagen {
-    width: 140px;
+    width:100%;
+    object-fit: contain;
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* flex-basis: 30px; */
+    /* aspect-ratio: attr(width) / attr(height); */
+    /* width: 140px; */
     padding-bottom: 3px;
     border-radius: 2%;
 }
@@ -133,13 +172,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end; 
+    align-items: flex-end;
     padding-right: 4px;
 
-     background: -webkit-linear-gradient(var(--amarillo), var(--naranja));
+    background: -webkit-linear-gradient(var(--amarillo), var(--naranja));
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
     transition: all 200ms;
 }
 
@@ -147,31 +186,28 @@ body {
     text-shadow: var(--amarillo) 1px 0 20px;
 }
 
-.album-icono-mas:active {
-	position:relative;
-	top:1px;
-}
+/* FOOTER */
 
 .footer-main {
     position: relative;
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    height: 13vh;
-    margin-top: 30px; 
-    height: 9vh;
+    bottom: 0;
+    min-height: 30px;
+    margin-top: auto;
     background-color: var(--negro);
     color: var(--amarillo);
- 
-    
-    box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
-    transition: all 600ms;
- }
 
- .footer-main:hover {
+
+    box-shadow: 0px -8px 12px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px -8px 12px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -8px 12px 1px rgba(0, 0, 0, 0.75);
+    transition: all 600ms;
+}
+
+.footer-main:hover {
     -webkit-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
     -moz-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
     box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
@@ -186,10 +222,8 @@ body {
     padding: 20px;
     position: relative;
     bottom: 0;
-    left:0;
+    left: 0;
     z-index: 20;
-
-  
 }
 
 .footer-principal {
@@ -197,34 +231,34 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
-    margin-bottom: 0px;
+    margin-top: auto;
+    max-height: 80px;
     padding: 20px;
     width: 100%;
-  
+
 }
 
 .footer-fixed {
     position: absolute;
     bottom: 0;
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: 13vh;
-    margin-top: 30px; 
+    margin-top: auto;
     height: 9vh;
     background-color: var(--negro);
     color: var(--amarillo);
- 
-    
-    box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
-    transition: all 600ms;
- }
 
- .footer-fixed:hover {
+
+    box-shadow: 0px -8px 12px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px -8px 12px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -8px 12px 1px rgba(0, 0, 0, 0.75);
+    transition: all 600ms;
+}
+
+.footer-fixed:hover {
     -webkit-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
     -moz-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
     box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
@@ -242,30 +276,28 @@ body {
 
 .footer-principal-right {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: center;
     padding-right: 14px;
-     transition: all 200ms;
+    transition: all 200ms;
 }
 
 .footer-logo {
     padding-top: 10px;
     max-width: 250px;
-    /* max-width: 20vw;  ESTE ACHICA / AGRANDA EL LOGO*/
 }
 
 .myButton {
-	background:linear-gradient(to bottom, #eeb86b 5%, #e26f3a 100%);
-	background-color:#eeb86b;
-	border-radius:4px;
-	display:inline-block;
-	cursor:pointer;
-	color:#310b0b;
-	/* font-family:Arial; */
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 14px;
-	text-decoration:none;
+    background: linear-gradient(to bottom, #eeb86b 5%, #e26f3a 100%);
+    background-color: #eeb86b;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    color: #310b0b;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 14px;
+    text-decoration: none;
 }
 
 .myButton:hover {
@@ -273,44 +305,60 @@ body {
 }
 
 .myButton:active {
-	position:relative;
-	top:1px;
+    position: relative;
+    top: 1px;
 }
 
 @media (min-width: 410px) {
-.album-imagen{
-    width: 200px;
-}
-.album-titulo {
-    font-size: 0.85rem;
-}
-.header-logo {
-    max-width: 190px;
-}
-
-}
+    /*     .album-imagen {
+            width: 200px;
+        }
+    
+        .album-titulo {
+            font-size: 0.85rem;
+        } */
+    
+        .header-logo {
+            max-width: 190px;
+        }
+    
+    }
 
 @media (min-width: 610px) {
-    .header-principal-right-movil{
+    /* .albums-main-container{
+        flex-direction: row;
+    } */
+
+    .header-principal-right-movil {
         display: none;
     }
-    .header-principal-right{
-        display:flex;
+
+    .header-principal-right {
+        display: flex;
     }
+
     .header-logo {
         max-width: 250px;
     }
-    .footer-principal{
+
+    .footer-principal {
         display: flex;
     }
-    .footer-principal-movil{
+
+    .footer-principal-movil {
         display: none;
     }
-    .album-imagen {
+    .album {
+        max-width:400px;
+    }
+
+
+/*     .album-imagen {
         width: 300px;
     }
+
     .album-titulo {
         font-size: 1rem;
-    }
-    
+    } */
+
 }
