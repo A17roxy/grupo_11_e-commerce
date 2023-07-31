@@ -33,8 +33,7 @@
     margin-bottom: 8px;
 }
 
-.reset-button,
-.submit-button {
+.reset-button, .submit-button {
     margin: 20px 5px;
     padding: 6px 15px;
     border-radius: 5px;
