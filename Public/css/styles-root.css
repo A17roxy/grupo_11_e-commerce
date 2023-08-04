@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: var(--amarillo);
+}
+
+:root {
+    --amarillo: #EEB76B;
+    --naranja: #E2703A;
+    --bordo: #9C3D54;
+    --negro: #310b0b;
+}
+
+
+/* esto es para que el selector de dias no salta negro y se funda con el fondo marrón */
+
+::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 2px;
+    opacity: 0.6;
+    filter: invert(1);
+  } 
