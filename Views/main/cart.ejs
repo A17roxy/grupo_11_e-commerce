@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles-root.css">
+    <link rel="stylesheet" href="css/styles-header-footer.css">
+    <link rel="stylesheet" href="css/styles-cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Carrito de compras</title>
+</head>
+
+<!-- <body class="body-master"> -->
+    <body class="body-master">
+    <header>
+        <%- include('header') %>
+    </header>
+    <main class="cart-main">
+        <div class="cart-cuadro client-sector">
+            <div class="cart-cuadro-cuadro">
+                <h3>sector datos de cliente y domicilio entrega</h3>
+            </div>
+        </div>
+        <div class="cart-cuadro products-sector">
+            <div class="cart-cuadro-cuadro products-sector">
+                <table class="cart-products-table">
+                <thead>
+                    <tr>
+                        <th class="cart-products-table-title" colspan="4">Tus compras</th>
+                    </tr>
+                    <tr>
+                        <th class="cart-products-table-header">Artista / Título</th>
+                        <th class="cart-products-table-header">Medio</th>
+                        <th class="cart-products-table-header">Distribución</th>
+                        <th class="cart-products-table-header">Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cart-products-table-item-left">Pink Floyd - Dark Side of the Moon</td>
+                        <td class="cart-products-table-item-left">Vinilo</td>
+                        <td class="cart-products-table-item-left">Fisica</td>
+                        <td class="cart-products-table-item-right">215.00</td>
+                    </tr>
+                    <tr>
+                        <td class="cart-products-table-item-left">Bruce Springteen - Born in the USA</td>
+                        <td class="cart-products-table-item-left">Vinilo</td>
+                        <td class="cart-products-table-item-left">Fisica</td>
+                        <td class="cart-products-table-item-right">415.00</td>
+                    </tr>
+
+                </tbody>
+                </table>
+
+
+
+
+
+            </div>
+        </div>
+        <div class="cart-cuadro payment-sector">
+            <div class="cart-cuadro-cuadro">
+                <h3>sector total y forma de pago</h3>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <%- include('footer') %>
+    </footer>
+</body>
+
+</html>
