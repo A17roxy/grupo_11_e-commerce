@@ -4,6 +4,7 @@
   "artist": "Margot Brain",
   "genre": "Funk",
   "year": 1971,
+  "price": 12882.00,
   "image": "images/albums/Album0001",
   "type": "Album"
 }, {
@@ -12,6 +13,7 @@
   "artist": "Bruce Springteen",
   "genre": "Rock",
   "year": 1984,
+  "price": 13382.00,
   "image": "images/albums/Album0002",
   "type": "Album"
 }, {
@@ -20,6 +22,7 @@
   "artist": "Pink Floyd",
   "genre": "Rock",
   "year": 1973,
+  "price": 54382.00,
   "image": "images/albums/Album0003",
   "type": "Album"
 }, {
@@ -28,6 +31,7 @@
   "artist": "Fleetwood Mac",
   "genre": "Pop",
   "year": 1977,
+  "price": 54482.00,
   "image": "images/albums/Album0004",
   "type": "Album"
 }, {
@@ -36,6 +40,7 @@
   "artist": "Grace Jones",
   "genre": "Pop",
   "year": 1985,
+  "price": 66282.00,
   "image": "images/albums/Album0005",
   "type": "Album"
 }, {
@@ -44,6 +49,7 @@
   "artist": "Janeth Jackson",
   "genre": "Pop",
   "year": 1989,
+  "price": 39282.00,
   "image": "images/albums/Album0006",
   "type": "Album"
 }, {
@@ -52,6 +58,7 @@
   "artist": "Judas Priest",
   "genre": "Rock",
   "year": 1980,
+  "price": 91836.00,
   "image": "images/albums/Album0007",
   "type": "Album"
 }, {
@@ -60,6 +67,7 @@
   "artist": "Lady Gaga",
   "genre": "Pop",
   "year": 2009,
+  "price": 88364.00,
   "image": "images/albums/Album0008",
   "type": "Album"
 }, {
@@ -68,6 +76,7 @@
   "artist": "Madonna",
   "genre": "Pop",
   "year": 1986,
+  "price": 65829.00,
   "image": "images/albums/Album0009",
   "type": "Album"
 }, {
@@ -76,6 +85,7 @@
   "artist": "Nirvana",
   "genre": "Rock",
   "year": 1991,
+  "price": 27758.00,
   "image": "images/albums/Album0010",
   "type": "Album"
 },{
@@ -84,6 +94,7 @@
   "artist": "Rodolph Excell",
   "genre": "Electronic",
   "year": 2011,
+  "price": 32455.00,
   "image": "images/tracks/headshot01",
   "type": "Track"
 }, {
@@ -92,6 +103,7 @@
   "artist": "Hedvige Behan",
   "genre": "Rock",
   "year": 2001,
+  "price": 19283.00,
   "image": "images/tracks/headshot02",
   "type": "Track"
 }, {
@@ -100,6 +112,7 @@
   "artist": "Annnora Haresnaip",
   "genre": "Punk",
   "year": 2006,
+  "price": 61544.00,
   "image": "images/tracks/headshot03",
   "type": "Track"
 }, {
@@ -108,6 +121,7 @@
   "artist": "Dotti Cotsford",
   "genre": "Rock",
   "year": 1993,
+  "price": 69833.00,
   "image": "images/tracks/headshot04",
   "type": "Track"
 }, {
@@ -116,6 +130,7 @@
   "artist": "Elle Samudio",
   "genre": "Electronic",
   "year": 1989,
+  "price": 36767.00,
   "image": "images/tracks/headshot05",
   "type": "Track"
 }, {
@@ -124,6 +139,7 @@
   "artist": "Miran Godard",
   "genre": "Ballad",
   "year": 1998,
+  "price": 99111.00,
   "image": "images/tracks/headshot06",
   "type": "Track"
 }, {
@@ -132,6 +148,7 @@
   "artist": "Parker Case",
   "genre": "Rock",
   "year": 1994,
+  "price": 39504.00,
   "image": "images/tracks/headshot07",
   "type": "Track"
 }, {
@@ -140,6 +157,7 @@
   "artist": "Mannie Paten",
   "genre": "Electronic",
   "year": 2002,
+  "price": 64733.00,
   "image": "images/tracks/headshot08",
   "type": "Track"
 }, {
@@ -148,6 +166,7 @@
   "artist": "Gene Rizzillo",
   "genre": "Electronic",
   "year": 1990,
+  "price": 21455.00,
   "image": "images/tracks/headshot09",
   "type": "Track"
 }, {
@@ -156,6 +175,7 @@
   "artist": "Eugenia Larkins",
   "genre": "Punk",
   "year": 2000,
+  "price": 14344.00,
   "image": "images/tracks/headshot10",
   "type": "Track"
 }, {
@@ -164,6 +184,7 @@
   "artist": "Arlinda Gent",
   "genre": "Acoustic",
   "year": 2007,
+  "price": 43482.00,
   "image": "images/tracks/headshot11",
   "type": "Track"
 }, {
@@ -172,6 +193,7 @@
   "artist": "Bee Meffen",
   "genre": "Kids",
   "year": 2012,
+  "price": 13435.00,
   "image": "images/tracks/headshot12",
   "type": "Track"
 }, {
@@ -180,6 +202,7 @@
   "artist": "Joan Lowe",
   "genre": "Pop",
   "year": 2012,
+  "price": 144433.00,
   "image": "images/tracks/headshot13",
   "type": "Track"
 }, {
@@ -188,6 +211,7 @@
   "artist": "Magdalena Moneypenny",
   "genre": "Synth Pop",
   "year": 2001,
+  "price": 77362.00,
   "image": "images/tracks/headshot14",
   "type": "Track"
 }, {
@@ -196,6 +220,7 @@
   "artist": "Elmer Blampy",
   "genre": "Latin",
   "year": 1992,
+  "price": 43929.00,
   "image": "images/tracks/headshot15",
   "type": "Track"
 }, {
@@ -204,6 +229,7 @@
   "artist": "Helene Scholling",
   "genre": "Rock",
   "year": 2012,
+  "price": 50000.00,
   "image": "images/tracks/headshot16",
   "type": "Track"
 }, {
@@ -212,6 +238,7 @@
   "artist": "Inesita Elam",
   "genre": "Jazz",
   "year": 2010,
+  "price": 9012.00,
   "image": "images/tracks/headshot17",
   "type": "Track"
 }, {
@@ -220,6 +247,7 @@
   "artist": "Orelle Wardhough",
   "genre": "Punk",
   "year": 1999,
+  "price": 88372.00,
   "image": "images/tracks/headshot18",
   "type": "Track"
 }, {
@@ -228,6 +256,7 @@
   "artist": "Karim Hanrahan",
   "genre": "Synth Pop",
   "year": 2011,
+  "price": 13111.00,
   "image": "images/tracks/headshot19",
   "type": "Track"
 }, {
@@ -236,6 +265,7 @@
   "artist": "Madelene Ren",
   "genre": "Acoustic",
   "year": 1995,
+  "price": 54672.00,
   "image": "images/tracks/headshot20",
   "type": "Track"
 }]
