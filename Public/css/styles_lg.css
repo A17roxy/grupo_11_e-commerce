@@ -121,11 +121,13 @@
     flex-direction: column;
 } 
 
-.checkbox-category{
+/* .checkbox-category{
     display: flex;
     flex-direction: column;
 }
-.control-register-form label {
+ */
+ 
+ .control-register-form label {
     margin-bottom: 10px;
 }
 
