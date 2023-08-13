@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+:root {
+    --amarillo: #EEB76B;
+    --naranja: #E2703A;
+    --bordo: #9C3D54;
+    --negro: #310b0b;
+}
+
+body {
+    background-color: var(--negro);
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #310b0b;
+    margin: 0px;
+    padding: 20px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px 8px 12px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 8px 12px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 8px 12px 1px rgba(0, 0, 0, 0.75);
+    transition: all 600ms;
+}
+
+.header-principal:hover {
+    -webkit-box-shadow: 0px 0px 17px 1px rgba(255, 232, 138, 1);
+    -moz-box-shadow: 0px 0px 17px 1px rgba(255, 232, 138, 1);
+    box-shadow: 0px 0px 17px 1px rgba(255, 232, 138, 1);
+}
+
+.header-principal-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-principal-right {
+    display: none;
+    justify-content:flex-end;
+    align-items: center;
+    margin-right: 20px;
+    transition: all 200ms;
+
+}
+
+.header-principal-right-movil {
+    background-color: var(--negro);
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    margin-right: 0px;
+    transition: all 200ms;
+
+}
+
+.header-logo {
+    max-width: 150px;
+    /* max-width: 20vw;  ESTE ACHICA y AGRANDA EL LOGO con el responsive */
+}
+
+
+.albums-main-container {
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    padding-top: 150px; 
+    z-index: 1;
+} 
+
+.album {
+    border: solid 1px black;
+    border-radius: 3%;
+    background-image: linear-gradient(var(--naranja), var(--negro));
+    display: inline-block;
+    block-size: auto;
+    font-size: 1rem;
+    padding: 5px;
+    margin: 10px;
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.84);
+    -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.84);
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.84);
+    transition: all 300ms;
+}
+
+.album:hover {
+    -webkit-box-shadow: 0px 0px 17px 1px rgba(255, 232, 138, 1);
+    -moz-box-shadow: 0px 0px 17px 1px rgba(255, 232, 138, 1);
+    box-shadow: 0px 0px 17px 1px rgba(255, 232, 138, 1);
+}
+
+
+.album-imagen {
+    width: 140px;
+    padding-bottom: 3px;
+    border-radius: 2%;
+}
+
+.album-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding-left: 2px;
+    padding-bottom: 2px;
+
+}
+
+.album-titulo {
+    color: var(--amarillo);
+    font-size: 0.7rem;
+}
+
+.album-icono-mas {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end; 
+    padding-right: 4px;
+
+     background: -webkit-linear-gradient(var(--amarillo), var(--naranja));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    transition: all 200ms;
+}
+
+.album-icono-mas:hover {
+    text-shadow: var(--amarillo) 1px 0 20px;
+}
+
+.album-icono-mas:active {
+	position:relative;
+	top:1px;
+}
+
+.footer-main {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    width: 100%;
+    height: 13vh;
+    margin-top: 30px; 
+    height: 9vh;
+    background-color: var(--negro);
+    color: var(--amarillo);
+ 
+    
+    box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
+    transition: all 600ms;
+ }
+
+ .footer-main:hover {
+    -webkit-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
+    -moz-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
+    box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
+}
+
+.footer-principal-movil {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    left:0;
+    z-index: 20;
+
+  
+}
+
+.footer-principal {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 0px;
+    padding: 20px;
+    width: 100%;
+  
+}
+
+.footer-fixed {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    width: 100%;
+    height: 13vh;
+    margin-top: 30px; 
+    height: 9vh;
+    background-color: var(--negro);
+    color: var(--amarillo);
+ 
+    
+    box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
+    transition: all 600ms;
+ }
+
+ .footer-fixed:hover {
+    -webkit-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
+    -moz-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
+    box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
+}
+
+
+.footer-principal-left {
+    text-align: left;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-principal-right {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    padding-right: 14px;
+     transition: all 200ms;
+}
+
+.footer-logo {
+    padding-top: 10px;
+    max-width: 250px;
+    /* max-width: 20vw;  ESTE ACHICA / AGRANDA EL LOGO*/
+}
+
+.myButton {
+	background:linear-gradient(to bottom, #eeb86b 5%, #e26f3a 100%);
+	background-color:#eeb86b;
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#310b0b;
+	/* font-family:Arial; */
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 14px;
+	text-decoration:none;
+}
+
+.myButton:hover {
+    box-shadow: var(--amarillo) 1px 0 20px;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+@media (min-width: 410px) {
+.album-imagen{
+    width: 200px;
+}
+.album-titulo {
+    font-size: 0.85rem;
+}
+.header-logo {
+    max-width: 190px;
+}
+
+}
+
+@media (min-width: 610px) {
+    .header-principal-right-movil{
+        display: none;
+    }
+    .header-principal-right{
+        display:flex;
+    }
+    .header-logo {
+        max-width: 250px;
+    }
+    .footer-principal{
+        display: flex;
+    }
+    .footer-principal-movil{
+        display: none;
+    }
+    .album-imagen {
+        width: 300px;
+    }
+    .album-titulo {
+        font-size: 1rem;
+    }
+    
+}
