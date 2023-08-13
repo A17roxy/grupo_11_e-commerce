@@ -8,5 +8,11 @@ router.get('/',albumsController.albums);
 // @GET - /products/:id/detail
 router.get('/:id/detail', productsController.getDetail);
 
+// @GET - /products/create
+router.get('/create', albumsController.getCreate);
+
+// @POST - /products
+router.post('/', albumsController.postProduct);
+
 
 module.exports = router;

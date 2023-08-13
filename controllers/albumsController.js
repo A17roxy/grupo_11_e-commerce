@@ -16,6 +16,14 @@ const controller ={
         const selectedProduct = productModel.findById(productId);
 
         res.send('albumsDetails', { products: selectedProduct });
+    },
+
+    getCreate: (req, res) => {
+        res.render('createAlbum');
+    },
+
+    postProduct: (req, res) => {
+        res.render('Se está creando eel producto...');
     }
 
 }
