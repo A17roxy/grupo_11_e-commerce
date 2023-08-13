@@ -2,9 +2,10 @@ const usersModel = require('../models/usersModels');
 
 const controller = {
     getList: (req, res) => {
-        usersModel.findAll();
+        const users = usersModel.findAll();
 
-
+        // Mostraría la vista users.ejs ...
+        // res.send('users', { users });
     }
 }
 

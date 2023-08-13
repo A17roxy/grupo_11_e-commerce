@@ -20,7 +20,8 @@ app.set('views',[
 let mainRouter = require('./routers/mainRouter');
 let albumsRouter = require('./routers/albumsRouter');
 let pistasRouter = require('./routers/pistasRouter');
-let cartRouter = require('./routers/cartRouter'); 
+let cartRouter = require('./routers/cartRouter');
+let usersRouter = require('./routers/usersRouter');
 
 
 /* APP.USE PARA CADA ROUTER */
@@ -30,6 +31,7 @@ app.use('/register', mainRouter);
 app.use('/albums', albumsRouter);
 app.use('/pistas', pistasRouter);
 app.use('/cart', cartRouter);
+app.use('/users', usersRouter);
 
 
 
