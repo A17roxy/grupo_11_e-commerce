@@ -23,7 +23,20 @@ const controller ={
     },
 
     postProduct: (req, res) => {
-        res.render('Se está creando eel producto...');
+        console.log(req.body);
+
+        const newProduct = {
+            title: req.body.title,
+            price: req.body.price
+        }
+
+        const createdProduct = productModel.createProduct(newProduct);
+
+        console.log('El nuevo producto tiene como id: ' + createdProduct.id);
+        res.redirect('/products/' + createdProduct.id + '/detail');
+        
+        // Desde los POST no renderizamos vistas, solo redireccionamos.
+        // res.redirect('/products');
     }
 
 }

@@ -22,7 +22,11 @@ let albumsRouter = require('./routers/albumsRouter');
 let pistasRouter = require('./routers/pistasRouter');
 let cartRouter = require('./routers/cartRouter');
 let usersRouter = require('./routers/usersRouter');
+const exp = require('constants');
 
+
+app.use(express.urlencoded({extended: true}));
+app.use(express.json);
 
 /* APP.USE PARA CADA ROUTER */
 app.use('/', mainRouter);
