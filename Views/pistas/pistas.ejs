@@ -20,17 +20,15 @@
     </header>
     <main>
         <section class="pistas-main-container">
-            <% let i=1; for (i=1 ; i<=20; i++) { let arx="images/tracks/headshot" +i.toString().padStart(2, '0' )+".jpg"
-                %>
+            <% pistas.filter(pista => pista.type=='Track').forEach(pista => {%>  
                 <article class="pista">
                     <div class="pista-pista">
                         <div class="pista-cover">
-                            <img class="pista-imagen" src="<%=arx%>" alt="">
+                            <img class="pista-imagen" src="<%=pista.image%>" alt="">
                         </div>
                         <div class="pista-artista-titulo">
-                            <h3>Nombre del Artista - información adicional <%=arx%>
-                            </h3>
-                            <h2>Titulo del trabajo y mensaje del artista</h2>
+                            <h3><%=pista.artist%></h3>
+                            <h2><%=pista.title%></h2>
                         </div>
                         <div class="pista-controles">
                             <div class="icono-luz"><a href="#">
@@ -44,7 +42,10 @@
                         </div>
                         <div class="pista-comprar">
                             <div class="pista-comprar-precio">
-                                <h1>$ 999,99&nbsp;&nbsp;&nbsp;</h1>
+                                <h1>$&nbsp;<%=Intl.NumberFormat("en-US", {
+                                    minimumFractionDigits: 2,
+                                    maximumFractionDigits: 2,
+                                  }).format(pista.price)%>&nbsp;&nbsp;&nbsp;</h1>
                             </div>
                             <div class="pista-comprar-icono-mas">
                                 <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
@@ -52,7 +53,7 @@
                         </div>
                     </div>
                 </article>
-                <% } %>
+                <% }) %>
         </section>
     </main>
     <footer class="footer-main">

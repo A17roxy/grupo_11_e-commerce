@@ -7,8 +7,8 @@ const model = {
     findAll: () => {
         const jsonData = fs.readFileSync(model.fileRoute, 'utf-8');
         // convierto JSON en javascript
-        const albums = JSON.parse(jsonData);
-        return albums;
+        const pistas = JSON.parse(jsonData);
+        return pistas;
     },
 
     findById: (id) => {
@@ -16,3 +16,4 @@ const model = {
 }
 
 module.exports = model;
+

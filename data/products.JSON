@@ -6,7 +6,7 @@
     "genre": "Funk",
     "year": 1971,
     "price": 12882.00,
-    "image": "images/albums/Album0001",
+    "image": "images/albums/Album0001.webp",
     "type": "Album"
   },
   {
@@ -16,7 +16,7 @@
     "genre": "Rock",
     "year": 1984,
     "price": 13382.00,
-    "image": "images/albums/Album0002",
+    "image": "images/albums/Album0002.webp",
     "type": "Album"
   },
   {
@@ -26,7 +26,7 @@
     "genre": "Rock",
     "year": 1973,
     "price": 54382.00,
-    "image": "images/albums/Album0003",
+    "image": "images/albums/Album0003.webp",
     "type": "Album"
   },
   {
@@ -36,7 +36,7 @@
     "genre": "Pop",
     "year": 1977,
     "price": 54482.00,
-    "image": "images/albums/Album0004",
+    "image": "images/albums/Album0004.webp",
     "type": "Album"
   },
   {
@@ -46,7 +46,7 @@
     "genre": "Pop",
     "year": 1985,
     "price": 66282.00,
-    "image": "images/albums/Album0005",
+    "image": "images/albums/Album0005.webp",
     "type": "Album"
   },
   {
@@ -56,7 +56,7 @@
     "genre": "Pop",
     "year": 1989,
     "price": 39282.00,
-    "image": "images/albums/Album0006",
+    "image": "images/albums/Album0006.webp",
     "type": "Album"
   },
   {
@@ -66,7 +66,7 @@
     "genre": "Rock",
     "year": 1980,
     "price": 91836.00,
-    "image": "images/albums/Album0007",
+    "image": "images/albums/Album0007.webp",
     "type": "Album"
   },
   {
@@ -76,7 +76,7 @@
     "genre": "Pop",
     "year": 2009,
     "price": 88364.00,
-    "image": "images/albums/Album0008",
+    "image": "images/albums/Album0008.webp",
     "type": "Album"
   },
   {
@@ -86,7 +86,7 @@
     "genre": "Pop",
     "year": 1986,
     "price": 65829.00,
-    "image": "images/albums/Album0009",
+    "image": "images/albums/Album0009.webp",
     "type": "Album"
   },
   {
@@ -96,7 +96,7 @@
     "genre": "Rock",
     "year": 1991,
     "price": 27758.00,
-    "image": "images/albums/Album0010",
+    "image": "images/albums/Album0010.webp",
     "type": "Album"
   },
   {
@@ -106,7 +106,7 @@
     "genre": "Electronic",
     "year": 2011,
     "price": 32455.00,
-    "image": "images/tracks/headshot01",
+    "image": "images/tracks/headshot01.jpg",
     "type": "Track"
   },
   {
@@ -116,7 +116,7 @@
     "genre": "Rock",
     "year": 2001,
     "price": 19283.00,
-    "image": "images/tracks/headshot02",
+    "image": "images/tracks/headshot02.jpg",
     "type": "Track"
   },
   {
@@ -126,7 +126,7 @@
     "genre": "Punk",
     "year": 2006,
     "price": 61544.00,
-    "image": "images/tracks/headshot03",
+    "image": "images/tracks/headshot03.jpg",
     "type": "Track"
   },
   {
@@ -136,7 +136,7 @@
     "genre": "Rock",
     "year": 1993,
     "price": 69833.00,
-    "image": "images/tracks/headshot04",
+    "image": "images/tracks/headshot04.jpg",
     "type": "Track"
   },
   {
@@ -146,7 +146,7 @@
     "genre": "Electronic",
     "year": 1989,
     "price": 36767.00,
-    "image": "images/tracks/headshot05",
+    "image": "images/tracks/headshot05.jpg",
     "type": "Track"
   },
   {
@@ -156,7 +156,7 @@
     "genre": "Ballad",
     "year": 1998,
     "price": 99111.00,
-    "image": "images/tracks/headshot06",
+    "image": "images/tracks/headshot06.jpg",
     "type": "Track"
   },
   {
@@ -166,7 +166,7 @@
     "genre": "Rock",
     "year": 1994,
     "price": 39504.00,
-    "image": "images/tracks/headshot07",
+    "image": "images/tracks/headshot07.jpg",
     "type": "Track"
   },
   {
@@ -176,7 +176,7 @@
     "genre": "Electronic",
     "year": 2002,
     "price": 64733.00,
-    "image": "images/tracks/headshot08",
+    "image": "images/tracks/headshot08.jpg",
     "type": "Track"
   },
   {
@@ -186,7 +186,7 @@
     "genre": "Electronic",
     "year": 1990,
     "price": 21455.00,
-    "image": "images/tracks/headshot09",
+    "image": "images/tracks/headshot09.jpg",
     "type": "Track"
   },
   {
@@ -196,7 +196,7 @@
     "genre": "Punk",
     "year": 2000,
     "price": 14344.00,
-    "image": "images/tracks/headshot10",
+    "image": "images/tracks/headshot10.jpg",
     "type": "Track"
   },
   {
@@ -206,7 +206,7 @@
     "genre": "Acoustic",
     "year": 2007,
     "price": 43482.00,
-    "image": "images/tracks/headshot11",
+    "image": "images/tracks/headshot11.jpg",
     "type": "Track"
   },
   {
@@ -216,7 +216,7 @@
     "genre": "Kids",
     "year": 2012,
     "price": 13435.00,
-    "image": "images/tracks/headshot12",
+    "image": "images/tracks/headshot12.jpg",
     "type": "Track"
   },
   {
@@ -226,7 +226,7 @@
     "genre": "Pop",
     "year": 2012,
     "price": 144433.00,
-    "image": "images/tracks/headshot13",
+    "image": "images/tracks/headshot13.jpg",
     "type": "Track"
   },
   {
@@ -236,7 +236,7 @@
     "genre": "Synth Pop",
     "year": 2001,
     "price": 77362.00,
-    "image": "images/tracks/headshot14",
+    "image": "images/tracks/headshot14.jpg",
     "type": "Track"
   },
   {
@@ -246,7 +246,7 @@
     "genre": "Latin",
     "year": 1992,
     "price": 43929.00,
-    "image": "images/tracks/headshot15",
+    "image": "images/tracks/headshot15.jpg",
     "type": "Track"
   },
   {
@@ -256,7 +256,7 @@
     "genre": "Rock",
     "year": 2012,
     "price": 50000.00,
-    "image": "images/tracks/headshot16",
+    "image": "images/tracks/headshot16.jpg",
     "type": "Track"
   },
   {
@@ -266,7 +266,7 @@
     "genre": "Jazz",
     "year": 2010,
     "price": 9012.00,
-    "image": "images/tracks/headshot17",
+    "image": "images/tracks/headshot17.jpg",
     "type": "Track"
   },
   {
@@ -276,7 +276,7 @@
     "genre": "Punk",
     "year": 1999,
     "price": 88372.00,
-    "image": "images/tracks/headshot18",
+    "image": "images/tracks/headshot18.jpg",
     "type": "Track"
   },
   {
@@ -286,7 +286,7 @@
     "genre": "Synth Pop",
     "year": 2011,
     "price": 13111.00,
-    "image": "images/tracks/headshot19",
+    "image": "images/tracks/headshot19.jpg",
     "type": "Track"
   },
   {
@@ -296,7 +296,7 @@
     "genre": "Acoustic",
     "year": 1995,
     "price": 54672.00,
-    "image": "images/tracks/headshot20",
+    "image": "images/tracks/headshot20.jpg",
     "type": "Track"
   }
 ]
