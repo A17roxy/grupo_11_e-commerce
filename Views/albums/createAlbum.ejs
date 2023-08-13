@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles-home.css">
+    <link rel="stylesheet" href="/css/styles-root.css">
+    <link rel="stylesheet" href="/css/styles_lg.css">
+    <link rel="stylesheet" href="/css/styles-login-register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Creación de Producto</title>
+</head>
+
+
+<body>
+    <header>
+        <%- include('header') %>
+    </header>
+
+    <main class="register-main">
+        <div class="reg-frame">
+            <div class="reg-frame-frame">
+                <form action="/products" class="reg-form" method="post">
+                    <div class="reg-form-field">
+                        <label class="title-register">Título</label>
+                        <input class="subcontrol-register-form" type="text" name="title" placeholder="Título"
+                            required>
+                    </div>
+                    <div class="reg-form-field">
+                        <label class="title-register">Artista</label>
+                        <input class="subcontrol-register-form" type="text" name="artist" placeholder="Artista"
+                            required>
+                    </div>
+                    <div class="reg-form-field">
+                        <label class="title-register">Año</label>
+                        <input class="subcontrol-register-form" type="number" name="number" placeholder="Año"
+                            required>
+                    </div>
+                    <div class="reg-form-field">
+                        <label class="title-register">Precio</label>
+                        <input class="subcontrol-register-form" type="number" name="price" placeholder="1000" required>
+                    </div>
+                    
+<!--                     <div class="reg-profile-form-field">
+                        <label class="title-register">Perfil de usuari@</label>
+                        <div class="user-category">
+                            <label><input class="subcontrol-register-form" type="radio" name="profile">Comprador</label>
+                            <label><input class="subcontrol-register-form" type="radio" name="profile">Vendedor</label>
+                            <label><input class="subcontrol-register-form" type="radio" name="profile">Ambos</label>
+                        </div>
+                    </div>
+
+                    <div class="reg-form-field">
+                        <label class="title-register">Contraseña</label>
+                        <input class="subcontrol-register-form" type="password" name="password">
+                        <br>
+                        <label class="title-register">Confirmar contraseña</label>
+                        <input class="subcontrol-register-form" type="password" name="confirm-password">
+                    </div> -->
+                    
+                    <div class="button-send-reset-register">
+                        <input class="reg-reset-button" type="reset" value="Borrar">
+                        <input class="reg-submit-button" type="submit" value="Enviar" action="/home.html">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <%- include('footer') %>
+    </footer>
+</body>
+
+</html>

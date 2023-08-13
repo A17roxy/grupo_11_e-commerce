@@ -15,7 +15,7 @@ const controller ={
 
         const selectedProduct = productModel.findById(productId);
 
-        res.send('Estás viendo el detalle del producto ' + productId);
+        res.send('albumsDetails', { products: selectedProduct });
     }
 
 }

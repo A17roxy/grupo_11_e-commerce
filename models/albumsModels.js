@@ -16,6 +16,7 @@ const model = {
 
         const selectedProduct = products.find(productoActual => productoActual.id == id);
 
+
         return selectedProduct;
     }
 }
