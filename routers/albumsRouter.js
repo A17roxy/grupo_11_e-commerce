@@ -30,5 +30,10 @@ router.get('/create', albumsController.getCreate);
 // @POST - /albums // agregué acá el upload.single para que multer pueda enviar imagenes al server
 router.post('/', upload.single('productImage'), albumsController.postProduct);
 
+// @PUT - / albums/:id/edit
+// router.put('/:id/edit', upload.single('productImage'), albumsController.updateAlbum);
+
+router.put('/:id/edit', albumsController.updateAlbum);
+
 
 module.exports = router ;

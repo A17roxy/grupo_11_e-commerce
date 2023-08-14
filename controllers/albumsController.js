@@ -44,6 +44,26 @@ const controller ={
         // Desde los POST no renderizamos vistas, solo redireccionamos.
         /* res.redirect('message?text="gracias por registrarte"&redir="/home"', {text: "Producto grabado con ID: " + createdAlbum.id}); */
         res.redirect('/albums'); 
+    },
+
+    updateAlbum: (req, res) => {
+        let updatedProduct = {
+            id: Number(req.params.id)
+        };
+
+        updatedProduct = {
+            ...updatedProduct,
+            ...req.body
+        };
+
+        /* 
+            const updatedProduct = req.body;
+            updatedProduct.id = Number(req.params.id); 
+        */
+
+        productModel.updateProduct(updatedProduct);
+
+        res.redirect('/products/' + updatedProduct.id + '/detail');
     }
 
 }
