@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
-
+/* 
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,10 +14,10 @@
     --naranja: #E2703A;
     --bordo: #9C3D54;
     --negro: #310b0b;
-}
+} */
  
 /*LOGIN*/
-
+/* 
 .login-main{
     width: 100%;
     align-content: center;
@@ -102,14 +102,16 @@
 }
 
 .login-form-field input:focus {
-/*     outline:none; */
+/*     outline:none; 
     -webkit-box-shadow: 0px 0px 10px 1px rgba(255, 232, 138, 1);
     -moz-box-shadow: 0px 0px 10px 1px rgba(255, 232, 138, 1);
     box-shadow: 0px 0px 10px 1px rgba(255, 232, 138, 1);
-}
+} 
+
+*/
 
 /*REGISTER*/
-
+/* 
 .form-register {
     padding: 20px;
     width: 100%
@@ -119,7 +121,7 @@
     padding: 10px 0px;
     display: flex;
     flex-direction: column;
-} 
+}  */
 
 /* .checkbox-category{
     display: flex;

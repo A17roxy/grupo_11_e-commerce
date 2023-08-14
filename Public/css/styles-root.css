@@ -17,6 +17,16 @@
 }
 
 
+body {
+    background-color: var(--negro);
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 /* esto es para que el selector de dias no salta negro y se funda con el fondo marrón */
 
 ::-webkit-calendar-picker-indicator {
@@ -26,5 +36,27 @@
     opacity: 0.6;
     filter: invert(1);
   } 
+
+
+
+  .icono-luz {
+    display: flex;
+    align-items: flex-end; 
+    padding-right: 4px;
+    background: -webkit-linear-gradient(var(--amarillo), var(--naranja));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 200ms;
+}
+
+.icono-luz:hover {
+    text-shadow: var(--amarillo) 1px 0 20px;
+}
+
+.icono-luz:active {
+    position:relative;
+    top:1px;
+}
 
   

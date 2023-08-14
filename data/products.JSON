@@ -1,302 +1,360 @@
 [
-  {
-    "id": 1,
-    "title": "Funkadelic",
-    "artist": "Margot Brain",
-    "genre": "Funk",
-    "year": 1971,
-    "price": 12882.00,
-    "image": "images/albums/Album0001.webp",
-    "type": "Album"
-  },
-  {
-    "id": 2,
-    "title": "Born in the U.S.A.",
-    "artist": "Bruce Springteen",
-    "genre": "Rock",
-    "year": 1984,
-    "price": 13382.00,
-    "image": "images/albums/Album0002.webp",
-    "type": "Album"
-  },
-  {
-    "id": 3,
-    "title": "Dark Side of the Moon",
-    "artist": "Pink Floyd",
-    "genre": "Rock",
-    "year": 1973,
-    "price": 54382.00,
-    "image": "images/albums/Album0003.webp",
-    "type": "Album"
-  },
-  {
-    "id": 4,
-    "title": "Rumors",
-    "artist": "Fleetwood Mac",
-    "genre": "Pop",
-    "year": 1977,
-    "price": 54482.00,
-    "image": "images/albums/Album0004.webp",
-    "type": "Album"
-  },
-  {
-    "id": 5,
-    "title": "Island Life",
-    "artist": "Grace Jones",
-    "genre": "Pop",
-    "year": 1985,
-    "price": 66282.00,
-    "image": "images/albums/Album0005.webp",
-    "type": "Album"
-  },
-  {
-    "id": 6,
-    "title": "Rhythm Nation 1814",
-    "artist": "Janet Jackson",
-    "genre": "Pop",
-    "year": 1989,
-    "price": 39282.00,
-    "image": "images/albums/Album0006.webp",
-    "type": "Album"
-  },
-  {
-    "id": 7,
-    "title": "British Steel",
-    "artist": "Judas Priest",
-    "genre": "Rock",
-    "year": 1980,
-    "price": 91836.00,
-    "image": "images/albums/Album0007.webp",
-    "type": "Album"
-  },
-  {
-    "id": 8,
-    "title": "The Fame Monster",
-    "artist": "Lady Gaga",
-    "genre": "Pop",
-    "year": 2009,
-    "price": 88364.00,
-    "image": "images/albums/Album0008.webp",
-    "type": "Album"
-  },
-  {
-    "id": 9,
-    "title": "True Blue",
-    "artist": "Madonna",
-    "genre": "Pop",
-    "year": 1986,
-    "price": 65829.00,
-    "image": "images/albums/Album0009.webp",
-    "type": "Album"
-  },
-  {
-    "id": 10,
-    "title": "Nevermind",
-    "artist": "Nirvana",
-    "genre": "Rock",
-    "year": 1991,
-    "price": 27758.00,
-    "image": "images/albums/Album0010.webp",
-    "type": "Album"
-  },
-  {
-    "id": 11,
-    "title": "The Message",
-    "artist": "Rodolph Excell",
-    "genre": "Electronic",
-    "year": 2011,
-    "price": 32455.00,
-    "image": "images/tracks/headshot01.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 12,
-    "title": "Skeleton Crew",
-    "artist": "Hedvige Behan",
-    "genre": "Rock",
-    "year": 2001,
-    "price": 19283.00,
-    "image": "images/tracks/headshot02.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 13,
-    "title": "Exorcist: The Beginning",
-    "artist": "Annnora Haresnaip",
-    "genre": "Punk",
-    "year": 2006,
-    "price": 61544.00,
-    "image": "images/tracks/headshot03.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 14,
-    "title": "Imaginary Crimes",
-    "artist": "Dotti Cotsford",
-    "genre": "Rock",
-    "year": 1993,
-    "price": 69833.00,
-    "image": "images/tracks/headshot04.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 15,
-    "title": "Suchwiin Bulmyeong",
-    "artist": "Elle Samudio",
-    "genre": "Electronic",
-    "year": 1989,
-    "price": 36767.00,
-    "image": "images/tracks/headshot05.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 16,
-    "title": "Paternity",
-    "artist": "Miran Godard",
-    "genre": "Ballad",
-    "year": 1998,
-    "price": 99111.00,
-    "image": "images/tracks/headshot06.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 17,
-    "title": "Assassin Next Door",
-    "artist": "Parker Case",
-    "genre": "Rock",
-    "year": 1994,
-    "price": 39504.00,
-    "image": "images/tracks/headshot07.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 18,
-    "title": "Dishonored",
-    "artist": "Mannie Paten",
-    "genre": "Electronic",
-    "year": 2002,
-    "price": 64733.00,
-    "image": "images/tracks/headshot08.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 19,
-    "title": "Bleak House",
-    "artist": "Gene Rizzillo",
-    "genre": "Electronic",
-    "year": 1990,
-    "price": 21455.00,
-    "image": "images/tracks/headshot09.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 20,
-    "title": "Battle of Los Angeles",
-    "artist": "Eugenia Larkins",
-    "genre": "Punk",
-    "year": 2000,
-    "price": 14344.00,
-    "image": "images/tracks/headshot10.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 21,
-    "title": "Vikings",
-    "artist": "Arlinda Gent",
-    "genre": "Acoustic",
-    "year": 2007,
-    "price": 43482.00,
-    "image": "images/tracks/headshot11.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 22,
-    "title": "Parent Trap",
-    "artist": "Bee Meffen",
-    "genre": "Kids",
-    "year": 2012,
-    "price": 13435.00,
-    "image": "images/tracks/headshot12.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 23,
-    "title": "Lie with Me",
-    "artist": "Joan Lowe",
-    "genre": "Pop",
-    "year": 2012,
-    "price": 144433.00,
-    "image": "images/tracks/headshot13.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 24,
-    "title": "Dernier Combat",
-    "artist": "Magdalena Moneypenny",
-    "genre": "Synth Pop",
-    "year": 2001,
-    "price": 77362.00,
-    "image": "images/tracks/headshot14.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 25,
-    "title": "Latin Music USA",
-    "artist": "Elmer Blampy",
-    "genre": "Latin",
-    "year": 1992,
-    "price": 43929.00,
-    "image": "images/tracks/headshot15.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 26,
-    "title": "Five Fingers",
-    "artist": "Helene Scholling",
-    "genre": "Rock",
-    "year": 2012,
-    "price": 50000.00,
-    "image": "images/tracks/headshot16.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 27,
-    "title": "Book of Fate",
-    "artist": "Inesita Elam",
-    "genre": "Jazz",
-    "year": 2010,
-    "price": 9012.00,
-    "image": "images/tracks/headshot17.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 28,
-    "title": "Pig Hunt",
-    "artist": "Orelle Wardhough",
-    "genre": "Punk",
-    "year": 1999,
-    "price": 88372.00,
-    "image": "images/tracks/headshot18.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 29,
-    "title": "Oranges",
-    "artist": "Karim Hanrahan",
-    "genre": "Synth Pop",
-    "year": 2011,
-    "price": 13111.00,
-    "image": "images/tracks/headshot19.jpg",
-    "type": "Track"
-  },
-  {
-    "id": 30,
-    "title": "Favor",
-    "artist": "Madelene Ren",
-    "genre": "Acoustic",
-    "year": 1995,
-    "price": 54672.00,
-    "image": "images/tracks/headshot20.jpg",
-    "type": "Track"
-  }
+    {
+        "id": 1,
+        "title": "Funkadelic",
+        "artist": "Margot Brain",
+        "genre": "Funk",
+        "year": 1971,
+        "price": 12882,
+        "image": "images/products/Album0001.webp",
+        "type": "Album"
+    },
+    {
+        "id": 2,
+        "title": "Born in the U.S.A.",
+        "artist": "Bruce Springteen",
+        "genre": "Rock",
+        "year": 1984,
+        "price": 13382,
+        "image": "images/products/Album0002.webp",
+        "type": "Album"
+    },
+    {
+        "id": 3,
+        "title": "Dark Side of the Moon",
+        "artist": "Pink Floyd",
+        "genre": "Rock",
+        "year": 1973,
+        "price": 54382,
+        "image": "images/products/Album0003.webp",
+        "type": "Album"
+    },
+    {
+        "id": 4,
+        "title": "Rumors",
+        "artist": "Fleetwood Mac",
+        "genre": "Pop",
+        "year": 1977,
+        "price": 54482,
+        "image": "images/products/Album0004.webp",
+        "type": "Album"
+    },
+    {
+        "id": 5,
+        "title": "Island Life",
+        "artist": "Grace Jones",
+        "genre": "Pop",
+        "year": 1985,
+        "price": 66282,
+        "image": "images/products/Album0005.webp",
+        "type": "Album"
+    },
+    {
+        "id": 6,
+        "title": "Rhythm Nation 1814",
+        "artist": "Janet Jackson",
+        "genre": "Pop",
+        "year": 1989,
+        "price": 39282,
+        "image": "images/products/Album0006.webp",
+        "type": "Album"
+    },
+    {
+        "id": 7,
+        "title": "British Steel",
+        "artist": "Judas Priest",
+        "genre": "Rock",
+        "year": 1980,
+        "price": 91836,
+        "image": "images/products/Album0007.webp",
+        "type": "Album"
+    },
+    {
+        "id": 8,
+        "title": "The Fame Monster",
+        "artist": "Lady Gaga",
+        "genre": "Pop",
+        "year": 2009,
+        "price": 88364,
+        "image": "images/products/Album0008.webp",
+        "type": "Album"
+    },
+    {
+        "id": 9,
+        "title": "True Blue",
+        "artist": "Madonna",
+        "genre": "Pop",
+        "year": 1986,
+        "price": 65829,
+        "image": "images/products/Album0009.webp",
+        "type": "Album"
+    },
+    {
+        "id": 10,
+        "title": "Nevermind",
+        "artist": "Nirvana",
+        "genre": "Rock",
+        "year": 1991,
+        "price": 27758,
+        "image": "images/products/Album0010.webp",
+        "type": "Album"
+    },
+    {
+        "id": 11,
+        "title": "The Message",
+        "artist": "Rodolph Excell",
+        "genre": "Electronic",
+        "year": 2011,
+        "price": 32455,
+        "image": "images/products/headshot01.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 12,
+        "title": "Skeleton Crew",
+        "artist": "Hedvige Behan",
+        "genre": "Rock",
+        "year": 2001,
+        "price": 19283,
+        "image": "images/products/headshot02.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 13,
+        "title": "Exorcist: The Beginning",
+        "artist": "Annnora Haresnaip",
+        "genre": "Punk",
+        "year": 2006,
+        "price": 61544,
+        "image": "images/products/headshot03.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 14,
+        "title": "Imaginary Crimes",
+        "artist": "Dotti Cotsford",
+        "genre": "Rock",
+        "year": 1993,
+        "price": 69833,
+        "image": "images/products/headshot04.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 15,
+        "title": "Suchwiin Bulmyeong",
+        "artist": "Elle Samudio",
+        "genre": "Electronic",
+        "year": 1989,
+        "price": 36767,
+        "image": "images/products/headshot05.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 16,
+        "title": "Paternity",
+        "artist": "Miran Godard",
+        "genre": "Ballad",
+        "year": 1998,
+        "price": 99111,
+        "image": "images/products/headshot06.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 17,
+        "title": "Assassin Next Door",
+        "artist": "Parker Case",
+        "genre": "Rock",
+        "year": 1994,
+        "price": 39504,
+        "image": "images/products/headshot07.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 18,
+        "title": "Dishonored",
+        "artist": "Mannie Paten",
+        "genre": "Electronic",
+        "year": 2002,
+        "price": 64733,
+        "image": "images/products/headshot08.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 19,
+        "title": "Bleak House",
+        "artist": "Gene Rizzillo",
+        "genre": "Electronic",
+        "year": 1990,
+        "price": 21455,
+        "image": "images/products/headshot09.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 20,
+        "title": "Battle of Los Angeles",
+        "artist": "Eugenia Larkins",
+        "genre": "Punk",
+        "year": 2000,
+        "price": 14344,
+        "image": "images/products/headshot10.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 21,
+        "title": "Vikings",
+        "artist": "Arlinda Gent",
+        "genre": "Acoustic",
+        "year": 2007,
+        "price": 43482,
+        "image": "images/products/headshot11.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 22,
+        "title": "Parent Trap",
+        "artist": "Bee Meffen",
+        "genre": "Kids",
+        "year": 2012,
+        "price": 13435,
+        "image": "images/products/headshot12.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 23,
+        "title": "Lie with Me",
+        "artist": "Joan Lowe",
+        "genre": "Pop",
+        "year": 2012,
+        "price": 144433,
+        "image": "images/products/headshot13.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 24,
+        "title": "Dernier Combat",
+        "artist": "Magdalena Moneypenny",
+        "genre": "Synth Pop",
+        "year": 2001,
+        "price": 77362,
+        "image": "images/products/headshot14.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 25,
+        "title": "Latin Music USA",
+        "artist": "Elmer Blampy",
+        "genre": "Latin",
+        "year": 1992,
+        "price": 43929,
+        "image": "images/products/headshot15.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 26,
+        "title": "Five Fingers",
+        "artist": "Helene Scholling",
+        "genre": "Rock",
+        "year": 2012,
+        "price": 50000,
+        "image": "images/products/headshot16.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 27,
+        "title": "Book of Fate",
+        "artist": "Inesita Elam",
+        "genre": "Jazz",
+        "year": 2010,
+        "price": 9012,
+        "image": "images/products/headshot17.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 28,
+        "title": "Pig Hunt",
+        "artist": "Orelle Wardhough",
+        "genre": "Punk",
+        "year": 1999,
+        "price": 88372,
+        "image": "images/products/headshot18.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 29,
+        "title": "Oranges",
+        "artist": "Karim Hanrahan",
+        "genre": "Synth Pop",
+        "year": 2011,
+        "price": 13111,
+        "image": "images/products/headshot19.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 30,
+        "title": "Favor",
+        "artist": "Madelene Ren",
+        "genre": "Acoustic",
+        "year": 1995,
+        "price": 54672,
+        "image": "images/products/headshot20.jpg",
+        "type": "Track"
+    },
+    {
+        "id": 31,
+        "title": "Rio",
+        "artist": "Duran Duran",
+        "genre": "Rock",
+        "year": "1981",
+        "price": "94000",
+        "type": "Album",
+        "image": "images/products/1692026881274-Duran_Duran-Rio-1982.webp"
+    },
+    {
+        "id": 32,
+        "title": "peowurq",
+        "artist": "poweur",
+        "genre": "rpoewiur",
+        "year": "243",
+        "price": "3",
+        "image": "images/products/1692028857782-Santana-Abraxas-1970.webp"
+    },
+    {
+        "id": 33,
+        "title": "Alguno de los beatles",
+        "artist": "The Beatles",
+        "genre": "Rock",
+        "year": "1980",
+        "price": "20000",
+        "image": "images/products/1692044298533-The_Beatles-Sgt-Peppers-Lonely-Hearts-Club-Band_1967.webp"
+    },
+    {
+        "id": 34,
+        "title": "ewqrrwqr",
+        "artist": "ewreqwr",
+        "genre": "ewqrewqr",
+        "year": "1999",
+        "price": "129282",
+        "type": "Album",
+        "image": "images/products/1692044473109-Young_Thug-Jeffery-2016.webp"
+    },
+    {
+        "id": 35,
+        "title": "reqwr",
+        "artist": "ewqr",
+        "genre": "ewrq",
+        "year": "1111",
+        "price": "111111",
+        "type": "Album",
+        "image": "images/products/1692044573332-The_Beatles-Sgt-Peppers-Lonely-Hearts-Club-Band_1967.webp"
+    },
+    {
+        "id": 36,
+        "title": "aaaaaaaaaaaaaaa",
+        "artist": "aaaaaaaaaa",
+        "genre": "aaaaaaaaaaaa",
+        "year": "1111",
+        "price": "2222",
+        "type": "Album",
+        "image": "images/products/1692045642069-Metallica-Master_of_Puppets-1986.webp"
+    }
 ]
