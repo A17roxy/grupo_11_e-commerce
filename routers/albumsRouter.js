@@ -31,9 +31,9 @@ router.get('/create', albumsController.getCreate);
 router.post('/', upload.single('productImage'), albumsController.postProduct);
 
 // @PUT - / albums/:id/edit
-// router.put('/:id/edit', upload.single('productImage'), albumsController.updateAlbum);
+router.put('/:id/edit', upload.single('productImage'), albumsController.updateAlbum);
 
-router.put('/:id/edit', albumsController.updateAlbum);
+//router.put('/:id/edit', albumsController.updateAlbum);
 
 
 module.exports = router ;

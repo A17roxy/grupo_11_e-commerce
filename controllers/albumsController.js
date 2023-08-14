@@ -33,9 +33,7 @@ const controller ={
 
         const newProd = JSON.parse(JSON.stringify(req.body)); // req.body = [Object: null prototype] { title: 'product' }
         newProd.image = "images/products/"+req.file.filename
-        console.log(newProd); 
-        
-        
+     
         const createdAlbum = albumsModels.createAlbum(newProd);
 
         console.log('El nuevo producto tiene como id: ' + createdAlbum.id);
@@ -47,13 +45,18 @@ const controller ={
     },
 
     updateAlbum: (req, res) => {
+
+        const updatedBody = JSON.parse(JSON.stringify(req.body)); // req.body = [Object: null prototype] { title: 'product' }
+        updatedBody.image = "images/products/"+req.file.filename
+
         let updatedProduct = {
             id: Number(req.params.id)
         };
 
+
         updatedProduct = {
             ...updatedProduct,
-            ...req.body
+            ...updatedBody
         };
 
         /* 
@@ -61,9 +64,9 @@ const controller ={
             updatedProduct.id = Number(req.params.id); 
         */
 
-        productModel.updateProduct(updatedProduct);
+        albumsModels.updateProduct(updatedProduct);
 
-        res.redirect('/products/' + updatedProduct.id + '/detail');
+        res.redirect('/');
     }
 
 }

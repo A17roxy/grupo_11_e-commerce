@@ -48,7 +48,7 @@ const model = {
         // Convertir este nuevo array en JSON
         const productsJson = JSON.stringify(products);
         // Guardar todo al JSON
-        fs.writeFileSync(modelo.fileRoute, productsJson, 'utf-8');
+        fs.writeFileSync(model.fileRoute, productsJson, 'utf-8');
     }
 }
 
