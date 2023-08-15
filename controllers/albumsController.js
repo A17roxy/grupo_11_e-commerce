@@ -67,6 +67,12 @@ const controller ={
         albumsModels.updateProduct(updatedProduct);
 
         res.redirect('/');
+    },
+
+    deleteProduct: (req, res) => {
+        productModel.destroy(Number(req.params.id));
+
+        res.redirect('/products');
     }
 
 }

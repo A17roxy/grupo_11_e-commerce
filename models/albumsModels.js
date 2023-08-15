@@ -38,6 +38,7 @@ const model = {
 
         return newProduct;
     },
+
     updateProduct: (updatedProduct) => {
         // Buscar array de productos ya existentes
         let products = model.findAll();
@@ -49,7 +50,17 @@ const model = {
         const productsJson = JSON.stringify(products);
         // Guardar todo al JSON
         fs.writeFileSync(model.fileRoute, productsJson, 'utf-8');
-    }
+    },
+
+    destroy: (id) => {
+        let products = model.findAll();
+
+        products = products.filter(productoActual => productoActual.id !== id);
+
+        const jsonProducts = JSON.stringify(products);
+
+        fs.writeFileSync(model.fileRoute, jsonProducts, 'utf-8');
+    },
 }
 
 module.exports = model;

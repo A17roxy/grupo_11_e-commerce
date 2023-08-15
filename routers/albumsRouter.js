@@ -35,5 +35,8 @@ router.put('/:id/edit', upload.single('productImage'), albumsController.updateAl
 
 //router.put('/:id/edit', albumsController.updateAlbum);
 
+// @DELETE - /products/:id/delete
+router.delete('/:id/delete', albumsController.deleteProduct);
+
 
 module.exports = router ;
