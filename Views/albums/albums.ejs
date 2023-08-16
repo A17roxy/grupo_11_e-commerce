@@ -38,6 +38,13 @@
                                 </h5>
                             </div>
                             <div class="album-icono-mas">
+                                <form action="albums/<%= album.id %>/delete?_method=DELETE" method="post">
+                                    <!-- <h1><input type="submit" value="B"><i class="fa-solid fa-circle-minus"></i></h1> -->
+                                    <button type="submit">
+                                        <i class="fa-solid fa-circle-minus"></i> 
+                                    </button>
+                                </form>
+                                <!-- <h1><a href="albums/<%=album.id%>/delete"><i class="fa-solid fa-circle-minus"></i></a></h1> -->
                                 <h1><a href="albums/<%=album.id%>/edit"><i class="fa-solid fa-circle-plus"></i></a></h1>
                             </div>
                         </div>
