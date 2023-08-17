@@ -66,7 +66,14 @@ const controller ={
         albumsModels.destroy(Number(req.params.id));
 
         res.redirect('/albums');
-    }
+    },
+
+
+   albumDetail: (req, res) => {
+        const productId = req.params.id;
+        const selectedProduct = albumsModels.findById(productId);
+        res.render('albumDetail', { products: selectedProduct });
+    },
 
 }
 
