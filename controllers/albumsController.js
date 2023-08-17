@@ -14,13 +14,6 @@ const controller ={
         res.render('editAlbum', { products: selectedProduct });
     },
 
-
-    getEdit: (req, res) => {
-        const productId = req.params.id;
-        const selectedProduct = albumsModels.findById(productId);
-        res.render('editAlbum', { products: selectedProduct });
-    },
-
     getCreate: (req, res) => {
         res.render('createAlbum');
     },
