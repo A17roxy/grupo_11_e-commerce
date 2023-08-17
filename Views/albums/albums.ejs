@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
 
     <head>
@@ -27,6 +27,11 @@
                             <img class="album-imagen" src="<%=album.image%>" alt="">
                             </a>
                         </div>
+
+                        <!-- Agregado para hover y detalles -->
+                        <!-- <span class="album-details">Detalle del Album: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequatur dicta, dolores tempore veniam deleniti esse sunt incidunt adipisci unde aut accusantium repellendus, sint, sit porro? Explicabo, aspernatur quibusdam. Enim?</span> -->
+                        <div class="album-details"><p class="image-txt">Detalle del Album: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequatur dicta, dolores tempore veniam deleniti esse sunt incidunt adipisci unde aut accusantium repellendus, sint, sit porro? Explicabo, aspernatur quibusdam. Enim?</p></div>
+
                         <div class="album-footer">
                             <div class="album-titulo">
                                 <h4>
@@ -40,9 +45,15 @@
                                 </h5>
                             </div>
                             <div class="album-icono-mas">
+<<<<<<< HEAD
                                 <form action="albums/<%= album.id %>/delete?_method=DELETE" method="post">
                                     <!-- <h1><input type="submit" value="B"><i class="fa-solid fa-circle-minus"></i></h1> -->
                                     <button type="submit">
+=======
+                                <form action="/albums/<%= album.id %>/delete?_method=DELETE" method="post">
+                                    <!-- <h1><input type="submit" value="B"><i class="fa-solid fa-circle-minus"></i></h1> -->
+                                    <button type="submit" class="album-icono-mas">
+>>>>>>> f98114289138812337af860ce5b4edf943f2cbea
                                         <i class="fa-solid fa-circle-minus"></i> 
                                     </button>
                                 </form>
