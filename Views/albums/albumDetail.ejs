@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Creación de Producto</title>
+    <title>Detalle del Album</title>
 </head>
 
 
@@ -22,9 +22,26 @@
     </header>
 
     <main class="register-main">
-        <h1> ESTA ES EL albumDetail
+<!--         <h1> ESTA ES EL albumDetail
 
-<%=products.title%>
+<%=products.title%> -->
+
+<!-- <section class="albums-main-container">
+    <article class="album">
+        <div class="album-cover">
+            <img class="album-imagen" src="<%= 'images/albums/Album0002.webp' %>" alt="">
+        </div>
+        <div class="album-footer">
+            <div class="album-titulo">
+                <h4><%= products.title %></h4>
+                <h4><%= products.artist %></h4>
+                <h5><%= products.year %></h5>
+            </div>
+            <div class="album-icono-mas">
+                <h1><a href="#"><i class="fa-solid fa-circle-plus"></i></a></h1>
+            </div>
+        </div>
+    </article> -->
 
         </h1>
         <div class="reg-frame">
@@ -32,27 +49,40 @@
                 <form action="/albums" class="reg-form" method="post" enctype="multipart/form-data">
                     <div class="reg-form-field">
                         <label class="title-register">Título</label>
-                        <input class="subcontrol-register-form" type="text" name="title" placeholder="Título" required>
+                        <h4><%= products.title %></h4>
+                        <!-- <input class="subcontrol-register-form" type="text" name="title" placeholder="Título" required> -->
                     </div>
                     <div class="reg-form-field">
                         <label class="title-register">Artista</label>
-                        <input class="subcontrol-register-form" type="text" name="artist" placeholder="Artista"
-                            required>
+                        <h4><%= products.artist %></h4>
+                        <!-- <input class="subcontrol-register-form" type="text" name="artist" placeholder="Artista"
+                            required> -->
                     </div>
                     <div class="reg-form-field">
                         <label class="title-register">Género musical</label>
-                        <input class="subcontrol-register-form" type="text" name="genre" placeholder="Género musical"
-                            required>
+                        <h4><%= products.genre %></h4>
+                        <!-- <input class="subcontrol-register-form" type="text" name="genre" placeholder="Género musical"
+                            required> -->
                     </div>
                     <div class="reg-form-field">
                         <label class="title-register">Año</label>
-                        <input class="subcontrol-register-form" type="number" name="year" placeholder="Año" required>
+                        <h4><%= products.year %></h4>
+                        <!-- <input class="subcontrol-register-form" type="number" name="year" placeholder="Año" required> -->
                     </div>
                     <div class="reg-form-field">
                         <label class="title-register">Precio</label>
-                        <input class="subcontrol-register-form" type="number" name="price" placeholder="1000" required>
+                        <h4><%= products.price %></h4>
+                        <!-- <input class="subcontrol-register-form" type="number" name="price" placeholder="1000" required> -->
                     </div>
-                    <div class="reg-profile-form-field">
+                    <div class="reg-form-field">
+                        <label class="title-register">Acerca del album</label>
+                        <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eius expedita porro, velit quae, doloremque molestias ex officia error aspernatur odit quibusdam, cupiditate iste rerum! Deleniti dicta similique aspernatur voluptatibus.</h4>
+                    </div>
+
+
+
+
+<!--                     <div class="reg-profile-form-field">
                         <label class="title-register"></label>
                         <div class="user-category">
                             <label><input class="subcontrol-register-form" type="radio" name="type" value="Album" required>Album</label>
@@ -60,10 +90,10 @@
                         </div>
                     </div>
                     <div class="reg-form-field">
-                        <label class="title-register">Archivo de imagen</label>
+                        <label class="title-register">Archivo de imagen</label> -->
                         <!-- El input de FILE tiene que tener NAME coincidente con el que se puso en
                         el ROUTER (upload.single('productImage')), si no no anda -->
-                        <input class="subcontrol-register-form" type="file" name="productImage"
+<!--                         <input class="subcontrol-register-form" type="file" name="productImage"
                             placeholder="Imagen del álbum / artista" required>
                     </div>
                     <br><br>
@@ -71,7 +101,8 @@
                         <input class="reg-reset-button" type="reset" value="Borrar">
                         &nbsp;&nbsp;&nbsp;
                         <input class="reg-submit-button" type="submit" value="Enviar">
-                    </div>
+                    </div> -->
+
                 </form>
             </div>
         </div>
