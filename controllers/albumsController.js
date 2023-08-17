@@ -70,9 +70,9 @@ const controller ={
     },
 
     deleteProduct: (req, res) => {
-        productModel.destroy(Number(req.params.id));
+        albumsModels.destroy(Number(req.params.id));
 
-        res.redirect('/products');
+        res.redirect('/albums');
     }
 
 }
