@@ -162,6 +162,20 @@ body {
     font-size: 0.7rem;
 }
 
+
+.album-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end; 
+    
+/*
+    background: -webkit-linear-gradient(var(--amarillo), var(--naranja));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    transition: all 200ms; */
+}
 .album-icono-mas {
     display: flex;
     flex-direction: column;

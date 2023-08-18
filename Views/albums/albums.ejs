@@ -1,70 +1,92 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/styles-root.css" rel="stylesheet">
-        <link href="css/styles-header-footer.css" rel="stylesheet">
-        <link href="css/styles-albums.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <title>Albums</title>
-    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles-root.css" rel="stylesheet">
+    <link href="css/styles-header-footer.css" rel="stylesheet">
+    <link href="css/styles-albums.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Albums</title>
+</head>
 
-    <body>
-        <header>
-            <%- include('header') %>
-        </header>
-        <main>
-            <section class="albums-main-container">
-                <% albums.filter(album => album.type=='Album').forEach(album => { %>
-                    <article class="album">
-                        <div class="album-cover">
-                            <a href="albums/<%=album.id%>/detail">
+<body>
+    <header>
+        <%- include('header') %>
+    </header>
+    <main>
+        <section class="albums-main-container">
+            <% albums.filter(album=> album.type=='Album').forEach(album => { %>
+                <article class="album">
+                    <div class="album-cover">
+                        <a href="albums/<%=album.id%>/detail">
                             <img class="album-imagen" src="<%=album.image%>" alt="">
-                            </a>
-                        </div>
+                        </a>
+                    </div>
 
-                        <!-- Agregado para hover y detalles -->
-                        <!-- <span class="album-details">Detalle del Album: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequatur dicta, dolores tempore veniam deleniti esse sunt incidunt adipisci unde aut accusantium repellendus, sint, sit porro? Explicabo, aspernatur quibusdam. Enim?</span> -->
- <!--                        <div class="album-details">
+                    <!-- Agregado para hover y detalles -->
+                    <!-- <span class="album-details">Detalle del Album: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequatur dicta, dolores tempore veniam deleniti esse sunt incidunt adipisci unde aut accusantium repellendus, sint, sit porro? Explicabo, aspernatur quibusdam. Enim?</span> -->
+                    <!--                        <div class="album-details">
                              <p class="image-txt">Detalle del Album: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequatur dicta, dolores tempore veniam deleniti esse sunt incidunt adipisci unde aut accusantium repellendus, sint, sit porro? Explicabo, aspernatur quibusdam. Enim?</p>
                          </div>
  -->
-                        <div class="album-footer">
-                            <div class="album-titulo">
-                                <h4>
-                                    <%=album.title%>
-                                </h4>
-                                <h4>
-                                    <%=album.artist%>
-                                </h4>
-                                <h5>
-                                    <%=album.year%>
-                                </h5>
-                            </div>
+                    <div class="album-footer">
+                        <div class="album-titulo">
+                            <h4>
+                                <%=album.title%>
+                            </h4>
+                            <h4>
+                                <%=album.artist%>
+                            </h4>
+                            <h5>
+                                <%=album.year%>
+                            </h5>
+                        </div>
+                        <div class="album-botones">
                             <div class="album-icono-mas">
                                 <form action="/albums/<%= album.id %>/delete?_method=DELETE" method="post">
-                                    <!-- <h1><input type="submit" value="B"><i class="fa-solid fa-circle-minus"></i></h1> -->
-                                    <button type="submit" class="album-icono-mas">
-                                        <i class="fa-solid fa-circle-minus"></i> 
+                                    <h1><button type="submit" class="boton-con-luz" title="Borrar álbum">
+                                        <i class="fa-solid fa-trash-can"></i> </h1>
                                     </button>
                                 </form>
-                                <!-- <h1><a href="albums/<%=album.id%>/delete"><i class="fa-solid fa-circle-minus"></i></a></h1> -->
-                                <h1><a href="albums/<%=album.id%>/edit"><i class="fa-solid fa-circle-plus"></i></a></h1>
+                                <!-- <h1><a href="/albums/<%= album.id %>/delete?_method=DELETE"><i class="fa-solid fa-circle-minus"></i></a></h1> -->
+                            </div>
+                            &nbsp;&nbsp;
+                            <div class="album-icono-mas">
+                                <form action="albums/<%=album.id%>/edit" method="GET">
+                                    <h1><button type="submit" class="boton-con-luz" title="Editar álbum">
+                                            <i class="fa-solid fa-pen-to-square"></i> </h1>
+                                    </button>
+                                </form>
+                                <!-- 
+                                <button type="submit" class="boton-con-luz">
+                                    <h1><i class="fa-solid fa-circle-minus"></i> </h1>
+                                </button>
+                                <h1><a href="albums/<%=album.id%>/edit" title="Editar álbum"><i class="fa-solid fa-circle-plus"></i></a></h1> -->
+                            </div>
+                            &nbsp;
+                            <div class="album-icono-mas">
+                                <form action="#" method="GET">
+                                    <h1><button type="submit" class="boton-con-luz" title="Comprar - Agregar al carrito">
+                                         <i class="fa-solid fa-cart-plus"></i> </h1>
+                                    </button>
+                                </form>
+                                <!-- <h1><a href="/albums/<%= album.id %>/delete?_method=DELETE"><i class="fa-solid fa-circle-minus"></i></a></h1> -->
                             </div>
                         </div>
-                    </article>
-                    <%}) %>
-            </section>
-        </main>
-        <footer class="footer-main">
-            <%- include('footer') %>
-        </footer>
-    </body>
+                    </div>
+                </article>
+                <%}) %>
+        </section>
+    </main>
+    <footer class="footer-main">
+        <%- include('footer') %>
+    </footer>
+</body>
 
 
-    </html>
+</html>

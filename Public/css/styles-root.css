@@ -59,4 +59,30 @@ body {
     top:1px;
 }
 
+
+.boton-con-luz {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end; 
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: 14pt;
+    background: -webkit-linear-gradient(var(--amarillo), var(--naranja));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    transition: all 200ms;
+}
+
+.boton-con-luz:hover {
+    text-shadow: var(--amarillo) 1px 0 20px;
+}
+
+.boton-zon-luz:active {
+	position:relative;
+	top:1px;
+}
+
   
