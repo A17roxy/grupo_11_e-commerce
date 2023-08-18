@@ -28,15 +28,16 @@ let mainRouter = require('./routers/mainRouter');
 let albumsRouter = require('./routers/albumsRouter');
 let pistasRouter = require('./routers/pistasRouter');
 let cartRouter = require('./routers/cartRouter'); 
+let usersRouter = require('./routers/usersRouter');
 
 /* APP.USE PARA CADA ROUTER */
 app.use('/', mainRouter);
-app.use('/login', mainRouter);
+app.use('/users', usersRouter);
 app.use('/register', mainRouter);
 app.use('/albums', albumsRouter);
 app.use('/pistas', pistasRouter);
 app.use('/cart', cartRouter);
 
 /* SERVER EN ESCUCHA */
-app.listen(3000, () => {console.log('Server en 3000 OK')});
+app.listen(3000, () => {console.log('Server funcionando 3000 OK en'+' http://localhost:3000/')});
 
