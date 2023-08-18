@@ -2,6 +2,17 @@
 
 ## Sprint 3
 
+Puntos del SPRINT-3
+
+1. Listado de productos: /albums (se accede desde el home "Musica en tus manos")
+2. Formulario de creación de productos: /albums/create (no tiene link directo)
+3. Detalle de un producto: /albums/:id/detail (Click sobre la imagen del album)
+4. Formulario de POST de creacion: /albums/create (no tiene link directo)
+5. Formulario de edición: /albums/:id/edit (Click sobre el icono "+" del album)
+6. PUT de la edición: /albums/:id/edit (formulario OK)
+7. DELETE de productos: /albums/:id/delete (Click sobre el icono "-" del album)
+
+
 ### Start Doing
 - Initiate regular discussions (daily/weekly) to review progress.
   
