@@ -5,6 +5,7 @@
         "last_name": "Pilley",
         "email": "lpilley0@newyorker.com",
         "password": "gL5#?\\Ke",
+        "category": "Admin",
         "image": "http://dummyimage.com/210x100.png/5fa2dd/ffffff"
     },
     {
@@ -13,6 +14,7 @@
         "last_name": "Biernat",
         "email": "rbiernat1@telegraph.co.uk",
         "password": "oI6~DUX\"",
+        "category": "Admin",
         "image": "http://dummyimage.com/158x100.png/dddddd/000000"
     },
     {
@@ -21,6 +23,7 @@
         "last_name": "Hundal",
         "email": "ehundal2@princeton.edu",
         "password": "mA8@!i\\NV)'$ha",
+        "category": "Admin",
         "image": "http://dummyimage.com/132x100.png/cc0000/ffffff"
     },
     {
@@ -29,6 +32,7 @@
         "last_name": "Lesslie",
         "email": "dlesslie3@msn.com",
         "password": "lT6*a/SFcgQ*e@",
+        "category": "User",
         "image": "http://dummyimage.com/193x100.png/ff4444/ffffff"
     },
     {
@@ -37,6 +41,7 @@
         "last_name": "Brainsby",
         "email": "gbrainsby4@paypal.com",
         "password": "dC2$\\1rQbsA)xx42",
+        "category": "User",
         "image": "http://dummyimage.com/183x100.png/5fa2dd/ffffff"
     },
     {
@@ -45,6 +50,7 @@
         "last_name": "Whiten",
         "email": "cwhiten5@ifeng.com",
         "password": "tV5}r.30xXeO",
+        "category": "User",
         "image": "http://dummyimage.com/133x100.png/dddddd/000000"
     },
     {
@@ -53,6 +59,7 @@
         "last_name": "Corah",
         "email": "ecorah6@github.io",
         "password": "gN9`z+i4#w+BX",
+        "category": "User",
         "image": "http://dummyimage.com/141x100.png/ff4444/ffffff"
     },
     {
@@ -61,6 +68,7 @@
         "last_name": "Bramstom",
         "email": "lbramstom7@woothemes.com",
         "password": "nG3\"o5QDVn",
+        "category": "User",
         "image": "http://dummyimage.com/122x100.png/ff4444/ffffff"
     },
     {
@@ -69,6 +77,7 @@
         "last_name": "Brockelsby",
         "email": "dbrockelsby8@unicef.org",
         "password": "vK5}4=cY",
+        "category": "User",
         "image": "http://dummyimage.com/156x100.png/5fa2dd/ffffff"
     },
     {
@@ -77,6 +86,7 @@
         "last_name": "Robet",
         "email": "frobet9@chronoengine.com",
         "password": "vH8'!ehJb",
+        "category": "Admin",
         "image": "http://dummyimage.com/247x100.png/ff4444/ffffff"
     },
     {
@@ -85,6 +95,7 @@
         "last_name": "Blanpein",
         "email": "oblanpeina@domainmarket.com",
         "password": "xC1_\"}`m",
+        "category": "User",
         "image": "http://dummyimage.com/122x100.png/ff4444/ffffff"
     },
     {
@@ -93,6 +104,7 @@
         "last_name": "Shevill",
         "email": "bshevillb@rediff.com",
         "password": "hP9+L+??#j3_.A",
+        "category": "User",
         "image": "http://dummyimage.com/187x100.png/dddddd/000000"
     },
     {
@@ -101,6 +113,7 @@
         "last_name": "Shingfield",
         "email": "rshingfieldc@biblegateway.com",
         "password": "jL8$%\\l3v=dgHp",
+        "category": "User",
         "image": "http://dummyimage.com/241x100.png/5fa2dd/ffffff"
     },
     {
@@ -109,6 +122,7 @@
         "last_name": "Bromley",
         "email": "jbromleyd@hubpages.com",
         "password": "nK8`\\XI=",
+        "category": "User",
         "image": "http://dummyimage.com/197x100.png/ff4444/ffffff"
     },
     {
@@ -117,6 +131,7 @@
         "last_name": "Beverstock",
         "email": "abeverstocke@jugem.jp",
         "password": "jN4*%V2$0p",
+        "category": "User",
         "image": "http://dummyimage.com/214x100.png/5fa2dd/ffffff"
     },
     {
@@ -125,6 +140,7 @@
         "last_name": "Tomczykiewicz",
         "email": "ctomczykiewiczf@alibaba.com",
         "password": "eY4'9Ur>.$SE",
+        "category": "User",
         "image": "http://dummyimage.com/143x100.png/5fa2dd/ffffff"
     },
     {
@@ -133,6 +149,7 @@
         "last_name": "Gales",
         "email": "ogalesg@multiply.com",
         "password": "uA0{KE`dT5cUMrCO",
+        "category": "User",
         "image": "http://dummyimage.com/220x100.png/cc0000/ffffff"
     },
     {
@@ -141,6 +158,7 @@
         "last_name": "Yarrall",
         "email": "dyarrallh@washingtonpost.com",
         "password": "zP6=idcd,4",
+        "category": "User",
         "image": "http://dummyimage.com/178x100.png/5fa2dd/ffffff"
     },
     {
@@ -149,6 +167,7 @@
         "last_name": "Pipes",
         "email": "cpipesi@psu.edu",
         "password": "vX5(qkV}/oq",
+        "category": "User",
         "image": "http://dummyimage.com/202x100.png/dddddd/000000"
     },
     {
@@ -157,6 +176,7 @@
         "last_name": "Yurchishin",
         "email": "kyurchishinj@drupal.org",
         "password": "hK2~lt@_5V",
+        "category": "User",
         "image": "http://dummyimage.com/199x100.png/5fa2dd/ffffff"
     },
     {
@@ -165,6 +185,7 @@
         "last_name": "Gartshore",
         "email": "mgartshorek@godaddy.com",
         "password": "bH4>m0|p!8WC=k",
+        "category": "User",
         "image": "http://dummyimage.com/113x100.png/5fa2dd/ffffff"
     },
     {
@@ -173,182 +194,7 @@
         "last_name": "Pidduck",
         "email": "lpidduckl@mapy.cz",
         "password": "yU2@EQulrf",
+        "category": "User",
         "image": "http://dummyimage.com/129x100.png/5fa2dd/ffffff"
-    },
-    {
-        "id": 23,
-        "first_name": "Packston",
-        "last_name": "Sweatman",
-        "email": "psweatmanm@china.com.cn",
-        "password": "wP8|m5X<IpXZ",
-        "image": "http://dummyimage.com/194x100.png/ff4444/ffffff"
-    },
-    {
-        "id": 24,
-        "first_name": "Egbert",
-        "last_name": "Truckell",
-        "email": "etruckelln@facebook.com",
-        "password": "fM1\\r%Y#hUfdWH#",
-        "image": "http://dummyimage.com/180x100.png/ff4444/ffffff"
-    },
-    {
-        "id": 25,
-        "first_name": "Zelig",
-        "last_name": "Whiffin",
-        "email": "zwhiffino@berkeley.edu",
-        "password": "fW7\"C{aD",
-        "image": "http://dummyimage.com/136x100.png/ff4444/ffffff"
-    },
-    {
-        "id": 26,
-        "first_name": "Boycey",
-        "last_name": "Aleksidze",
-        "email": "baleksidzep@dagondesign.com",
-        "password": "zM1_KE7|gb8",
-        "image": "http://dummyimage.com/235x100.png/ff4444/ffffff"
-    },
-    {
-        "id": 27,
-        "first_name": "Kaine",
-        "last_name": "McClune",
-        "email": "kmccluneq@prweb.com",
-        "password": "pD3*y<@_&F?JF&1",
-        "image": "http://dummyimage.com/134x100.png/5fa2dd/ffffff"
-    },
-    {
-        "id": 28,
-        "first_name": "Brier",
-        "last_name": "Naisbet",
-        "email": "bnaisbetr@admin.ch",
-        "password": "vK1!Y|YA2f\\c",
-        "image": "http://dummyimage.com/109x100.png/cc0000/ffffff"
-    },
-    {
-        "id": 29,
-        "first_name": "Christiane",
-        "last_name": "Pottes",
-        "email": "cpottess@ibm.com",
-        "password": "nY7&h.6'AU0E(",
-        "image": "http://dummyimage.com/196x100.png/ff4444/ffffff"
-    },
-    {
-        "id": 30,
-        "first_name": "Alanah",
-        "last_name": "Crichten",
-        "email": "acrichtent@blogspot.com",
-        "password": "hD9`!.R&8T",
-        "image": "http://dummyimage.com/103x100.png/ff4444/ffffff"
-    },
-    {
-        "id": 31,
-        "first_name": "Glenine",
-        "last_name": "Jedryka",
-        "email": "gjedrykau@wikipedia.org",
-        "password": "oG5>Hq\\KpT0",
-        "image": "http://dummyimage.com/139x100.png/5fa2dd/ffffff"
-    },
-    {
-        "id": 32,
-        "first_name": "Obadiah",
-        "last_name": "Gianullo",
-        "email": "ogianullov@privacy.gov.au",
-        "password": "tB6~asJ#yLIZ4Q8Q",
-        "image": "http://dummyimage.com/224x100.png/cc0000/ffffff"
-    },
-    {
-        "id": 33,
-        "first_name": "Blanca",
-        "last_name": "Chasles",
-        "email": "bchaslesw@elpais.com",
-        "password": "cX3&N\"9zdO",
-        "image": "http://dummyimage.com/247x100.png/cc0000/ffffff"
-    },
-    {
-        "id": 34,
-        "first_name": "Almeda",
-        "last_name": "Copsey",
-        "email": "acopseyx@dell.com",
-        "password": "mI8,(47@NFK$hL8z",
-        "image": "http://dummyimage.com/147x100.png/5fa2dd/ffffff"
-    },
-    {
-        "id": 35,
-        "first_name": "Melinde",
-        "last_name": "Minett",
-        "email": "mminetty@msu.edu",
-        "password": "xB6{J|Sc<x5",
-        "image": "http://dummyimage.com/127x100.png/ff4444/ffffff"
-    },
-    {
-        "id": 36,
-        "first_name": "Ford",
-        "last_name": "Fardy",
-        "email": "ffardyz@fotki.com",
-        "password": "pS3_L.eVknYh=L>~",
-        "image": "http://dummyimage.com/206x100.png/5fa2dd/ffffff"
-    },
-    {
-        "id": 37,
-        "first_name": "Dara",
-        "last_name": "Faichnie",
-        "email": "dfaichnie10@home.pl",
-        "password": "eV8(jV?~9",
-        "image": "http://dummyimage.com/157x100.png/5fa2dd/ffffff"
-    },
-    {
-        "id": 38,
-        "first_name": "Jarad",
-        "last_name": "Malzard",
-        "email": "jmalzard11@xinhuanet.com",
-        "password": "mO2\"~ct|yMz9",
-        "image": "http://dummyimage.com/186x100.png/ff4444/ffffff"
-    },
-    {
-        "id": 39,
-        "first_name": "Risa",
-        "last_name": "Cominotti",
-        "email": "rcominotti12@themeforest.net",
-        "password": "dZ0}Jr)S56c\"/C>",
-        "image": "http://dummyimage.com/113x100.png/dddddd/000000"
-    },
-    {
-        "id": 40,
-        "first_name": "Vergil",
-        "last_name": "Emps",
-        "email": "vemps13@360.cn",
-        "password": "lX9)i0kl.?MB1=F",
-        "image": "http://dummyimage.com/135x100.png/5fa2dd/ffffff"
-    },
-    {
-        "id": 41,
-        "first_name": "Gregor",
-        "last_name": "Casa",
-        "email": "gcasa14@msn.com",
-        "password": "jG9&mFJ?'I5,",
-        "image": "http://dummyimage.com/160x100.png/cc0000/ffffff"
-    },
-    {
-        "id": 42,
-        "first_name": "Ferne",
-        "last_name": "Speers",
-        "email": "fspeers15@nyu.edu",
-        "password": "uN5/kb0ND}",
-        "image": "http://dummyimage.com/153x100.png/dddddd/000000"
-    },
-    {
-        "id": 43,
-        "first_name": "Caye",
-        "last_name": "Pendlington",
-        "email": "cpendlington16@4shared.com",
-        "password": "gX8<sIJgOfM",
-        "image": "http://dummyimage.com/240x100.png/ff4444/ffffff"
-    },
-    {
-        "id": 44,
-        "first_name": "Morley",
-        "last_name": "Dooland",
-        "email": "mdooland17@wiley.com",
-        "password": "yS5'8q@_@IP?",
-        "image": "http://dummyimage.com/165x100.png/cc0000/ffffff"
     }
 ]
