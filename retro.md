@@ -1,8 +1,26 @@
-SPRINT 3
-Start doing: Conversar unos minutos por semana/dia sobre los avances. 
-More of: Continuar con las historias de usuarios, pero reducirlas, acotarlas (MVP)
-Keep doing: Mantenernos al día en los conocimientos que se tienen que ir aplicando al proyecto.
-Less of: 
-Stop doing: Dejar de preocuparnos ya por pequeñas cuestiones estéticas.
+# Project Sprints
 
-SPRINT 4
+## Sprint 3
+
+### Start Doing
+- Initiate regular discussions (daily/weekly) to review progress.
+  
+### More Of
+- Continue refining user stories and narrow them down for MVP.
+
+### Keep Doing
+- Stay updated on the knowledge relevant to the project.
+
+### Less Of
+- Reduce focus on minor aesthetic details.
+
+### Stop Doing
+- Stop worrying about small design-related issues.
+
+## Sprint 4
+
+### More Of
+- Increase collaboration through pair programming.
+
+### Keep Doing
+- Maintain regular discussions (daily/weekly) about progress.
