@@ -39,6 +39,7 @@
                         <label class="title-register">E-mail</label>
                         <input class="subcontrol-register-form" type="email" name="email" placeholder="direccion@email.com"
                             required>
+                            <p style="color: rgb(252, 0, 0);"><%= errors.email %>/p>
                     </div>
                     <div class="reg-form-field">
                         <label class="title-register">Fecha de nacimiento</label>
@@ -75,6 +76,7 @@
                         <label class="title-register">Confirmar contraseña</label>
                         <input class="subcontrol-register-form" type="password" name="confirm-password">
                     </div>
+                    <p style="color: rgb(252, 0, 0);"><%= errors.password %>/p>
                     <div class="button-send-reset-register">
                         <input class="reg-reset-button" type="reset" value="Borrar">
                         <input class="reg-submit-button" type="submit" value="Enviar" action="/home.html">
