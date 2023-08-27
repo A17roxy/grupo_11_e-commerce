@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
-
  
  .form-register {
     padding: 20px;
@@ -58,10 +56,12 @@ justify-content: space-evenly;
 }
 
 
-
 .register-main{
     padding-top: 3svh; 
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
 }
 
 

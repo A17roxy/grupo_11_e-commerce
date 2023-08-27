@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles-root.css">
-    <link rel="stylesheet" href="/css/styles-home.css">
-    <link rel="stylesheet" href="/css/styles_lg.css">
+    <link rel="stylesheet" href="/css/styles-header-footer.css">
     <link rel="stylesheet" href="/css/styles-login-register.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,62 +24,48 @@
     <main class="register-main">
         <div class="reg-frame">
             <div class="reg-frame-frame">
-                <form action="/" class="reg-form">
+                <form action="/users/register" class="reg-form" method="post" enctype="multipart/form-data">
                     <div class="reg-form-field">
-                        <label class="title-register">Nombre y apellido</label>
-                        <input class="subcontrol-register-form" type="text" name="name-lastname" placeholder="Nombre y Apellido"
+                        <label class="title-register" for="f_lastname">Apellido(s)</label>
+                        <input class="subcontrol-register-form" type="text" id="f_lastname" name="lastname" placeholder="Apellido(s)"
                             required>
                     </div>
                     <div class="reg-form-field">
-                        <label class="title-register">Nombre de usuari@</label>
-                        <input class="subcontrol-register-form" type="text" name="user-name" placeholder="Nombre de Usuario"
+                        <label class="title-register" for="f_firstname">Nombre(s)</label>
+                        <input class="subcontrol-register-form" type="text" id="f_firstname" name="firstname" placeholder="Nombre(s)"
                             required>
                     </div>
                     <div class="reg-form-field">
-                        <label class="title-register">E-mail</label>
-                        <input class="subcontrol-register-form" type="email" name="email" placeholder="direccion@email.com"
+                        <label class="title-register" for="f_email">e-mail</label>
+                        <input class="subcontrol-register-form" type="email" id="f_email" name="email" placeholder="direccion@email.com"
                             required>
-                            <p style="color: rgb(252, 0, 0);"><%= errors.email %>/p>
+                            <% if (locals.errors) { %> 
+                                <p style="color: rgb(252, 0, 0);">HOLA ERROR ERORRRRRL</p>
+                                <p style="color: rgb(252, 0, 0);"> <%=errors%> </p>
+                            <% } %>
                     </div>
                     <div class="reg-form-field">
-                        <label class="title-register">Fecha de nacimiento</label>
-                        <input class="subcontrol-register-form" type="date" name="birth" required>
-                    </div>
-                    <div class="reg-profile-form-field">
-                        <label class="title-register">Perfil de usuari@</label>
-                        <div class="user-category">
-                            <label><input class="subcontrol-register-form" type="radio" name="profile">Comprador</label>
-                            <label><input class="subcontrol-register-form" type="radio" name="profile">Vendedor</label>
-                            <label><input class="subcontrol-register-form" type="radio" name="profile">Ambos</label>
-                        </div>
-                    </div>
-                    <div class="reg-categories-form-field">
-                        <label class="title-register">Categorías de interés</label>
-                        <div class="checkbox-category">
-
-                            <label><input class="subcontrol-register-form check" type="checkbox"
-                                    name="user-interest">Electro</label>
-                            <label><input class="subcontrol-register-form check" type="checkbox"
-                                    name="user-interest">jazz</label>
-                            <label><input class="subcontrol-register-form check" type="checkbox"
-                                    name="user-interest">trap</label>
-                            <label><input class="subcontrol-register-form check" type="checkbox"
-                                    name="user-interest">blues</label>
-                            <label><input class="subcontrol-register-form check" type="checkbox"
-                                    name="user-interest">salsa</label>
-                        </div>
-                    </div>
-                    <div class="reg-form-field">
-                        <label class="title-register">Contraseña</label>
-                        <input class="subcontrol-register-form" type="password" name="password">
+                        <label class="title-register" for="f_password">Contraseña</label>
+                        <input class="subcontrol-register-form" id="f_password" type="password" name="password">
                         <br>
-                        <label class="title-register">Confirmar contraseña</label>
-                        <input class="subcontrol-register-form" type="password" name="confirm-password">
+                        <label class="title-register" for="f_password2">Confirmar contraseña</label>
+                        <input class="subcontrol-register-form" type="password" id="f_password2" name="password_confirmation">
                     </div>
+                    <% if (locals.errors && errors.password) { %> 
                     <p style="color: rgb(252, 0, 0);"><%= errors.password %>/p>
+                    <% } %>
+                    
+                        <div class="reg-form-field">
+                        <label class="title-register">Archivo de imagen</label>
+                        <!-- El input de FILE tiene que tener NAME coincidente con el que se puso en
+                        el ROUTER (upload.single('productImage')), si no no anda -->
+                        <input class="subcontrol-register-form" type="file" name="userImage"
+                            placeholder="Imagen/avatar" required>
+                    </div>
+                    <br>
                     <div class="button-send-reset-register">
-                        <input class="reg-reset-button" type="reset" value="Borrar">
-                        <input class="reg-submit-button" type="submit" value="Enviar" action="/home.html">
+                        <input class="myButton" type="reset" value="Borrar">&nbsp;&nbsp;&nbsp;
+                        <input class="myButton" type="submit" value="Enviar" action="/home.html">
                     </div>
                 </form>
             </div>
@@ -87,7 +73,7 @@
 
     </main>
 
-    <footer>
+    <footer class="footer-main">
         <%- include('footer') %>
     </footer>
 </body>

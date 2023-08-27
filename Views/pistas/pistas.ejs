@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="css/styles-root.css" rel="stylesheet">
-    <link href="css/styles-header-footer.css" rel="stylesheet">
-    <link href="css/styles-pistas.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <!-- la normalize destruye todo en e esta vista, falta verificar/normalizar !  -->
+    <link rel="stylesheet" href="/css/styles-root.css">
+    <link rel="stylesheet" href="/css/styles-header-footer.css">
+    <link rel="stylesheet" href="css/styles-pistas.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -57,39 +58,7 @@
         </section>
     </main>
     <footer class="footer-main">
-        <div class="footer-principal-movil">
-            <div class="footer-principal-left">
-                <div class="icono-luz"><a href="#">
-                        <h2><i class="fa-brands fa-square-instagram"></i>&nbsp;&nbsp;</h2>
-                    </a></div>
-                <div class="icono-luz"><a href="#">
-                        <h2><i class="fa-brands fa-square-facebook"></i>&nbsp;&nbsp;</h2>
-                    </a></div>
-                <div class="icono-luz"><a href="#">
-                        <h2><i class="fa-brands fa-square-twitter"></i>&nbsp;&nbsp;</h2>
-                    </a></div>
-                <div class="icono-luz">
-                    <a href="#">
-                        <h2><i class="fa-solid fa-square-envelope"></i>&nbsp;&nbsp;</h2>
-                    </a>
-                </div>
-                <div class="icono-luz">
-                    <a href="#">
-                        <h2><i class="fa-solid fa-square-phone"></i></h2>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-principal-right">
-
-                <div>
-                    <h4>&#169; 2023 B&S</h4>
-                </div>
-            </div>
-        </div>
-        <div class="footer-principal">
-              <%- include('footer'); %>
-        </div> 
+        <%- include('footer') %>
     </footer>
 </body>
-
 </html>

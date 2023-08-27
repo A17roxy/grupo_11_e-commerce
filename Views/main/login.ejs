@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles_lg.css">
-    <link rel="stylesheet" href="/css/styles-albums.css">
+    <link rel="stylesheet" href="/css/styles-root.css">
+    <link rel="stylesheet" href="/css/styles-header-footer.css">
+    <link rel="stylesheet" href="/css/styles-login-register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,31 +19,34 @@
         <%- include('header') %> 
     </header>
 
-    <main class="login-main">
-        <div class="login-cuadro">
-            <div class="login-cuadro-cuadro">
+    <main class="register-main">
+        <div class="reg-frame">
+            <div class="reg-frame-frame">
                 <p style="color: red;"><%= error %></p>
-                <form action="/" class="login-form">
-                    <div class="login-form-field">
-                        <label for="user">Nombre de usuario:</label>
+                <form action="/" class="reg-form">
+                    <div class="reg-form-field">
+                        <label class="title-register" for="user">e-mail:</label>
                         <input type="text" id="user" name="user-name" placeholder="User123">
                     </div>
-                    <div class="login-form-field">
-                        <label for="pass">Contraseña:</label>
+                    <div class="reg-form-field">
+                        <label class="title-register" for="pass">Contraseña:</label>
                         <input type="password" id="pass" name="password">
                     </div>
-                    <div class="login-form-button">
+                    <br>
+                    <div class="button-send-reset-register">
+                        
                         <input class="myButton" type="submit" value="Enviar" action="/home.html">
                     </div>
-                    &nbsp;<br>
-                    <h5><a class="login-form-field" href="#">Olvidé mi usuario</a></h5>
-                    &nbsp;<br>
-                    <h5><a class="login-form-field" href="#">Olvide mi contraseña</a></h5>
+                    <br>
+                    <h5><a href="#">Olvidé mi usuario</a></h5>
+                    <br>
+                    <h5><a href="#">Olvide mi contraseña</a></h5>
                 </form>
             </div>
         </div>
 
     </main>
+    <footer class="footer-sticky">
         <%- include('footer') %>
     </footer>
 </body>

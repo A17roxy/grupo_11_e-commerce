@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles-root.css">
     <link rel="stylesheet" href="/css/styles-header-footer.css">
-    <link rel="stylesheet" href="/css/styles-home.css">
     <link rel="stylesheet" href="/css/styles-login-register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -26,26 +25,26 @@
             <div class="reg-frame-frame">
                 <form action="/albums" class="reg-form" method="post" enctype="multipart/form-data">
                     <div class="reg-form-field">
-                        <label class="title-register">Título</label>
-                        <input class="subcontrol-register-form" type="text" name="title" placeholder="Título" required>
+                        <label class="title-register" for="r_title">Título</label>
+                        <input class="subcontrol-register-form" type="text" name="title" id="r_title" placeholder="Título" required>
                     </div>
                     <div class="reg-form-field">
-                        <label class="title-register">Artista</label>
-                        <input class="subcontrol-register-form" type="text" name="artist" placeholder="Artista"
+                        <label class="title-register" for="f_artist">Artista</label>
+                        <input class="subcontrol-register-form" type="text" name="artist" id="f_artist" placeholder="Artista"
                             required>
                     </div>
                     <div class="reg-form-field">
-                        <label class="title-register">Género musical</label>
-                        <input class="subcontrol-register-form" type="text" name="genre" placeholder="Género musical"
+                        <label class="title-register" for="f_genre">Género musical</label>
+                        <input class="subcontrol-register-form" type="text" name="genre" id="f_genre" placeholder="Género musical"
                             required>
                     </div>
                     <div class="reg-form-field">
-                        <label class="title-register">Año</label>
-                        <input class="subcontrol-register-form" type="number" name="year" placeholder="Año" required>
+                        <label class="title-register" for="f_year">Año</label>
+                        <input class="subcontrol-register-form" type="number" name="year" id="f_year" placeholder="Año" required>
                     </div>
                     <div class="reg-form-field">
-                        <label class="title-register">Precio</label>
-                        <input class="subcontrol-register-form" type="number" name="price" placeholder="1000" required>
+                        <label class="title-register" for="f_price">Precio</label>
+                        <input class="subcontrol-register-form" type="number" name="price" id="f_price" placeholder="1000" required>
                     </div>
                     <div class="reg-profile-form-field">
                         <label class="title-register"></label>
@@ -61,7 +60,7 @@
                         <input class="subcontrol-register-form" type="file" name="productImage"
                             placeholder="Imagen del álbum / artista" required>
                     </div>
-                    <br><br>
+                    <br>
                     <div class="button-send-reset-register">
                         <input class="reg-reset-button" type="reset" value="Borrar">
                         &nbsp;&nbsp;&nbsp;
@@ -73,7 +72,7 @@
 
     </main>
 
-    <footer>
+    <footer class="footer-main">
         <%- include('footer') %>
     </footer>
 </body>

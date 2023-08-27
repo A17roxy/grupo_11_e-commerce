@@ -1,8 +1,8 @@
-const usersModel = require('../models/usersModels');
+const usersModels = require('../models/usersModels');
 
 const controller = {
     getList: (req, res) => {
-        usersModel.findAll();
+        usersModels.findAll();
     },
     getLogin: (req, res) => {
         const error = req.query.error;
@@ -17,7 +17,7 @@ const controller = {
     },
 
     login: (req, res) => {
-        const userInJson = userModel.findByEmail(req.body.email);
+        const userInJson = usersModels.findByEmail(req.body.email);
 
         // Si no encuentra el mail redirecciona
         if (!userInJson) {
@@ -41,24 +41,34 @@ const controller = {
             res.redirect('/users/login?error=Datos de usuario incorrectos');
         }
     },
-//PREGUNTAR COMO PONER VARIAS OPCIONES EN UNA CATEGORIA DE REGISTER
+
     register: (req, res) => {
         const newUser = {
-            nombreYApellido:req.body.nombreYApellido,
-            nombreDeUsuario:req.body.nombreDeUsuario,
-            email: req.body.email,
-            fechaDeNacimiento:req.body.fechaDeNacimiento,
-            password: req.body.password,
+            lastname:req.body.lastname ,
+            firstname:req.body.firstname ,
+            email: req.body.email ,
+            password: req.body.password ,
+            category: "User" //user puesto a mano, todos los que se mueven por ahora son usuarios externos
         }
+        newUser.image = "images/users/"+req.file.filename
 
-        const user = userModel.create(newUser);
 
-        if (user.error) {
-            res.redirect('/users/register?error=' + user.error);
+
+        const user = usersModels.create(newUser);
+
+        console.log(user)
+
+        if (user.errors) {
+            res.redirect('/users/register?errors=' + user.errors);
         } else {
-            res.redirect('/');
+            res.redirect('/users/register-thank-you?mensaje='+user.firstname);
         }
     },
+
+    thankYouForRegister: (req,res) => {
+        const mensaje = req.query.mensaje; 
+        res.render('register-thank-you', { mensaje });
+    }, 
 }
 
 

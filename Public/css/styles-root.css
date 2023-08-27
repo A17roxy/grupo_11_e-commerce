@@ -38,8 +38,7 @@ body {
   } 
 
 
-
-  .icono-luz {
+.icono-luz {
     display: flex;
     align-items: flex-end; 
     padding-right: 4px;
@@ -59,7 +58,7 @@ body {
     top:1px;
 }
 
-
+ 
 .boton-con-luz {
     display: flex;
     flex-direction: column;
@@ -80,9 +79,64 @@ body {
     text-shadow: var(--amarillo) 1px 0 20px;
 }
 
-.boton-zon-luz:active {
+.boton-con-luz:active {
 	position:relative;
 	top:1px;
 }
 
-  
+
+.myButton {
+	background:linear-gradient(to bottom, #eeb86b 5%, #e26f3a 100%);
+	background-color: var(--amarillo);
+	border-radius:4px;
+	display:inline-block;
+	cursor:pointer;
+	color: var(--negro);
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 14px;
+	text-decoration:none;
+}
+
+.myButton:hover {
+    box-shadow: var(--amarillo) 1px 0 20px;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+.icono-luz {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 4px;
+    background: -webkit-linear-gradient(var(--amarillo), var(--naranja));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 200ms;
+    transition: all 200ms;
+}
+
+.icono-luz:hover {
+    text-shadow: var(--amarillo) 1px 0 20px;
+}
+
+.icono-luz:active {
+	position:relative;
+	top:1px;
+}
+
+.body-master{
+    background-color: var(--negro);
+}
+

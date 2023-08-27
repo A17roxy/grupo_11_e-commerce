@@ -72,11 +72,39 @@
     transition: all 600ms;
  }
 
+ .footer-sticky {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    width: 100%;
+    margin-top: 30px; 
+    min-height: 30px;
+    background-color: var(--negro);
+    color: var(--amarillo);
+    box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
+    transition: all 600ms;
+ }
+
+
+
  .footer-main:hover {
     -webkit-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
     -moz-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
     box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
 }
+
+.footer-sticky:hover {
+    -webkit-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
+    -moz-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
+    box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
+}
+
+
+
 
 .footer-principal-movil {
     width: 100%;
@@ -100,36 +128,12 @@
     align-items: center;
     margin: auto;
     margin-bottom: 0px;
+    max-height: 90px;
     padding: 20px;
     width: 100%;
   
 }
 
-.footer-fixed {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    width: 100%;
-    height: 13vh;
-    margin-top: 30px; 
-    height: 9vh;
-    background-color: var(--negro);
-    color: var(--amarillo);
- 
-    
-    box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -8px 12px 1px rgba(0,0,0,0.75);
-    transition: all 600ms;
- }
-
- .footer-fixed:hover {
-    -webkit-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
-    -moz-box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
-    box-shadow: 0px -7px 18px -7px rgba(255, 232, 138, 1);
-}
 
 
 .footer-principal-left {
@@ -160,67 +164,6 @@
 /* ESTILOS GENERALES DE BOTONES / ILUMINACION DE ICONOS / ETC */
 /**************************************************************/
 
-.myButton {
-	background:linear-gradient(to bottom, #eeb86b 5%, #e26f3a 100%);
-	background-color: var(--amarillo);
-	border-radius:4px;
-	display:inline-block;
-	cursor:pointer;
-	color: var(--negro);
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 14px;
-	text-decoration:none;
-}
-
-.myButton:hover {
-    box-shadow: var(--amarillo) 1px 0 20px;
-}
-
-.myButton:active {
-	position:relative;
-	top:1px;
-}
-
-.icono-luz {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-right: 4px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-right: 4px;
-
-    background: -webkit-linear-gradient(var(--amarillo), var(--naranja));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 200ms;
-
-/*  background: -webkit-linear-gradient(var(--amarillo), var(--naranja));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
- */    
-    transition: all 200ms;
-
-}
-
-.icono-luz:hover {
-    text-shadow: var(--amarillo) 1px 0 20px;
-}
-
-.icono-luz:active {
-	position:relative;
-	top:1px;
-}
-
-.body-master{
-    background-color: var(--negro);
-}
 
 
 @media (min-width: 410px) {
