@@ -18,8 +18,8 @@ const model = {
         if (emailInUse) {
             return ({
                 errors: {
-                    email:'Este e-mail ya esta en uso',
-                    password:'Esta contraseña ya esta en uso'
+                    email:'Este e-mail ya está en uso',
+                    password:'Esta contraseña ya está en uso'
                 }
 
             });

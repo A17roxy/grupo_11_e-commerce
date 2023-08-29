@@ -1,1 +1,29 @@
-[{"id":1,"lastname":"Lind","firstname":"Pilley","email":"lpilley0@newyorker.com","password":"gL5#?\\Ke","category":"Admin","image":"http://dummyimage.com/210x100.png/5fa2dd/ffffff"},{"id":"6fe03e23-3297-43de-ad11-c971c33627d8","lastname":"Lozada","firstname":"Francisco","email":"fjlozada@hotmail.com","password":"$2b$10$IqZosfinRhzutYHGtDOpLunxn2Yy3HSDMHgrv2rgQujXDKXN3S9MS","category":"Admin","image":"images/users/1693097683672-headshot06.jpg"},{"id":"7e949952-21c6-4e2b-878e-f94dd5a89122","lastname":"Lozada","firstname":"Francisco","email":"flozada@hotmail.com","password":"$2b$10$nNz2Kjbxd7TarTv0bubx/e137SnxGKbA/wrifNr1QjNs2I1CklX6i","category":"Admin","image":"images/users/1693097727359-headshot06.jpg"},{"id":"fabd4a2b-70c8-46f0-b856-78ed055672b8","lastname":"Romero","firstname":"Juan","email":"jromero@gmail.com","password":"$2b$10$.NH1QTq1WjFunPVAxzCJveYkMzFLKD8FzqsjEf48NWPm/PP71Tbvy","category":"User","image":"images/users/1693098156506-headshot06.jpg"},{"id":"486a778e-2754-41cd-a45f-bba5110d7a32","lastname":"lozada","firstname":"francisco","email":"fjlozad@hotmail.com","password":"$2b$10$DmVtL6HpKf8JJxgPlD25d.z53DacPHUYp0Ak7RrxwpDJpqnyCUClS","category":"User","image":"images/users/1693098342192-headshot06.jpg"}]
+[
+    {
+        "id": 1,
+        "lastname": "Lind",
+        "firstname": "Pilley",
+        "email": "lpilley0@newyorker.com",
+        "password": "gL5#?\\Ke",
+        "category": "Admin",
+        "image": "http://dummyimage.com/210x100.png/5fa2dd/ffffff"
+    },
+    {
+        "id": "9a807100-44c3-4cac-bf28-e3a94334e63f",
+        "lastname": "Lozada",
+        "firstname": "Francisco",
+        "email": "fjlozada@hotmail.com",
+        "password": "$2b$10$oLEURZJJrtEYs5zmasbG6up.b4SirNbtgiEEnlPn1Ti5S8C3cXXya",
+        "category": "User",
+        "image": "images/users/1693278764034-headshot08.jpg"
+    },
+    {
+        "id": "c63cc0d9-2ffe-4e40-aa5b-bd6425e679fc",
+        "lastname": "Lozada",
+        "firstname": "Francisco",
+        "email": "fjlozada@gmail.com",
+        "password": "$2b$10$vrS/RrYggNugRndZKNx.0OwwoYGoyG9RE.Zt7dlvk/nqHPoYwd.42",
+        "category": "User",
+        "image": "images/users/1693278805199-headshot08.jpg"
+    }
+]

@@ -1,4 +1,5 @@
 const usersModels = require('../models/usersModels');
+const validationResult = require('express-validator').validationResult;
 
 const controller = {
     getList: (req, res) => {
@@ -43,6 +44,12 @@ const controller = {
     },
 
     register: (req, res) => {
+        const xValid = validationResult(req);
+        if (xValid.errors && xValid.errors.length != 0){
+            console.log(xValid.errors);
+            res.render('register', { errorExpress: xValid.errors });
+            return;
+        }
         const newUser = {
             lastname:req.body.lastname ,
             firstname:req.body.firstname ,
@@ -50,16 +57,13 @@ const controller = {
             password: req.body.password ,
             category: "User" //user puesto a mano, todos los que se mueven por ahora son usuarios externos
         }
-        newUser.image = "images/users/"+req.file.filename
-
-
-
+        newUser.image = "images/users/"+req.file.filename;
         const user = usersModels.create(newUser);
 
-        console.log(user)
-
+  
+        
         if (user.errors) {
-            res.redirect('/users/register?errors=' + user.errors);
+            res.render('register', { errors: user.errors });
         } else {
             res.redirect('/users/register-thank-you?mensaje='+user.firstname);
         }
