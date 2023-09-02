@@ -1,4 +1,4 @@
-
+/* 
 var a = [
     {
       type: 'field',
@@ -33,4 +33,10 @@ console.log(
     a.indexOf({path: 'firstname'})
 )
 
+ */
+var a = "hola"
+console.log(a)
 
+
+a = undefined
+console.log(a)
