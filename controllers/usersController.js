@@ -28,7 +28,7 @@ const controller = {
 
         if (userIndB) {
             console.log('encontre el usuario');
-            const passCheck = bcrypt.compareSync(req.body.password, userIndB.password);
+            let passCheck = bcrypt.compareSync(req.body.password, userIndB.password);
 
             if (passCheck) {
                 console.log('password valido');
@@ -41,6 +41,9 @@ const controller = {
                 }
 
                 req.session.user = userIndB;
+                req.session.loggedFirstName = userIndB.firstname;
+
+                console.log('El usuario logeado es : '+ req.session.loggedFirstName);
 
                 return res.redirect('/');
             }
