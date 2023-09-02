@@ -7,19 +7,19 @@ const model = {
 
     fileRoute: path.join(__dirname, '../data/users.json'),
 
-    findAll: () => {
-        const jsonData = fs.readFileSync(path.join(__dirname, '../data/users.json'));
+    findAll: function () {
+        return JSON.parse(fs.readFileSync(model.fileRoute, 'utf-8'));
     },
-    
+
     create: (userData) => {
-        
+
         const emailInUse = model.findByEmail(userData.email);
 
         if (emailInUse) {
             return ({
                 errors: {
-                    email:'Este e-mail ya está en uso',
-                    password:'Esta contraseña ya está en uso'
+                    email: 'Este e-mail ya está en uso',
+                    password: 'Esta contraseña ya está en uso'
                 }
 
             });
@@ -50,7 +50,17 @@ const model = {
 
         return coincidence || null;
     },
+    findByField: function (field, text) {
+        let users = this.findAll();
+        let userFound = users.find(theUser => theUser[field] === text);
+        console.log('buscando por campo ' + field);
+        if (userFound != undefined) {
+            console.log('usuario enconotrado: ');
+        } else {
+            console.log('usuario no encontrado');
+        }
+        return userFound;
+    }
 }
-
 
 module.exports = model;

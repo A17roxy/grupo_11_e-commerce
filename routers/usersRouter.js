@@ -32,7 +32,7 @@ router.get('/usersList', usersController.getList);
 router.get('/login',usersController.getLogin);
 
 //Post de /users/login
-router.post('/login', usersController.login);
+router.post('/login', usersController.loginProcess);
 
 
 //Get de /users/register

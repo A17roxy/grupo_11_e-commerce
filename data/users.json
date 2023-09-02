@@ -25,5 +25,14 @@
         "password": "$2b$10$vrS/RrYggNugRndZKNx.0OwwoYGoyG9RE.Zt7dlvk/nqHPoYwd.42",
         "category": "User",
         "image": "images/users/1693278805199-headshot08.jpg"
+    },
+    {
+        "id": "cdfa49a9-2bdf-46c9-bedd-f07f7608bf59",
+        "lastname": "Test",
+        "firstname": "User",
+        "email": "usertest@gmail.com",
+        "password": "$2b$10$kFLS3BoA9Z8/Ul49mriSwuVhTHifRv8TR/uznrdq8RVeVzgrRllhC",
+        "category": "User",
+        "image": "images/users/1693678790226-f.elconfidencial.com_original_966_3c2_fea_9663c2fea596b7d03e5760ef3870b3a6.jpg"
     }
 ]

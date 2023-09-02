@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/styles-root.css">
     <link rel="stylesheet" href="/css/styles-header-footer.css">
     <link rel="stylesheet" href="/css/styles-login-register.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,31 +17,46 @@
 
 <body>
     <header>
-        <%- include('header') %> 
+        <%- include('header') %>
     </header>
 
     <main class="register-main">
         <div class="reg-frame">
             <div class="reg-frame-frame">
-                <p style="color: red;"><%= error %></p>
-                <form action="/" class="reg-form">
-                    <div class="reg-form-field">
-                        <label class="title-register" for="user">e-mail:</label>
-                        <input type="text" id="user" name="user-name" placeholder="User123">
-                    </div>
-                    <div class="reg-form-field">
-                        <label class="title-register" for="pass">Contraseña:</label>
-                        <input type="password" id="pass" name="password">
-                    </div>
-                    <br>
-                    <div class="button-send-reset-register">
-                        
-                        <input class="myButton" type="submit" value="Enviar" action="/home.html">
-                    </div>
-                    <br>
-                    <h5><a href="#">Olvidé mi usuario</a></h5>
-                    <br>
-                    <h5><a href="#">Olvide mi contraseña</a></h5>
+
+                <form action="/users/login" class="reg-form" method="post">
+                    <% if (locals.errorExpress) { errorExpress.forEach(error=> { %>
+                        <p style="color: var(--errorNivel2);">
+                            <%= error.msg %>
+                        </p>
+                        <% }); } %>
+                            <div class="reg-form-field">
+                                <label class="title-register" for="email">e-mail:</label>
+                                <input type="text" id="email" name="email" placeholder="jhon_doe@email.com">
+                                <% if (locals.errors && errors.email) { %>
+                                    <p style="color: rgb(252, 0, 0);">
+                                        <%=errors.email.msg%>
+                                    </p>
+                                    <% } %>
+                            </div>
+                            <div class="reg-form-field">
+                                <label class="title-register" for="password">Contraseña:</label>
+                                <input type="password" id="password" name="password" placeholder="password">
+                                <% if (locals.errors && errors.password) { %>
+                                    <p style="color: rgb(252, 0, 0);">
+                                        <%=errors.password.msg%>
+                                    </p>
+                                    <% } %>
+                            </div>
+                            <br>
+                            <div class="button-send-reset-register">
+
+                                <input class="myButton" type="submit" value="Ingresar" >
+                            </div>
+                            <br>
+                            <h5><a href="#">Olvidé mi usuario</a></h5>
+                            <br>
+                            <h5><a href="#">Olvide mi contraseña</a></h5>
                 </form>
             </div>
         </div>
