@@ -36,22 +36,8 @@ let pistasRouter = require('./routers/pistasRouter');
 let cartRouter = require('./routers/cartRouter'); 
 let usersRouter = require('./routers/usersRouter');
 
-/*Cookies*/
-
-app.use((req, res, next) => {
-    
-    if(req.cookies.email){
-        const userModel = require('./models/userModels');
-
-        const user = userModel.findByEmail(req.cookies.email);
-
-        req.session.user = user;
-    }
-    next();
-});
-
-
-
+/* CARGA DE MIDDLEWARES */
+let rememberMiddleware = require('./middlewares/rememberMiddleware');
 
 /* APP.USE PARA CADA ROUTER */
 app.use('/', mainRouter);
@@ -60,6 +46,9 @@ app.use('/register', mainRouter);
 app.use('/albums', albumsRouter);
 app.use('/pistas', pistasRouter);
 app.use('/cart', cartRouter);
+
+/*APP USE PARA CADA MIDDLEWARE */
+app.use(rememberMiddleware);
 
 /* SERVER EN ESCUCHA */
 app.listen(3000, () => {console.log('Server funcionando 3000 OK en'+' http://localhost:3000/')});

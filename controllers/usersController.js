@@ -34,8 +34,8 @@ const controller = {
                 console.log('password valido');
 
                 if (req.body.remember === 'on') {
-
-                    res.cookie('email', userIndB.email, { maxAge: 1000 * 60 * 60 * 24 * 365 });
+                    res.cookie('remember', userIndB.firstname, { maxAge: 1000 * 60 * 60 * 24 * 365 });
+                    console.log('recordar usuario activado');
                 } else {
                     console.log('No se mantendra la sesión iniciada');
                 }
