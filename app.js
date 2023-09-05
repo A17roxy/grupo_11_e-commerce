@@ -18,6 +18,7 @@ app.use(express.static('public'));
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
+
 const port = process.env.PORT || 3000;
 
 /* ESPECIFICO VIEW ENGINE Y PASO ARRAY CON PATHS DE TODOS LOS MODULOS DE VIEW */
@@ -46,6 +47,11 @@ app.use('/register', mainRouter);
 app.use('/albums', albumsRouter);
 app.use('/pistas', pistasRouter);
 app.use('/cart', cartRouter);
+
+/*ERROR 404 */
+app.use((req,res,next) => {
+    res.status(404).render('not-found')
+})
 
 /*APP USE PARA CADA MIDDLEWARE */
 app.use(rememberMiddleware);
