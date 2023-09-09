@@ -8,9 +8,14 @@ const controller = {
     },
     getLogin: (req, res) => {
 
+        if(req.session.user != undefined){
+            res.redirect('profile');
+        } else {
+
         const error = req.query.error;
 
         res.render('login', { error });
+        }
     },
 
     getRegister: (req, res) => {
@@ -60,6 +65,14 @@ const controller = {
                 email: { msg: 'Credenciales invalidas' }
             }
         });
+
+    },
+
+    userprofile: function(req,res){
+
+        let userData = req.session.user;
+
+        return res.render('profile', { user: userData });
 
     },
 

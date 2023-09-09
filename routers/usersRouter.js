@@ -34,6 +34,8 @@ router.get('/login',usersController.getLogin);
 //Post de /users/login
 router.post('/login', usersController.loginProcess);
 
+//Get de /users/profile
+router.get('/profile',usersController.userprofile);
 
 //Get de /users/register
 router.get('/register',usersController.getRegister);

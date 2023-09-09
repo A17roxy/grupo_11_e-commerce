@@ -1,0 +1,89 @@
+
+.profile-main {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: var(--negro);
+    color: var(--amarillo);
+    margin-top: 60px;
+}
+
+.profile-frame {
+    width: 80%;
+    max-width: 600px;
+    background-color: var(--negro);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.84);
+    padding: 30px;
+}
+
+.profile-frame-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--amarillo);
+    font-weight: 500;
+}
+
+.profile-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-profile {
+    font-weight: 600;
+    color: var(--naranja);
+    flex-basis: 40%;
+}
+
+.profile-form-field span {
+    color: var(--amarillo);
+    flex-basis: 60%;
+    text-align: right;
+}
+
+.profile-image {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-image img {
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.button-edit-exit-profile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.myButton {
+    background-color: var(--naranja);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.myButton:hover {
+    background-color: var(--amarillo);
+}
