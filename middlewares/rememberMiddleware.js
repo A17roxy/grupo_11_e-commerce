@@ -1,8 +1,8 @@
 function rememberMiddleware(req, res, next) {
-
-    if (req.cookies.remember != undefined && req.session.loggedFirstName == undefined) {
-        console.log('Cookie encontrada: '+req.cookies.remeber);
-        req.session.loggedFirstName = req.cookies.remeber;
+    
+    if (req.cookies.remember != undefined && req.session.user == undefined) {
+        console.log('Cookie encontrada: ');
+        req.session.user = req.cookies.remember;
     }
     next();
 }

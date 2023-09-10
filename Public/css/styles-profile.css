@@ -24,6 +24,11 @@
     flex-direction: column;
     align-items: center;
 }
+.logout-frame-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 h2 {
     text-align: center;
@@ -72,6 +77,10 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+}
+
+.button-home-logout {
+    width: 100%;
 }
 
 .myButton {

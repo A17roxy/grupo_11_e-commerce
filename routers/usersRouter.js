@@ -27,12 +27,14 @@ const validations = [
 //Get de /users/usersList
 router.get('/usersList', usersController.getList);
 
-
 //Get de /users/register
 router.get('/login',usersController.getLogin);
 
 //Post de /users/login
 router.post('/login', usersController.loginProcess);
+
+//Post de /users/logout
+router.get('/logout',usersController.logout);
 
 //Get de /users/profile
 router.get('/profile',usersController.userprofile);

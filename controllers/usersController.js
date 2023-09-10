@@ -1,3 +1,4 @@
+const rememberMiddleware = require('../middlewares/rememberMiddleware');
 const usersModels = require('../models/usersModels');
 const validationResult = require('express-validator').validationResult;
 const bcrypt = require('bcrypt');
@@ -6,17 +7,17 @@ const controller = {
     getList: (req, res) => {
         usersModels.findAll();
     },
-    getLogin: (req, res) => {
+    getLogin: [rememberMiddleware, (req, res) => {
 
-        if(req.session.user != undefined){
+        if (req.session.user != undefined) {
             res.redirect('profile');
         } else {
 
-        const error = req.query.error;
+            const error = req.query.error;
 
-        res.render('login', { error });
+            res.render('login', { error });
         }
-    },
+    }],
 
     getRegister: (req, res) => {
         const error = req.query.error;
@@ -39,7 +40,7 @@ const controller = {
                 console.log('password valido');
 
                 if (req.body.remember === 'on') {
-                    res.cookie('remember', userIndB.firstname, { maxAge: 1000 * 60 * 60 * 24 * 365 });
+                    res.cookie('remember', userIndB, { maxAge: 1000 * 60 * 60 * 24 * 365 });
                     console.log('recordar usuario activado');
                 } else {
                     console.log('No se mantendra la sesión iniciada');
@@ -48,7 +49,7 @@ const controller = {
                 req.session.user = userIndB;
                 req.session.loggedFirstName = userIndB.firstname;
 
-                console.log('El usuario logeado es : '+ req.session.loggedFirstName);
+                console.log('El usuario logeado es : ' + req.session.loggedFirstName);
 
                 return res.redirect('/');
             }
@@ -68,7 +69,15 @@ const controller = {
 
     },
 
-    userprofile: function(req,res){
+    logout: function (req, res) {
+        res.clearCookie('remember');
+        req.session.user = undefined;
+        req.session.loggedFirstName = undefined;
+        console.log("cierro sesion de usuario");
+        return res.render('logout');
+    },
+
+    userprofile: function (req, res) {
 
         let userData = req.session.user;
 
