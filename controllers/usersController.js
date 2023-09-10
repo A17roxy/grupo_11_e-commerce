@@ -43,7 +43,7 @@ const controller = {
                     res.cookie('remember', userIndB, { maxAge: 1000 * 60 * 60 * 24 * 365 });
                     console.log('recordar usuario activado');
                 } else {
-                    console.log('No se mantendra la sesión iniciada');
+                    console.log('No se mantendrá la sesión iniciada');
                 }
 
                 req.session.user = userIndB;
@@ -56,14 +56,14 @@ const controller = {
 
             return res.render('login', {
                 errors: {
-                    password: { msg: 'Credenciales invalidas' }
+                    password: { msg: 'Credenciales inválidas' }
                 }
             });
         }
 
         return res.render('login', {
             errors: {
-                email: { msg: 'Credenciales invalidas' }
+                email: { msg: 'Credenciales inválidas' }
             }
         });
 
