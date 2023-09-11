@@ -7,7 +7,8 @@ const controller = {
     getList: (req, res) => {
         usersModels.findAll();
     },
-    getLogin: [rememberMiddleware, (req, res) => {
+
+    getLogin:  (req, res) => {
 
         if (req.session.user != undefined) {
             res.redirect('profile');
@@ -17,7 +18,7 @@ const controller = {
 
             res.render('login', { error });
         }
-    }],
+    },
 
     getRegister: (req, res) => {
         const error = req.query.error;

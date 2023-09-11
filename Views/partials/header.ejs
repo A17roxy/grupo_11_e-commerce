@@ -12,6 +12,12 @@
         <div class="icono-luz">
             <h1><a href="/users/logout"><i class="fa-solid fa-right-from-bracket"></i></a>&nbsp;&nbsp;</h1>
         </div>
+
+        <%if (locals.session) {%>
+            LOGUEADO
+            <%} else {%>
+            NO LOGUEADO
+            <%}%>
         <!-- <div>
             <a href="/users/login" class="myButton">Mi cuenta</a></div>
         </div> -->

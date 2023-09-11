@@ -1,4 +1,5 @@
 const express = require('express');
+const rememberMiddleware = require("../middlewares/rememberMiddleware");
 const body = require('express-validator').body
 // otra forma es const { body } = require('express-validator')
 const router = express.Router();
@@ -28,7 +29,7 @@ const validations = [
 router.get('/usersList', usersController.getList);
 
 //Get de /users/register
-router.get('/login',usersController.getLogin);
+router.get('/login', rememberMiddleware, usersController.getLogin);
 
 //Post de /users/login
 router.post('/login', usersController.loginProcess);
