@@ -116,6 +116,16 @@ const controller = {
         const mensaje = req.query.mensaje;
         res.render('register-thank-you', { mensaje });
     },
+
+    cartWithoutAccess: (req, res) => {
+        const mensaje = req.query.mensaje;
+        res.render('cart-error-whitout-access', { mensaje });
+    },
+    
+    albumWithoutAccess: (req, res) => {
+        const mensaje = req.query.mensaje;
+        res.render('album-error-whitout-access', { mensaje });
+    }
 }
 
 

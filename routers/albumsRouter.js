@@ -2,7 +2,7 @@ const express = require('express');
 const multer = require('multer');
 const router = express.Router();
 const albumsController = require('../controllers/albumsController.js');
-
+const albumMiddleware = require('../middlewares/albumMiddleware.js');
 
 // Inicializo storage de multer, con el destination y formato de filename
 const storage = multer.diskStorage({
@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 /* www.url.com/albums (Lista de Albums) */
-router.get('/',albumsController.albums);
+router.get('/', albumMiddleware, albumsController.albums);
 
 // @GET - /albums/:id/detail
 /* router.get('/:id/detail', albumsController.getDetail); */

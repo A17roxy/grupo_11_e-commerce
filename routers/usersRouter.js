@@ -51,4 +51,11 @@ router.post('/register', [upload.single('userImage'), ...validations], usersCont
 //Get del /users/register-thank-you
 router.get('/register-thank-you',usersController.thankYouForRegister);
 
+//Get del /users/cart-error-whitout-access
+router.get('/cart-error-whitout-access',usersController.cartWithoutAccess);
+
+//Get del /users/album-error-whitout-access
+router.get('/album-error-whitout-access',usersController.albumWithoutAccess);
+
+
 module.exports = router;
