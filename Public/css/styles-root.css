@@ -60,6 +60,24 @@ body {
     top:1px;
 }
 
+.icono-luz-simple {
+    padding-right: 4px;
+    background: -webkit-linear-gradient(var(--amarillo), var(--naranja));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 200ms;
+}
+
+.icono-luz-simple:hover {
+    text-shadow: var(--amarillo) 1px 0 20px;
+}
+
+.icono-luz-simple:active {
+    position:relative;
+    top:1px;
+}
+
  
 .boton-con-luz {
     display: flex;

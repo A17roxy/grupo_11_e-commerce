@@ -39,6 +39,16 @@ let usersRouter = require('./routers/usersRouter');
 
 /* CARGA DE MIDDLEWARES */
 let rememberMiddleware = require('./middlewares/rememberMiddleware');
+// const userMiddleware = require('./middlewares/userMiddleware');
+
+// Middle para pasar siempre la session.loggedFirstName a todas las vistas.
+app.use(function (req, res, next) {   
+    if (req.session.loggedFirstName) {
+        res.locals.loggedFirstName = req.session.loggedFirstName;
+        }
+    next();
+  });
+
 
 /* APP.USE PARA CADA ROUTER */
 app.use('/', mainRouter);
@@ -50,8 +60,9 @@ app.use('/cart', cartRouter);
 
 /*ERROR 404 */
 app.use((req,res,next) => {
-    res.status(404).render('not-found')
+    res.status(404).render('not-found');
 })
+
 
 /*APP USE PARA CADA MIDDLEWARE */
 app.use(rememberMiddleware);

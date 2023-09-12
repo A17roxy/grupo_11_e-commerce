@@ -54,6 +54,9 @@
     /* max-width: 20vw;  ESTE ACHICA y AGRANDA EL LOGO con el responsive */
 }
 
+.h_header {
+    margin-bottom: 0px;
+}
 
 .footer-main {
     position: relative;
