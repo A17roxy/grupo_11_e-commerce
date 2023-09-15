@@ -15,6 +15,8 @@ Nuestro público objetivo es principalmente melómano-cultural, de nicho, mayor 
 - **Francisco Lozada**: Conocimientos amplios de SQL y programación en tecnologías viejas (VFoxPro / VBasic). No sé de diseño gráfico ni HTML/CSS. 
 - **Daniel Fresneda**
 - **Ignacio Nogueira**
+- **Matias Rosetani**:
+- **Agustín Gallardo**:
 
 ## Sitios de exploración / referencia
 
