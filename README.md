@@ -10,7 +10,7 @@ Nuestro público objetivo es principalmente melómano-cultural, de nicho, mayor 
 
 ## Integrantes del equipo
 
-- **Analía Boscatto**: Diseño Audiovisual, programas de post-producción, conocimientos básicos de programación, metodologías ágiles, idiomas. Me gusta la música, la fotografía, etc.
+- **Analía Boscatto**: Diseñadora en Comunicación Audiovisual, programas de post-producción, conocimientos básicos de programación, metodologías ágiles, idiomas. Me gusta la música, la fotografía, etc.
 - **Ignacio Riopedre**: Primero pasos en programación. Soy músico.
 - **Francisco Lozada**: Conocimientos amplios de SQL y programación en tecnologías viejas (VFoxPro / VBasic). No sé de diseño gráfico ni HTML/CSS. 
 - **Daniel Fresneda**
