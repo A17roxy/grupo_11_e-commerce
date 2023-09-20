@@ -163,3 +163,4 @@ INSERT INTO products (title, artist, id_genre, year, price, image, type) VALUES 
 INSERT INTO products (title, artist, id_genre, year, price, image, type) VALUES ('Madonna', 'Madonna', 2, 1986, 65000, 'images/products/1692445709171-Album0009.webp', 'Album');
 INSERT INTO products (title, artist, id_genre, year, price, image, type) VALUES ('Nevermind', 'Nirvana', 1, 1988, 91000, 'images/products/1693093640673-1692445671063-Album0010.webp', 'Album');
 
+
