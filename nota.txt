@@ -1,0 +1,5 @@
+npm i sequelize-auto
+
+(tener corriendo el mysql)
+
+node_modules/.bin/sequelize-auto -o "./database/models" -d bits_and_sound -h localhost -u root -p 3306 -e mysql
