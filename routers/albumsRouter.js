@@ -42,6 +42,10 @@ router.delete('/:id/delete', albumsController.deleteProduct);
 // @GET - /albums/:id/detail
 router.get('/:id/detail', albumsController.albumDetail);
 
+// @POST - /albums
 router.post('/',albumsController.createOne);
+
+// @PUT - /albums/:id/edit
+router.put('/:id/edit', albumsController.editOne)
 
 module.exports = router ;

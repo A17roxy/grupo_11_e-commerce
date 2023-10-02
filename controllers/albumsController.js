@@ -8,10 +8,18 @@ const controller ={
         res.render('albums', { albums: albums }); // { albums } como se llama igual es lo mismo que poner { albums: albums }
     },
 
-    albumEdit: (req, res) => {
+    albumEdit: async (req, res) => {
         const productId = req.params.id;
-        const selectedProduct = albumsModels.findById(productId);
-        res.render('editAlbum', { products: selectedProduct });
+
+        try{
+            const album = album.findByPk(productId,{raw : true});
+
+            res.render('editarAlbum', { album });
+
+        } catch (error) {
+            console.log(error);
+        }
+        
     },
 
     getCreate: async (req, res) => {
@@ -101,7 +109,30 @@ const controller ={
             console.log(error);
         }
 
-        res.send('Creando jugador');
+        res.send('Creando albums');
+    },
+    editOne: async (req, res) => {
+        const id = req.params.id;
+
+        const updatedAlbum = {
+            title: bodyData.title,
+            artist: bodyData.artist,
+            genres: bodyData.genres,
+            year: bodyData.year,
+            price: bodyData.price,
+        };
+
+        try {
+            await album.update(updatedAlbum, {
+                where: {
+                    id: req.params.id
+                }
+            })
+        } catch (error) {
+            console.log(error);
+        }
+
+        res.send('Editando albums');
     },
 
 }
