@@ -3,6 +3,7 @@ const multer = require('multer');
 const router = express.Router();
 const albumsController = require('../controllers/albumsController.js');
 const albumMiddleware = require('../middlewares/albumMiddleware.js');
+const controller = require('../controllers/albumsController.js');
 
 // Inicializo storage de multer, con el destination y formato de filename
 const storage = multer.diskStorage({
@@ -40,5 +41,7 @@ router.delete('/:id/delete', albumsController.deleteProduct);
 
 // @GET - /albums/:id/detail
 router.get('/:id/detail', albumsController.albumDetail);
+
+router.post('/',albumsController.createOne);
 
 module.exports = router ;

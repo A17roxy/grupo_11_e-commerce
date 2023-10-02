@@ -36,6 +36,7 @@ let albumsRouter = require('./routers/albumsRouter');
 let pistasRouter = require('./routers/pistasRouter');
 let cartRouter = require('./routers/cartRouter'); 
 let usersRouter = require('./routers/usersRouter');
+let pruebasRouter = require('./routers/pruebasRouter');
 
 /* CARGA DE MIDDLEWARES */
 let rememberMiddleware = require('./middlewares/rememberMiddleware');
@@ -57,6 +58,7 @@ app.use('/register', mainRouter);
 app.use('/albums', albumsRouter);
 app.use('/pistas', pistasRouter);
 app.use('/cart', cartRouter);
+app.use('/pruebas', pruebasRouter);
 
 /*ERROR 404 */
 app.use((req,res,next) => {

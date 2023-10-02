@@ -14,8 +14,14 @@ const controller ={
         res.render('editAlbum', { products: selectedProduct });
     },
 
-    getCreate: (req, res) => {
-        res.render('createAlbum');
+    getCreate: async (req, res) => {
+        try {
+            const albums = await Album.findAll({raw: true});
+
+            res.render('createAlbum' , {albums});
+        } catch (error) {
+            console.log(error);
+        }
     },
 
     postProduct: (req, res) => {
@@ -73,6 +79,29 @@ const controller ={
         const productId = req.params.id;
         const selectedProduct = albumsModels.findById(productId);
         res.render('albumDetail', { products: selectedProduct });
+    },
+
+    createOne: async (req, res) => {
+        const bodyData = req.body;
+
+        const nuevoAlbum = {
+            title: bodyData.title,
+            artist: bodyData.artist,
+            genres: bodyData.genres,
+            year: bodyData.year,
+            price: bodyData.price,
+        };
+
+        try {
+            const newAlbum = await album.create(nuevoAlbum);
+
+            console.log(newAlbum);
+            return res.redirect('/albums/' + newAlbum.dataValues.id + '/detail')
+        } catch (error) {
+            console.log(error);
+        }
+
+        res.send('Creando jugador');
     },
 
 }
