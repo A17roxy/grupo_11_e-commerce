@@ -36,8 +36,8 @@ router.put('/:id/edit', upload.single('productImage'), albumsController.updateAl
 
 //router.put('/:id/edit', albumsController.updateAlbum);
 
-// @DELETE - /products/:id/delete
-router.delete('/:id/delete', albumsController.deleteProduct);
+/* // @DELETE - /products/:id/delete
+router.delete('/:id/delete', albumsController.deleteProduct); */
 
 // @GET - /albums/:id/detail
 router.get('/:id/detail', albumsController.albumDetail);
@@ -46,6 +46,9 @@ router.get('/:id/detail', albumsController.albumDetail);
 router.post('/',albumsController.createOne);
 
 // @PUT - /albums/:id/edit
-router.put('/:id/edit', albumsController.editOne)
+router.put('/:id/edit', albumsController.editOne);
+
+// @DELETE - /albums/:id/delete
+router.delete('/:id/delete', albumsController.deleteOne)
 
 module.exports = router ;
