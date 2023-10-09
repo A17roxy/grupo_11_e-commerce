@@ -4,11 +4,17 @@ const validationResult = require('express-validator').validationResult;
 const bcrypt = require('bcrypt');
 
 const controller = {
-    getList: (req, res) => {
-        usersModels.findAll();
+    getList: async (req, res) => {
+        try {
+            const users = await usersModels.findAll();
+            //res.render('userList', { users }); 
+        } catch (error) {
+            console.error(error);
+            //res.status(500).send('Error interno del servidor');
+        }
     },
 
-    getLogin:  (req, res) => {
+    getLogin: (req, res) => {
 
         if (req.session.user != undefined) {
             res.redirect('profile');
@@ -26,48 +32,40 @@ const controller = {
         res.render('register', { error });
     },
 
-    loginProcess: (req, res) => {
+    loginProcess: async (req, res) => {
+        console.log('Inicio de proceso de login');
+        //console.log(req.body);
+        try {
+            const userInDb = await usersModels.findByField('email', req.body.email);
 
-        console.log('inicio login process');
-        console.log(req.body);
+            if (userInDb) {
+                const passCheck = bcrypt.compareSync(req.body.password, userInDb.password);
+                if (passCheck) {
+                    console.log('password valido');
 
-        let userIndB = usersModels.findByField('email', req.body.email);
+                    if (req.body.remember === 'on') {
+                        res.cookie('remember', userInDb, { maxAge: 1000 * 60 * 60 * 24 * 365 });
+                        console.log('recordar usuario activado');
+                    } else {
+                        console.log('No se mantendrá la sesión iniciada');
+                    }
 
-        if (userIndB) {
-            console.log('encontre el usuario');
-            let passCheck = bcrypt.compareSync(req.body.password, userIndB.password);
+                    req.session.user = userInDb;
+                    req.session.loggedFirstName = userInDb.firstname;
 
-            if (passCheck) {
-                console.log('password valido');
-
-                if (req.body.remember === 'on') {
-                    res.cookie('remember', userIndB, { maxAge: 1000 * 60 * 60 * 24 * 365 });
-                    console.log('recordar usuario activado');
-                } else {
-                    console.log('No se mantendrá la sesión iniciada');
+                    console.log('El usuario logeado es : ' + req.session.loggedFirstName);
+                    return res.redirect('/');
                 }
-
-                req.session.user = userIndB;
-                req.session.loggedFirstName = userIndB.firstname;
-
-                console.log('El usuario logeado es : ' + req.session.loggedFirstName);
-
-                return res.redirect('/');
             }
-
             return res.render('login', {
                 errors: {
                     password: { msg: 'Credenciales inválidas' }
                 }
             });
+        } catch (error) {
+            console.error(error);
+            //res.status(500).send('Error del servidor');
         }
-
-        return res.render('login', {
-            errors: {
-                email: { msg: 'Credenciales inválidas' }
-            }
-        });
-
     },
 
     logout: function (req, res) {
@@ -85,30 +83,97 @@ const controller = {
         return res.render('profile', { user: userData });
 
     },
+    confirm_delete: (req, res) => {
+        res.render('confirm_delete');
+    },
+    delete: async function (req, res) {
+        try {
+            const userEmail = req.session.user.email;
+            const deletionResult = await usersModels.deleteUserByEmail(userEmail);
 
-    register: (req, res) => {
-        const xValid = validationResult(req);
-        if (xValid.errors && xValid.errors.length != 0) {
-            console.log(xValid.errors);
-            res.render('register', { errorExpress: xValid.errors });
-            return;
+            if (!deletionResult.success) {
+                return res.render('delete_account', { error: deletionResult.error });
+            }
+
+            req.session.destroy();
+            return res.redirect('/');
+        } catch (error) {
+            console.error(error);
+            return res.render('delete_account', { error });
         }
-        const newUser = {
-            lastname: req.body.lastname,
-            firstname: req.body.firstname,
-            email: req.body.email,
-            password: req.body.password,
-            category: "User" //user puesto a mano, todos los que se mueven por ahora son usuarios externos
+    },
+    update: async function (req, res) {
+        try {
+            if (req.method === 'GET') {
+                return res.render('edit_profile', { user: req.session.user });
+            }
+            if (req.method === 'POST') {
+                const userId = req.session.user.id;
+                console.log(userId);
+
+                let filename;
+                if (req.file) {
+                    filename = req.file.filename;
+                } else {
+                    filename = req.session.user.image.split('/').pop();
+                }
+
+                let userData = {
+                    lastname: req.body.lastname,
+                    firstname: req.body.firstname,
+                    email: req.body.email,
+                    password: req.body.password,
+                    category: "User",
+                    image: "images/users/" + filename
+                };
+
+                const updateSuccess = await usersModels.update(userId, userData);
+
+                if (updateSuccess) {
+                    req.session.user = { ...req.session.user, ...userData };
+                    return res.redirect('/users/profile');
+                } else {
+                    return res.redirect('/users/edit_profile?error=update_failed');
+                }
+            }
+        } catch (error) {
+            console.error(error);
+            return res.render('edit_profile', {
+                error: 'ocurrio un error al actualzar los datos',
+                user: req.session.user
+            });
         }
-        newUser.image = "images/users/" + req.file.filename;
-        const user = usersModels.create(newUser);
+    },
 
+    register: async (req, res) => {
+        try {
+            const xValid = validationResult(req);
+            if (xValid.errors && xValid.errors.length != 0) {
+                console.log(xValid.errors);
+                res.render('register', { errorExpress: xValid.errors });
+                return;
+            }
 
+            const newUser = {
+                lastname: req.body.lastname,
+                firstname: req.body.firstname,
+                email: req.body.email,
+                password: req.body.password,
+                category: "User",
+                image: "images/users/" + req.file.filename
+            };
 
-        if (user.errors) {
-            res.render('register', { errors: user.errors });
-        } else {
-            res.redirect('/users/register-thank-you?mensaje=' + user.firstname);
+            const result = await usersModels.create(newUser);
+
+            if (result.error) {
+                throw new Error(result.message);
+            }
+
+            res.redirect('/users/register-thank-you?mensaje=' + result.user.firstname);
+
+        } catch (error) {
+            console.error(error);
+            res.render('register', { errors: [{ msg: error.message }] });
         }
     },
 
@@ -121,7 +186,7 @@ const controller = {
         const mensaje = req.query.mensaje;
         res.render('cart-error-whitout-access', { mensaje });
     },
-    
+
     albumWithoutAccess: (req, res) => {
         const mensaje = req.query.mensaje;
         res.render('album-error-whitout-access', { mensaje });

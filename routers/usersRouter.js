@@ -40,6 +40,14 @@ router.get('/logout',usersController.logout);
 //Get de /users/profile
 router.get('/profile',usersController.userprofile);
 
+//Get de /users/profile_update
+router.get('/edit_profile', usersController.update);
+router.post('/update_profile', usersController.update);
+
+//Get de /users/delete_account
+router.get('/confirm_delete', usersController.confirm_delete);
+router.post('/delete_account', usersController.delete);
+
 //Get de /users/register
 router.get('/register',usersController.getRegister);
 

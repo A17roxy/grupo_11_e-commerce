@@ -22,13 +22,13 @@ CREATE TABLE `products` (
 );
 
 CREATE TABLE `users` (
-  `id` varchar(32) PRIMARY KEY,
+  `id` varchar(36) PRIMARY KEY,
   `lastname` varchar(50),
   `firstname` varchar(50),
   `email` varchar(50),
   `password` varchar(72),
   `id_category` integer,
-  `image` varchar(100)
+  `image` varchar(255)
 );
 
 CREATE TABLE `users_category` (

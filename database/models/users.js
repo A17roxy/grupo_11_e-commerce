@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('users', {
     id: {
-      type: DataTypes.STRING(32),
+      type: DataTypes.STRING(36),
       allowNull: false,
       primaryKey: true
     },
@@ -31,7 +31,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     image: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {

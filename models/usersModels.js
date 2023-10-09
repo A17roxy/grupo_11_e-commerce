@@ -1,66 +1,83 @@
-const fs = require('fs');
-const path = require('path');
 const uuid = require('uuid');
 const bcrypt = require('bcrypt');
 
+const db = require('../database/models/index.js');
+const initModels = require('../database/models/init-models');
+const models = initModels(db.sequelize); 
+const { users } = models
+
 const model = {
 
-    fileRoute: path.join(__dirname, '../data/users.json'),
+    findAll: async function () {
+        try {
+            return await users.findAll();
+        } catch (error) {
+            console.error(error);
+            throw new Error('Error al recuperar usuarios');
+        }
+    },
+    create: async (userData) => {
+        try {
+            const emailInUse = await model.findByEmail(userData.email);
+            if (emailInUse) {
+                return { error: true, message: 'Este e-mail ya está en uso' };
+            }
 
-    findAll: function () {
-        return JSON.parse(fs.readFileSync(model.fileRoute, 'utf-8'));
+            userData.password = bcrypt.hashSync(userData.password, 10);
+
+            const newUser = await users.create({id: uuid.v4(), ...userData});
+
+            //return newUser;
+            return { error: false, user: newUser };
+
+        } catch (error) {
+            console.error(error);
+            return { error: true, message: error.message };
+        }
     },
 
-    create: (userData) => {
-
-        const emailInUse = model.findByEmail(userData.email);
-
-        if (emailInUse) {
-            return ({
-                errors: {
-                    email: 'Este e-mail ya está en uso',
-                    password: 'Esta contraseña ya está en uso'
+    findByEmail: async (email) => {
+        try {
+            return await users.findOne({ where: { email } });
+        } catch (error) {
+            console.error(error);
+            throw new Error('Error al buscar usuario por correo electrónico');
+        }
+    },
+    findByField: async function (field, text) {
+        try {
+            return await users.findOne({ where: { [field]: text } });
+        } catch (error) {
+            console.error(error);
+            throw new Error('Error al buscar usuario por campo');
+        }
+    },
+    deleteUserByEmail: async (email) => {
+        try {
+            await users.destroy({
+                where: {
+                    email: email
                 }
-
             });
+            return { success: true };
+        } catch (error) {
+            console.error(error);
+            return { success: false, error };
         }
-
-        let users = JSON.parse(fs.readFileSync(model.fileRoute, 'utf-8'));
-
-        const newUser = {
-            id: uuid.v4(),
-            ...userData
-        };
-
-        newUser.password = bcrypt.hashSync(newUser.password, 10);
-
-        users.push(newUser);
-
-        const usersJson = JSON.stringify(users);
-
-        fs.writeFileSync(model.fileRoute, usersJson, 'utf-8');
-
-        return newUser;
     },
-
-    findByEmail: (email) => {
-        const users = JSON.parse(fs.readFileSync(model.fileRoute, 'utf-8'));
-
-        const coincidence = users.find(usuarioActual => usuarioActual.email === email);
-
-        return coincidence || null;
-    },
-    findByField: function (field, text) {
-        let users = this.findAll();
-        let userFound = users.find(theUser => theUser[field] === text);
-        console.log('buscando por campo ' + field);
-        if (userFound != undefined) {
-            console.log('usuario enconotrado: ');
-        } else {
-            console.log('usuario no encontrado');
+    update: async (userId, userData) => {
+        try {
+            await users.update(userData, {
+                where: {
+                    id: userId
+                }
+            });
+            return true;
+        } catch (error) {
+            console.error(error);
+            return false;
         }
-        return userFound;
-    }
+    },
 }
 
 module.exports = model;
