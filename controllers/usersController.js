@@ -110,13 +110,18 @@ const controller = {
             if (req.method === 'POST') {
                 const userId = req.session.user.id;
                 console.log(userId);
+                console.log(req.session.user);
 
                 let filename;
                 if (req.file) {
                     filename = req.file.filename;
+                    console.log("hay nueva imagen "+filename);
                 } else {
+                    console.log("No se actualiza la imagen");
                     filename = req.session.user.image.split('/').pop();
                 }
+
+                console.log(req.body);
 
                 let userData = {
                     lastname: req.body.lastname,
@@ -126,6 +131,8 @@ const controller = {
                     category: "User",
                     image: "images/users/" + filename
                 };
+
+                console.log(userData);
 
                 const updateSuccess = await usersModels.update(userId, userData);
 

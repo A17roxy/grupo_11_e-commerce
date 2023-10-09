@@ -42,7 +42,7 @@ router.get('/profile',usersController.userprofile);
 
 //Get de /users/profile_update
 router.get('/edit_profile', usersController.update);
-router.post('/update_profile', usersController.update);
+router.post('/update_profile', [upload.single('userImage'), ...validations], usersController.update);
 
 //Get de /users/delete_account
 router.get('/confirm_delete', usersController.confirm_delete);

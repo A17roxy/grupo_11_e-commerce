@@ -67,6 +67,8 @@ const model = {
     },
     update: async (userId, userData) => {
         try {
+            userData.password = bcrypt.hashSync(userData.password, 10);
+            
             await users.update(userData, {
                 where: {
                     id: userId
