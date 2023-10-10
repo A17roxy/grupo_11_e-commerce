@@ -1,24 +1,19 @@
 const fs = require('fs');
 const path = require('path');
 
-const sequelize = require('sequelize');
 const db = require('../database/models/index.js');
 const initModels = require('../database/models/init-models');
 const models = initModels(db.sequelize); 
-const { products } = models;
-
+const { users } = models
 
 const model = {
-    //fileRoute: { path.join(__dirname, '../data/products.json') },
-    traerTodos: async function () {
-        try {
-            const albumx = await products.findAll({ raw: true});
-            console.log(albumx);
-            return albumx;
-        } catch (error) {
-            console.error(error);
-            throw new Error('Error al traer albums');
-        }
+    fileRoute: path.join(__dirname, '../data/products.json'),
+
+    findAll: () => {
+        const jsonData = fs.readFileSync(model.fileRoute, 'utf-8');
+        // convierto JSON en javascript
+        const albums = JSON.parse(jsonData);
+        return albums;
     },
 
     findById: (id) => {

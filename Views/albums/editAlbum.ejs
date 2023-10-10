@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles-root.css">
     <link rel="stylesheet" href="/css/styles-header-footer.css">
-    
+
     <link rel="stylesheet" href="/css/styles-login-register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -24,47 +24,70 @@
     <main class="register-main">
         <div class="reg-frame">
             <div class="reg-frame-frame">
-                <!-- <form action="/albums/edit" class="reg-form" method="post" enctype="multipart/form-data"> -->
-                    <form action="/albums/<%=products.id %>/edit?_method=PUT" class="reg-form" method="post" enctype="multipart/form-data">
+                <form action="/albums/<%=products.id %>/edit?_method=PUT" class="reg-form" method="post"
+                    enctype="multipart/form-data">
+
                     <div class="reg-form-field">
                         <label class="title-register" for="f_title">Título</label>
-                        <input class="subcontrol-register-form" type="text" id="f_title" name="title" value="<%=products.title%>" placeholder="Título" required>
+                        <input class="subcontrol-register-form" type="text" id="f_title" name="title"
+                            value="<%=products.title%>" placeholder="Título" required>
                     </div>
                     <div class="reg-form-field">
                         <label class="title-register" for="f_artist">Artista</label>
-                        <input class="subcontrol-register-form" type="text" value="<%=products.artist%>" name="artist" id="f_artist" placeholder="Artista"
-                            required>
+                        <input class="subcontrol-register-form" type="text" value="<%=products.artist%>" name="artist"
+                            id="f_artist" placeholder="Artista" required>
                     </div>
-                    <div class="reg-form-field">
+                    
+                    <div class="select">
                         <label class="title-register" for="f_genre">Género musical</label>
-                        <input class="subcontrol-register-form" type="text" name="genre" value="<%=products.genre%>" id="f_genre" placeholder="Género musical"
-                            required>
+                        <select name="id_genre" class="combo_generos">
+                            <%genres.forEach(genre=> { %>
+                                <%if (products.id_genre==genre.id) {%>
+                                    <option value="<%=genre.id%>" selected>
+                                        <%=genre.genre%>
+                                    </option>
+                                    <%} else {%>
+                                        <option value="<%=genre.id%>">
+                                            <%=genre.genre%>
+                                        </option>
+                                        <%}%>
+                                            <%})%>
+                        </select>
+                        <div class="select_arrow">
+                        </div>
                     </div>
+
                     <div class="reg-form-field">
                         <label class="title-register" for="f_year">Año</label>
-                        <input class="subcontrol-register-form" type="number" name="year" value="<%=products.year%>" id="f_year" placeholder="Año" required>
+                        <input class="subcontrol-register-form" type="number" name="year" value="<%=products.year%>"
+                            id="f_year" placeholder="Año" required>
                     </div>
                     <div class="reg-form-field">
                         <label class="title-register" for="f_price">Precio</label>
-                        <input class="subcontrol-register-form" type="number" name="price" placeholder="1000" value="<%=products.price%>" id="f_price" required>
+                        <input class="subcontrol-register-form" type="number" name="price" placeholder="1000"
+                            value="<%=products.price%>" id="f_price" required>
                     </div>
                     <div class="reg-profile-form-field">
                         <label class="title-register"></label>
                         <div class="user-category">
-                            <% if (products.type="Album") { %> 
-                                <label><input class="subcontrol-register-form" type="radio" name="type" value="Album" required checked="checked">Album</label>
-                                <label><input class="subcontrol-register-form" type="radio" name="type" value="Track" required>Track</label>
-                            <%} else {%>
-                                <label><input class="subcontrol-register-form" type="radio" name="type" value="Album" required>Album</label>
-                                <label><input class="subcontrol-register-form" type="radio" name="type" value="Track" required checked="checked">Track</label>
-                                <%}%>
+                            <% if (products.type="Album" ) { %>
+                                <label><input class="subcontrol-register-form" type="radio" name="type" value="Album"
+                                        required checked="checked">Album</label>
+                                <label><input class="subcontrol-register-form" type="radio" name="type" value="Track"
+                                        required>Track</label>
+                                <%} else {%>
+                                    <label><input class="subcontrol-register-form" type="radio" name="type"
+                                            value="Album" required>Album</label>
+                                    <label><input class="subcontrol-register-form" type="radio" name="type"
+                                            value="Track" required checked="checked">Track</label>
+                                    <%}%>
                         </div>
                     </div>
                     <div class="reg-form-field">
                         <label class="title-register">Archivo de imagen</label>
                         <!-- El input de FILE tiene que tener NAME coincidente con el que se puso en
                         el ROUTER (upload.single('productImage')), si no no anda -->
-                
+
                         <input class="subcontrol-register-form" type="file" name="productImage"
                             placeholder="Imagen del álbum / artista" required>
                     </div>
@@ -84,4 +107,5 @@
         <%- include('footer') %>
     </footer>
 </body>
+
 </html>

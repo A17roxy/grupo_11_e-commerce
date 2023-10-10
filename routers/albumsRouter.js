@@ -29,10 +29,10 @@ router.get('/:id/edit', albumsController.albumEdit);
 router.get('/create', albumsController.getCreate);
 
 // @POST - /albums // agregué acá el upload.single para que multer pueda enviar imagenes al server
-router.post('/', upload.single('productImage'), albumsController.postProduct);
+//router.post('/', upload.single('productImage'), albumsController.postProduct);
 
 // @PUT - / albums/:id/edit
-router.put('/:id/edit', upload.single('productImage'), albumsController.updateAlbum);
+//router.put('/:id/edit',  albumsController.updateAlbum);
 
 //router.put('/:id/edit', albumsController.updateAlbum);
 
@@ -43,10 +43,10 @@ router.delete('/:id/delete', albumsController.deleteProduct); */
 router.get('/:id/detail', albumsController.albumDetail);
 
 // @POST - /albums
-router.post('/',albumsController.createOne);
+router.post('/', upload.single('productImage'), albumsController.createOne);
 
 // @PUT - /albums/:id/edit
-router.put('/:id/edit', albumsController.editOne);
+router.put('/:id/edit', upload.single('productImage'), albumsController.editOne);
 
 // @DELETE - /albums/:id/delete
 router.delete('/:id/delete', albumsController.deleteOne)

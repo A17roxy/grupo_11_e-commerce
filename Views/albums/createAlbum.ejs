@@ -33,10 +33,23 @@
                         <input class="subcontrol-register-form" type="text" name="artist" id="f_artist" placeholder="Artista"
                             required>
                     </div>
-                    <div class="reg-form-field">
+                    <div class="select">
                         <label class="title-register" for="f_genre">Género musical</label>
-                        <input class="subcontrol-register-form" type="text" name="genre" id="f_genre" placeholder="Género musical"
-                            required>
+                        <select name="id_genre" class="combo_generos">
+                            <%genres.forEach(genre=> { %>
+                                <%if (products.id_genre==genre.id) {%>
+                                    <option value="<%=genre.id%>" selected>
+                                        <%=genre.genre%>
+                                    </option>
+                                    <%} else {%>
+                                        <option value="<%=genre.id%>">
+                                            <%=genre.genre%>
+                                        </option>
+                                        <%}%>
+                                            <%})%>
+                        </select>
+                        <div class="select_arrow">
+                        </div>
                     </div>
                     <div class="reg-form-field">
                         <label class="title-register" for="f_year">Año</label>
