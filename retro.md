@@ -35,3 +35,6 @@ Puntos del SPRINT-3
 
 ### Keep Doing
 - Maintain regular discussions (daily/weekly) about progress.
+
+## Sprint 6
+-We implemented the database and CRUD operations within the project's structure, dividing tasks and collaborating to successfully achieve the proposed objectives.
