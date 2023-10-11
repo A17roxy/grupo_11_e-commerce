@@ -1,14 +1,10 @@
 const path = require('path');
 const bodyParser = require('body-parser')
-//const albumsModels = require('../models/albumsModels');
-
 
 const db = require('../database/models/index.js');
 const initModels = require('../database/models/init-models');
 const models = initModels(db.sequelize);
 const { products, genres } = models;
-
-
 
 const controller = {
     albums: async function (req, res) {
@@ -46,73 +42,13 @@ const controller = {
         }
     },
 
-    postProduct: (req, res) => {
-        //console.log(req.file);
-        // console.log('---------------')
-        //console.log(req.body);
-        const newProd = JSON.parse(JSON.stringify(req.body)); // req.body = [Object: null prototype] { title: 'product' }
-        newProd.image = "images/products/" + req.file.filename
-        const createdAlbum = albumsModels.createAlbum(newProd);
-        console.log('El nuevo producto tiene como id: ' + createdAlbum.id);
-        //res.redirect('/products/' + createdProduct.id + '/detail');  
-        // Desde los POST no renderizamos vistas, solo redireccionamos.
-        /* res.redirect('message?text="gracias por registrarte"&redir="/home"', {text: "Producto grabado con ID: " + createdAlbum.id}); */
-        res.redirect('/albums');
-    },
-
-    updateAlbum: async (req, res) => {
-        try {
-            const updatedBody = JSON.parse(JSON.stringify(req.body)); // req.body = [Object: null prototype] { title: 'product' }
-            updatedBody.image = "images/products/" + req.file.filename
-
-            let updatedProduct = {
-                id: Number(req.params.id)
-            };
-
-            updatedProduct = {
-                ...updatedProduct,
-                ...updatedBody
-            };
-
-            console.log("zzzzzzzz" +updatedProduct);
-
-            await products.update(
-                {
-                    title: updatedBody.title,
-                    artist: updatedBody.artist,
-                    year: updatedBody.year
-                },
-                { where: req.params.id }
-            )
-            res.redirect('/');
-
-        } 
-        catch 
-        {
-
-
-        }
-        /* 
-          const updatedProduct = req.body;
-          updatedProduct.id = Number(req.params.id); 
-        */
-        //albumsModels.updateProduct(updatedProduct);
-
-    },
-
-    /*  deleteProduct: (req, res) => {
-         albumsModels.destroy(Number(req.params.id));
- 
-         res.redirect('/albums');
-     }, */
-
-
+    
     albumDetail: async (req, res) => {
         try {
-            const album = await album.findByPk(req.params.id, { raw: true });
-
-            res.render('albumDetail', { album });
-
+            //const album = await products.findByPk(req.params.id, { raw: true });
+            const { QueryTypes } = require('sequelize');
+            const album = await db.sequelize.query("SELECT a.*,b.genre from products a left join genres b on a.id_genre=b.id where a.id=" + req.params.id, { type: QueryTypes.SELECT });
+            res.render('albumDetail', { products: album[0] });
         } catch (error) {
             console.log(error);
         }
@@ -180,7 +116,6 @@ const controller = {
         {
             console.log(error);
         }
-
         res.redirect('/albums')
     }
 
