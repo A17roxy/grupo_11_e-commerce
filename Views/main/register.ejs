@@ -37,27 +37,27 @@
 
                     <div class="reg-form-field">
                         <label class="title-register" for="f_lastname">Apellido(s)</label>
-                        <input class="subcontrol-register-form" type="text" id="f_lastname" name="lastname" placeholder="Apellido(s)">
+                        <input class="subcontrol-register-form" type="text" id="f_lastname" name="lastname" placeholder="Apellido(s)" required pattern=".{3,}">
                     </div>
                     <div class="reg-form-field">
                         <label class="title-register" for="f_firstname">Nombre(s)</label>
-                        <input class="subcontrol-register-form" type="text" id="f_firstname" name="firstname" placeholder="Nombre(s)">
+                        <input class="subcontrol-register-form" type="text" id="f_firstname" name="firstname" placeholder="Nombre(s)" required pattern=".{3,}">
                     </div>
                     <div class="reg-form-field">
                         <label class="title-register" for="f_email">e-mail</label>
                         <input class="subcontrol-register-form" type="email" id="f_email" name="email" placeholder="direccion@email.com"
-                            required>
+                            required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
                     </div>
                     <div class="reg-form-field">
                         <label class="title-register" for="f_password">Contraseña</label>
-                        <input class="subcontrol-register-form" id="f_password" type="password" name="password">
+                        <input class="subcontrol-register-form" id="f_password" type="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!]).{8,}$">
                         <br>
                         <label class="title-register" for="f_password2">Confirmar contraseña</label>
                         <input class="subcontrol-register-form" type="password" id="f_password2" name="password_confirmation">
                     </div>
                     <div class="reg-form-field">
                         <label class="title-register">Archivo de imagen</label>
-                        <input class="subcontrol-register-form" type="file" name="userImage" placeholder="Imagen/avatar" required>
+                        <input class="subcontrol-register-form" type="file" name="userImage" placeholder="Imagen/avatar" required accept=".jpg, .jpeg, .png, .gif">
                     </div>
                     <br>
                     <div class="button-send-reset-register">
