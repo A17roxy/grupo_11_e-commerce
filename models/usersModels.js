@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const db = require('../database/models/index.js');
 const initModels = require('../database/models/init-models');
 const models = initModels(db.sequelize); 
+const op = db.sequelize.op;
 const { users } = models
 
 const model = {
@@ -14,6 +15,14 @@ const model = {
         } catch (error) {
             console.error(error);
             throw new Error('Error al recuperar usuarios');
+        }
+    },
+    findLast: async function() {
+        try {
+            return await users.findOne({ order: [['id', 'DESC']] });
+        } catch (error) {
+            console.error(error);
+            throw new Error('Error al recuperar el último usuario creado');
         }
     },
     create: async (userData) => {
