@@ -5,6 +5,7 @@ const methodOverride = require('method-override');
 const dotenv = require('dotenv').config();
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 const app = express()
 app.use(express.urlencoded({ extended: true }));
@@ -19,7 +20,9 @@ const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
+
+app.use(cors());
 
 /* ESPECIFICO VIEW ENGINE Y PASO ARRAY CON PATHS DE TODOS LOS MODULOS DE VIEW */
 app.set('view engine', 'ejs');
@@ -66,6 +69,12 @@ app.use('/pruebas', pruebasRouter);
 /* APP.USE PARA CADA ROUTER API */
 app.use('/api/users', usersRouterApi);
 
+/* CONECTANDO REACT A EXPRESS */
+app.use(express.static(path.join(__dirname, '../dashboard/build')));
+/*app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../dashboard/build', 'index.html'));
+  });*/
+
 /*ERROR 404 */
 app.use((req,res,next) => {
     res.status(404).render('not-found');
@@ -76,5 +85,5 @@ app.use((req,res,next) => {
 app.use(rememberMiddleware);
 
 /* SERVER EN ESCUCHA */
-app.listen(3000, () => {console.log('Server funcionando 3000 OK en'+' http://localhost:3000/')});
+app.listen(3001, () => {console.log('Server funcionando 3000 OK en'+' http://localhost:3001/')});
 
