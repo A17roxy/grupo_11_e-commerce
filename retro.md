@@ -38,3 +38,6 @@ Puntos del SPRINT-3
 
 ## Sprint 6
 -We implemented the database and CRUD operations within the project's structure, dividing tasks and collaborating to successfully achieve the proposed objectives.
+
+## Sprint 7
+-It was difficult for us to organize and divide the tasks since it caught each of us during a complicated time of the year.
