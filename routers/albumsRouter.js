@@ -1,9 +1,9 @@
 const express = require('express');
 const multer = require('multer');
+const { body, validationResult } = require('express-validator');
 const router = express.Router();
 const albumsController = require('../controllers/albumsController.js');
 const albumMiddleware = require('../middlewares/albumMiddleware.js');
-const controller = require('../controllers/albumsController.js');
 
 // Inicializo storage de multer, con el destination y formato de filename
 const storage = multer.diskStorage({
@@ -16,39 +16,45 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-/* www.url.com/albums (Lista de Albums) */
+// Reglas de validación para el formulario de creación y edición
+const productValidationRules = [
+    body('name')
+        .notEmpty().withMessage('El nombre es obligatorio.')
+        .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres.'),
+
+    body('description')
+        .notEmpty().withMessage('La descripción es obligatoria.')
+        .isLength({ min: 20 }).withMessage('La descripción debe tener al menos 20 caracteres.')
+];
+
+const validate = (req, res, next) => {
+    const errors = validationResult(req);
+    if (errors.isEmpty()) {
+        return next();
+    }
+    const errorMessages = errors.array().map(error => ({ param: error.param, msg: error.msg }));
+    res.status(400).json({ errors: errorMessages });
+};
+
+// Lista de Albums
 router.get('/', albumMiddleware, albumsController.albums);
 
-// @GET - /albums/:id/detail
-/* router.get('/:id/detail', albumsController.getDetail); */
-
-// @GET - /albums/:id/edit
+// Editar Album
 router.get('/:id/edit', albumsController.albumEdit);
 
-// @GET - /albums/create
+// Crear Album
 router.get('/create', albumsController.getCreate);
 
-// @POST - /albums // agregué acá el upload.single para que multer pueda enviar imagenes al server
-//router.post('/', upload.single('productImage'), albumsController.postProduct);
-
-// @PUT - / albums/:id/edit
-//router.put('/:id/edit',  albumsController.updateAlbum);
-
-//router.put('/:id/edit', albumsController.updateAlbum);
-
-/* // @DELETE - /products/:id/delete
-router.delete('/:id/delete', albumsController.deleteProduct); */
-
-// @GET - /albums/:id/detail
+// Detalle del Album
 router.get('/:id/detail', albumsController.albumDetail);
 
-// @POST - /albums
-router.post('/', upload.single('productImage'), albumsController.createOne);
+// Crear un nuevo Album
+router.post('/', productValidationRules, validate, upload.single('productImage'), albumsController.createOne);
 
-// @PUT - /albums/:id/edit
-router.put('/:id/edit', upload.single('productImage'), albumsController.editOne);
+// Editar un Album existente
+router.put('/:id/edit', productValidationRules, validate, upload.single('productImage'), albumsController.editOne);
 
-// @DELETE - /albums/:id/delete
-router.delete('/:id/delete', albumsController.deleteOne)
+// Eliminar un Album
+router.delete('/:id/delete', albumsController.deleteOne);
 
-module.exports = router ;
+module.exports = router;
