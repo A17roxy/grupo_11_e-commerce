@@ -1,24 +1,28 @@
-const { check } = require('express-validator');
+const { body } = require('express-validator');
 
-function productValidation(req, res, next) {
-    const { name, description } = req.body;
+const productValidation = [
+    body('name')
+        .notEmpty().withMessage('El nombre es obligatorio.')
+        .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres.'),
 
-    req.check('name', 'El nombre es obligatorio y debe tener al menos 5 caracteres.').notEmpty().isLength({ min: 5 });
-    req.check('description', 'La descripción es obligatoria y debe tener al menos 20 caracteres.').notEmpty().isLength({ min: 20 });
-    req.check('image', 'La imagen es obligatoria y debe ser un archivo válido (JPG, JPEG, PNG, GIF).').notEmpty().isImageFile();
+    body('description')
+        .notEmpty().withMessage('La descripción es obligatoria.')
+        .isLength({ min: 20 }).withMessage('La descripción debe tener al menos 20 caracteres.'),
 
-    handleValidationResult(req, res, next);
-}
+    body('image')
+        .notEmpty().withMessage('La imagen es obligatoria.')
+        .custom(value => isImageFile(value)).withMessage('La imagen debe ser un archivo válido (JPG, JPEG, PNG, GIF).'),
 
-function handleValidationResult(req, res, next) {
-    const errors = req.validationErrors();
-    if (errors) {
-        return res.render('productsForm', { errors, ...req.body });
-    }
-    next();
+    
+];
+
+function isImageFile(value) {
+    
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+    const extension = value.substring(value.lastIndexOf('.')).toLowerCase();
+    return imageExtensions.includes(extension);
 }
 
 module.exports = {
     productValidation,
-    handleValidationResult,
 };
