@@ -17,9 +17,22 @@ const model = {
             throw new Error('Error al recuperar usuarios');
         }
     },
+    findAllApi: async function () {
+        try {
+            return await users.findAll({
+                attributes: { exclude: ['id','password', 'id_category', 'updatedAt'] },
+                order: [['createdAt', 'ASC']]
+            });
+        } catch (error) {
+            console.error(error);
+            throw new Error('Error al recuperar usuarios');
+        }
+    },
     findLast: async function() {
         try {
-            return await users.findOne({ order: [['id', 'DESC']] });
+            const user = await users.findOne({ order: [['createdAt', 'DESC']],
+            attributes: { exclude: ['id','password', 'id_category', 'updatedAt'] } });
+            return user;
         } catch (error) {
             console.error(error);
             throw new Error('Error al recuperar el último usuario creado');
@@ -41,21 +54,35 @@ const model = {
 
         } catch (error) {
             console.error(error);
-            return { error: true, message: error.message };
+            throw new Error('Error al crear usuario');;
         }
     },
 
     findByEmail: async (email) => {
         try {
-            return await users.findOne({ where: { email } });
+            const user = await users.findOne({ where: { email } });
+            
+            return user;
         } catch (error) {
             console.error(error);
             throw new Error('Error al buscar usuario por correo electrónico');
         }
     },
+    findById: async function(id) {
+        try {
+            const user = await users.findByPk(id, {
+                attributes: { exclude: ['password', 'id_category', 'updatedAt']}});
+ 
+            return user;
+        } catch (error) {
+            console.error(error);
+            throw new Error('Error al buscar usuario por correo id');
+        }
+    },
     findByField: async function (field, text) {
         try {
-            return await users.findOne({ where: { [field]: text } });
+            const user = await users.findOne({ where: { [field]: text } });
+            return user;
         } catch (error) {
             console.error(error);
             throw new Error('Error al buscar usuario por campo');

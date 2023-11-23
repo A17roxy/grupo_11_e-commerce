@@ -36,6 +36,7 @@ const controller = {
         console.log('Inicio de proceso de login');
         //console.log(req.body);
         try {
+
             const userInDb = await usersModels.findByField('email', req.body.email);
 
             if (userInDb) {
@@ -52,6 +53,7 @@ const controller = {
 
                     req.session.user = userInDb;
                     req.session.loggedFirstName = userInDb.firstname;
+                    
 
                     console.log('El usuario logeado es : ' + req.session.loggedFirstName);
                     return res.redirect('/');
@@ -79,6 +81,7 @@ const controller = {
     userprofile: function (req, res) {
 
         let userData = req.session.user;
+        
 
         return res.render('profile', { user: userData });
 
@@ -171,6 +174,7 @@ const controller = {
             };
 
             const result = await usersModels.create(newUser);
+            console.log("creando usuario en la db");
 
             if (result.error) {
                 throw new Error(result.message);

@@ -12,7 +12,8 @@ const UserList = ({ users, paginate, usersPerPage, totalUsers }) => {
       <h2>Lista de Usuarios</h2>
       <ul>
         {users.map(user => (
-          <li key={user.id}><p><strong>Nombre:</strong>{" "+user.firstname+" "+user.lastname+" "}<strong>Email:</strong>{" "+user.email}</p></li> 
+          <li key={user.id}><p><strong>Nombre:</strong>{" "+user.firstname+" "+user.lastname+" "}<br></br>
+          <strong>Email:</strong>{" "+user.email}</p></li> 
         ))}
       </ul>
       <div className="pagination">
