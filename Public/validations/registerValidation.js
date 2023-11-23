@@ -58,7 +58,8 @@ const LoginValidator = {
     },
 
     isValidPassword: function (password) {
-        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        /*const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;*/
+        const passwordRegex = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
         return passwordRegex.test(password);
     },
 
