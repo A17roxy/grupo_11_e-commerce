@@ -49,10 +49,10 @@ router.get('/create', albumsController.getCreate);
 router.get('/:id/detail', albumsController.albumDetail);
 
 // Crear un nuevo Album
-router.post('/', productValidationRules, validate, upload.single('productImage'), albumsController.createOne);
+router.post('/', /* productValidationRules, validate, */ upload.single('productImage'), albumsController.createOne);
 
 // Editar un Album existente
-router.put('/:id/edit', productValidationRules, validate, upload.single('productImage'), albumsController.editOne);
+router.put('/:id/edit', /* productValidationRules, validate, */ upload.single('productImage'), albumsController.editOne);
 
 // Eliminar un Album
 router.delete('/:id/delete', albumsController.deleteOne);
